@@ -1,0 +1,7 @@
+disableCSS = true
+disableHTML = true
+disableJS = true
+disableJSON = true
+disableSVG = true
+disableXML = true
+minifyOutput = false

@@ -1,0 +1,8 @@
+version: '3.8'
+services:
+    workspace:
+        build: .
+        volumes:
+            - .:/home/app
+        ports:
+            - "1313:1313"

@@ -1,0 +1,2 @@
+useResourceCacheWhen = "never"
+writeStats = false

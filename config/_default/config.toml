@@ -1,0 +1,18 @@
+theme = "lisboa-digital"
+
+disableHugoGeneratorInject = true
+disableKinds = ["taxonomy", "term", "RSS", "sitemap", "robotsTXT"]
+
+defaultContentLanguage = "pt"
+defaultContentLanguageInSubdir = true
+disableLanguages = []
+
+[languages.pt]
+    weight = 2
+    languageName = "Português"
+    title = "Lisboa Digital"
+
+[languages.en]
+    weight = 1
+    languageName = "English"
+    title = "Digital Lisbon"
