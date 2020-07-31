@@ -4,16 +4,17 @@
   "version": "1.0.0",
   "description": "Implemention stage of \"Lisboa Digital\" project",
   "scripts": {
-    "clean": "npx rimraf public gh_pages",
+    "clean": "npx rimraf public docs",
     "serve": "npm run clean && hugo serve --bind 0.0.0.0 -p 1313 --noHTTPCache --ignoreCache --disableFastRender --renderToDisk --gc",
     "build": "npm run clean && hugo -e gh_pages -d docs --ignoreCache --gc"
   },
   "author": "Pedro Pereira <a57127@campus.fcsh.unl.pt>",
   "license": "MIT",
   "devDependencies": {
+    "autoprefixer": "^9.8.6",
+    "bootstrap": "^4.5.0",
+    "postcss-cli": "^7.1.1",
     "rimraf": "^3.0.2"
   },
-  "dependencies": {
-    "bootstrap": "^4.5.0"
-  }
+  "dependencies": {}
 }

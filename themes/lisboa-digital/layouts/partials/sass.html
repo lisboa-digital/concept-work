@@ -1,0 +1,7 @@
+{{- $style := resources.Get (printf "styles/%s.scss" .) -}}
+{{- $style = $style | toCSS (dict "enableSourceMap" false "outputStyle" "compressed" "includePaths" "node_modules") -}}
+{{- $style = $style | fingerprint -}}
+{{- if ne hugo.Environment "development" -}}
+{{- $style = $style | postCSS (dict "noMap" true) -}}
+{{- end -}}
+<link rel="stylesheet" href="{{ $style.Permalink }}">

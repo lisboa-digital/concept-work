@@ -4,12 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{- block "page-title" . }}{{ .Site.Title }}{{ end -}}</title>
-    {{- $style := resources.Get "styles/main.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint -}}
-    <link rel="stylesheet" href="{{ $style.Permalink }}">
+    {{ partial "sass" "main" }}
     {{- block "styles" . -}}{{ end }}
 </head>
 <body>
-    {{- block "main" . -}}{{ end }}
+    {{- block "content" . -}}{{ end }}
     {{- block "scripts" . -}}{{ end }}
 </body>
 </html>
