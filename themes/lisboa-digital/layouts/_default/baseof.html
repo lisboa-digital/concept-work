@@ -6,7 +6,7 @@
     <title>{{- block "page-title" . }}{{ .Site.Title }}{{ end -}}</title>
     <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    {{ partial "style" "main" }}
+    {{ partial "style" (dict "src" "main" "asTmpl" . ) }}
     {{- block "meta-end" . -}}{{ end }}
 </head>
 <body>

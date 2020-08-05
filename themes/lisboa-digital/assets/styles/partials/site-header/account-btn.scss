@@ -1,8 +1,3 @@
-@import "../../settings";
-@import "../../bootstrap";
-@import "../../rem";
-@import "../btn";
-
 .site-header {
     &__account-btn {
         @include btn--secondary-hollow;
@@ -11,7 +6,7 @@
             @include btn--md;
         }
         .icon {
-            background-image: url("/images/icon-person--secondary.svg");
+            background-image: url($baseURL + "images/icon-person--secondary.svg");
         }
     }
 }

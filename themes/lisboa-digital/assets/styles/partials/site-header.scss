@@ -1,9 +1,3 @@
-@import "../settings";
-@import "../bootstrap";
-@import "../rem";
-@import "link";
-@import "btn";
-
 @import "site-header/account-btn";
 @import "site-header/submit-content-btn";
 @import "site-header/contact-btn";
@@ -255,7 +249,7 @@
             display: none;
         }
         .icon {
-            background-image: url("/images/icon-hamburger--secondary.svg");
+            background-image: url($baseURL + "images/icon-hamburger--secondary.svg");
         }
     }
 }

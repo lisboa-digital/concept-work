@@ -2,7 +2,7 @@
     <div class="site-header__container">
         <div class="site-header__row">
             <a class="site-header__logo" href="{{ "/" | relLangURL }}">
-                <img class="site-header__logo-image" src="/images/logo.svg" alt="logo">
+                <img class="site-header__logo-image" src="{{"/images/logo.svg" | relURL}}" alt="logo">
                 <div class="site-header__logo-text">
                     <span class="site-header__logo-city">{{ T "lisbon" }}</span>
                     <span class="site-header__logo-digital">{{ T "digital" }}</span>
@@ -10,7 +10,7 @@
             </a>
             <div class="site-header__actions">
                 <nav class="site-header__change-lang" aria-label="{{ T "aria_change_lang"}}">
-                    <img class="site-header__lang-icon" src="/images/icon-globe--light.svg" alt="{{ T "icon_globe_alt" }}" aria-hidden="true">
+                    <img class="site-header__lang-icon" src="{{"/images/icon-globe--light.svg"  | relURL}}" alt="{{ T "icon_globe_alt" }}" aria-hidden="true">
                     {{ $lang := .Lang }}
                     {{ range .AllTranslations }}
                     <a class="site-header__lang {{ if eq $lang .Language.Lang }}site-header__lang--selected{{ end }}" href="{{ .RelPermalink }}" data-lang-tag="{{ .Language.Lang | upper }}" data-lang-name="{{ .Language.LanguageName }}">{{ .Language.Lang }}</a>

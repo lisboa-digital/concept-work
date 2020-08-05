@@ -1,5 +1,8 @@
-{{- $style := resources.Get (printf "styles/%s.scss" .) -}}
-{{- $style = $style | toCSS (dict "enableSourceMap" false "outputStyle" "compressed" "includePaths" "node_modules") -}}
+{{- $style := resources.Get (printf "styles/%s.scss" .src) -}}
+{{- if (isset . "asTmpl") -}}
+{{- $style = $style | resources.ExecuteAsTemplate (printf "styles/%s.scss" .src) .asTmpl -}}
+{{- end -}}
+{{- $style = $style | toCSS (dict "enableSourceMap" false "outputStyle" "expanded" "includePaths" "node_modules") -}}
 {{- $style = $style | fingerprint -}}
 {{- if hugo.IsProduction -}}
 {{- $style = $style | postCSS (dict "noMap" true) -}}

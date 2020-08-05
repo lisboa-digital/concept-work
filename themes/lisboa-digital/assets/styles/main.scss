@@ -1,6 +1,14 @@
+$baseURL: "{{ .Site.BaseURL }}";
+
 @import "settings";
+@import "mixins/btn";
+@import "mixins/link";
+@import "mixins/pattern";
+@import "mixins/text";
+@import "mixins/title";
 @import "rem";
 @import "bootstrap";
+
 @import "bootstrap/scss/reboot";
 
 body {
