@@ -1,0 +1,67 @@
+@import "../settings";
+@import "../bootstrap";
+@import "../rem";
+
+@mixin section-title {
+    font-family: $font-family-primary;
+    font-weight: 700;
+    font-size: rem(24px);
+    @include media-breakpoint-up(md) {
+        font-size: rem(30px);
+    }
+    @include media-breakpoint-up(lg) {
+        font-size: rem(36px);
+    }
+}
+
+@mixin section-title--dark {
+    @include section-title;
+    color: $color-dark;
+}
+
+@mixin section-title--light {
+    @include section-title;
+    color: $color-light;
+}
+
+@mixin section-title--primary {
+    @include section-title;
+    color: $color-primary;
+}
+
+@mixin section-title--secondary {
+    @include section-title;
+    color: $color-secondary;
+}
+
+@mixin light-title {
+    font-family: $font-family-primary;
+    font-weight: 400;
+    font-size: rem(20px);
+    @include media-breakpoint-up(md) {
+        font-size: rem(22px);
+    }
+    @include media-breakpoint-up(lg) {
+        font-size: rem(24px);
+    }
+}
+
+@mixin light-title--dark {
+    @include light-title;
+    color: $color-dark;
+}
+
+@mixin light-title--light {
+    @include light-title;
+    color: $color-light;
+}
+
+@mixin light-title--primary {
+    @include light-title;
+    color: $color-primary;
+}
+
+@mixin light-title--secondary {
+    @include light-title;
+    color: $color-secondary;
+}

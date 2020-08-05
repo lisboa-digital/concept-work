@@ -1,0 +1,8 @@
+@import "settings";
+
+// Overwrite sass-rem variables here
+// Read more at: https://github.com/pierreburel/sass-rem
+
+$rem-baseline: $font-size-default;
+
+@import "sass-rem/rem"

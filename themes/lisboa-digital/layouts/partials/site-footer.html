@@ -1,0 +1,54 @@
+<footer class="site-footer">
+    <div class="site-footer__row">
+        <div class="site-footer__community">
+            <div class="site-footer__community-section">
+                <p class="site-footer__community-title">{{ T "community" }}</p>
+                <p class="site-footer__community-description">{{ T "community_description" }}</p>
+            </div>
+            <div class="site-footer__community-section">
+                <a class="site-footer__community-chat-btn" href="#">{{ T "btn_community_chat" }}<span class="icon"></span></a>
+            </div> 
+        </div>
+        <nav class="site-footer__actions" aria-label="{{ T "aria_quick_actions"}} (2)">
+            <a class="site-footer__account-btn" href="{{ relref . "login" }}">{{ T "btn_account" }}<span class="icon"></span></a>
+            <a class="site-footer__submit-content-btn" href="{{ relref . "login" }}">{{ T "btn_submit_content" }}<span class="icon"></span></a>
+            <a class="site-footer__contact-btn" href="{{ relref . "contact" }}">{{ T "btn_contact" }}<span class="icon"></span></a>
+        </nav>
+    </div>
+    <div class="site-footer__row">
+        <div class="site-footer__separator"></div>
+        <div class="site-footer__main">
+            <div class="site-footer__navs">
+                <nav class="site-footer__nav" aria-label="{{ T "aria_about_nav" }}">
+                    <p class="site-footer__heading">{{ T "nav_title_about" }}</p>
+                    <a class="site-footer__link" href="{{ relref . "the-city" }}">{{ T "nav_the_city" }}</a>
+                    <a class="site-footer__link" href="{{ relref . "the-project" }}">{{ T "nav_the_project" }}</a>
+                    <a class="site-footer__link" href="{{ relref . "be-involved" }}">{{ T "nav_be_involved" }}</a>
+                </nav>
+                <nav class="site-footer__nav" aria-label="{{ T "aria_website_nav" }}">
+                    <p class="site-footer__heading">Website</p>
+                    <a class="site-footer__link" href="{{ relref . "cookies" }}">Cookies</a>
+                    <a class="site-footer__link" href="{{ relref . "privacy" }}">{{ T "nav_privacy" }}</a>
+                    <a class="site-footer__link" href="{{ relref . "accessibility" }}">{{ T "nav_accessibility" }}</a>
+                </nav>
+                <nav class="site-footer__nav" aria-label="{{ T "aria_change_lang" }} (2)">
+                    <p class="site-footer__heading">{{ T "nav_title_lang" }}</p>
+                    {{ $lang := .Lang }}
+                    {{ range .AllTranslations }}
+                    <a class="site-footer__link {{ if eq $lang .Language.Lang }}site-footer__link--selected{{ end }}" href="{{ .RelPermalink }}">{{ .Language.LanguageName }}</a>
+                    {{ end }}
+                </nav>
+            </div>
+            <div class="site-footer__stay-connected">
+                <p class="site-footer__heading">Stay Connected with <span class="site-footer__hash-tag">#lisboadigital</span></p>
+                <nav class="site-footer__social" aria-label="{{ T "aria_social_nav" }}">
+                    <a class="site-footer__link" href="#"><img src="/images/linkedin-logo.svg" alt="linkedin logo">Linkedin</a>
+                    <a class="site-footer__link" href="#"><img src="/images/facebook-logo.svg" alt="facebook logo">Facebook</a>
+                    <a class="site-footer__link" href="#"><img src="/images/twitter-logo.svg" alt="twitter logo">Twitter</a>
+                </nav>
+                <a class="site-footer__newsletter-btn" href="{{ relref . "newsletter" }}">Newsletter<span class="icon"></span></a>
+            </div>
+        </div>
+        <div class="site-footer__separator"></div>
+    </div>
+</footer>

@@ -1,0 +1,13 @@
+@import "../settings";
+@import "../rem";
+
+@mixin pattern-dots {
+    background-image: radial-gradient(
+        rgba($color-light, 0.8), 
+        rgba($color-light, 0.8) rem(0.5px), 
+        transparent rem(1.5px),
+        transparent
+    );
+    background-size: rem(25px) rem(25px);
+    background-position: center;
+}

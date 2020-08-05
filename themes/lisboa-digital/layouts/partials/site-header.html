@@ -1,0 +1,45 @@
+<header class="site-header">
+    <div class="site-header__container">
+        <div class="site-header__row">
+            <a class="site-header__logo" href="{{ "/" | relLangURL }}">
+                <img class="site-header__logo-image" src="/images/logo.svg" alt="logo">
+                <div class="site-header__logo-text">
+                    <span class="site-header__logo-city">{{ T "lisbon" }}</span>
+                    <span class="site-header__logo-digital">{{ T "digital" }}</span>
+                </div>
+            </a>
+            <div class="site-header__actions">
+                <nav class="site-header__change-lang" aria-label="{{ T "aria_change_lang"}}">
+                    <img class="site-header__lang-icon" src="/images/icon-globe--light.svg" alt="{{ T "icon_globe_alt" }}" aria-hidden="true">
+                    {{ $lang := .Lang }}
+                    {{ range .AllTranslations }}
+                    <a class="site-header__lang {{ if eq $lang .Language.Lang }}site-header__lang--selected{{ end }}" href="{{ .RelPermalink }}" data-lang-tag="{{ .Language.Lang | upper }}" data-lang-name="{{ .Language.LanguageName }}">{{ .Language.Lang }}</a>
+                    {{ end }}
+                </nav>
+                <nav class="site-header__btns" aria-label="{{ T "aria_quick_actions"}}">
+                    {{ partial "site-header/account-btn" . }}                    
+                    {{ partial "site-header/submit-content-btn" . }}
+                    {{ partial "site-header/contact-btn" . }}
+                </nav>
+            </div>
+        </div>
+        <div class="site-header__row">
+            <nav class="site-header__nav" aria-label="{{ T "aria_main_nav"}}">
+                <ul class="site-header__nav-list">
+                    <li class="site-header__nav-item"><a class="site-header__nav-link" href="{{ relref . "news" }}">{{ T "nav_news" }}</a></li>
+                    <li class="site-header__nav-item"><a class="site-header__nav-link" href="{{ relref . "events" }}">{{ T "nav_events" }}</a></li>
+                    <li class="site-header__nav-item"><a class="site-header__nav-link" href="{{ relref . "people" }}">{{ T "nav_people" }}</a></li>
+                    <li class="site-header__nav-item"><a class="site-header__nav-link" href="{{ relref . "companies" }}">{{ T "nav_companies" }}</a></li>
+                    <li class="site-header__nav-item"><a class="site-header__nav-link" href="{{ relref . "jobs" }}">{{ T "nav_jobs" }}</a></li>
+                    <li class="site-header__nav-item"><a class="site-header__nav-link" href="{{ relref . "education" }}">{{ T "nav_education" }}</a></li>
+                    <li class="site-header__nav-item"><a class="site-header__nav-link" href="{{ relref . "resources" }}">{{ T "nav_resources" }}</a></li>
+                    <li class="site-header__nav-item"><a class="site-header__nav-link" href="{{ relref . "investment" }}">{{ T "nav_investment" }}</a></li>
+                    <li class="site-header__nav-item"><a class="site-header__nav-link" href="{{ relref . "workspaces" }}">{{ T "nav_workspaces" }}</a></li>
+                    <li class="site-header__nav-item">{{ partial "site-header/submit-content-btn" . }}</li>
+                    <li class="site-header__nav-item">{{ partial "site-header/contact-btn" . }}</li>
+                </ul>
+                <button class="site-header__toggle-nav-btn">{{T "btn_more" }}<span class="icon"></span></button>
+            </nav>
+        </div>
+    </div>
+</header>

@@ -1,4 +1,26 @@
+@import "settings";
+@import "rem";
 @import "bootstrap";
 @import "bootstrap/scss/reboot";
 
-body {}
+body {
+    font-size: 16px;
+}
+
+a {
+    &:focus {
+        outline-width: 1px;
+        outline-offset: rem(8px);
+        outline-style: dashed;
+    }
+}
+
+button {
+    background-color: transparent;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+@import "partials/site-header";
+@import "partials/site-footer";

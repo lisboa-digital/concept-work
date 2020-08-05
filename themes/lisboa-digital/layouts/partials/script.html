@@ -1,0 +1,9 @@
+{{- $opts := dict -}}
+{{- if hugo.IsProduction -}}
+{{- $opts = dict "minify" true -}}
+{{- end -}}
+{{- $script := resources.Get (printf "scripts/%s.js" .) -}}
+{{- $script = $script | js.Build $opts -}}
+{{- $script = $script | babel -}}
+{{- $script = $script | fingerprint -}}
+<script src="{{ $script.RelPermalink }}" type="text/javascript" defer></script>

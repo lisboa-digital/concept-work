@@ -4,11 +4,17 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{- block "page-title" . }}{{ .Site.Title }}{{ end -}}</title>
-    {{ partial "sass" "main" }}
-    {{- block "styles" . -}}{{ end }}
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    {{ partial "style" "main" }}
+    {{- block "meta-end" . -}}{{ end }}
 </head>
 <body>
-    {{- block "content" . -}}{{ end }}
-    {{- block "scripts" . -}}{{ end }}
+    {{- block "body-start" . -}}{{ end }}
+    {{ partial "site-header" . }}
+    {{- block "body-content" . -}}{{ end }}
+    {{ partial "site-footer" . }}
+    {{ partial "script" "main" }}
+    {{- block "body-end" . -}}{{ end }}
 </body>
 </html>

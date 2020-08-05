@@ -1,0 +1,36 @@
+@import "../settings";
+
+@mixin link {
+    font-family: $font-family-secondary;
+    font-weight: 700;
+    text-decoration: underline;
+    letter-spacing: 0.04em;
+    &--selected {
+        font-weight: 400;
+        text-decoration: none;
+        &:hover {
+            text-decoration: none;
+            cursor: default;
+        }
+    }
+}
+
+@mixin link--primary {
+    @include link;
+    color: $color-primary;
+    &:hover,
+    &:focus,
+    &--selected {
+        color: $color-dark;
+    }
+}
+
+@mixin link--secondary {
+    @include link;
+    color: $color-secondary;
+    &:hover,
+    &:focus,
+    &--selected {
+        color: $color-light;
+    }
+}

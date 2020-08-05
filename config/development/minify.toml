@@ -1,6 +1,6 @@
 disableCSS = true
-disableHTML = true
-disableJS = true
+disableHTML = false
+disableJS = false
 disableJSON = true
 disableSVG = true
 disableXML = true

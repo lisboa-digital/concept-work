@@ -1,0 +1,17 @@
+@import "../../settings";
+@import "../../bootstrap";
+@import "../../rem";
+@import "../btn";
+
+.site-header {
+    &__contact-btn {
+        @include btn--secondary;
+        @include btn--sm;
+        @include media-breakpoint-up(lg) {
+            @include btn--md;
+        }
+        .icon {
+            background-image: url("/images/icon-envelope--primary.svg");
+        }
+    }
+}

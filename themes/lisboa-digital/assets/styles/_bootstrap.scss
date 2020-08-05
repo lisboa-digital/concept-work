@@ -1,6 +1,16 @@
-// Overwrite Bootstrap variables here
+@import "settings";
+@import "rem";
 
-// Required
+// Overwrite Bootstrap variables here
+// See: bootstrap/scss/_variables.scss
+
+$body-bg:                               #FFFFFF;
+$body-color:                            $color-dark;
+$link-color:                            $color-primary;
+$link-hover-color:                      darken($color-primary, 15%);
+$font-family-base:                      $font-family-primary;
+$font-size-base:                        rem($font-size-default);
+
 @import "bootstrap/scss/functions";
 @import "bootstrap/scss/variables";
 @import "bootstrap/scss/mixins";

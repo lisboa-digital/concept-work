@@ -1,0 +1,261 @@
+@import "../settings";
+@import "../bootstrap";
+@import "../rem";
+@import "link";
+@import "btn";
+
+@import "site-header/account-btn";
+@import "site-header/submit-content-btn";
+@import "site-header/contact-btn";
+
+.site-header {
+    background-color: $color-primary;
+    &__container {
+        // max-width: $site-max-width;
+        margin: 0 auto;
+        padding: 0 rem($gutter);
+        @include media-breakpoint-up(lg) {
+            padding: 0 rem(($gutter*2));
+        }
+    }
+    &__row {
+        &:nth-of-type(1) {
+            display: flex;
+            flex-direction: row;
+            padding-top: rem($gutter);
+            padding-bottom: rem($gutter);
+            @include media-breakpoint-up(lg) {
+                padding-top: rem(40px);
+                padding-bottom: rem(32px);
+            }
+        }
+        &:nth-of-type(2) {
+            padding-top: rem($gutter);
+            padding-bottom: rem($gutter);
+            border-top: 1px solid rgba($color-light, 0.15);
+            @include media-breakpoint-up(lg) {
+                padding-top: rem(40px);
+                padding-bottom: rem(40px);
+            }
+        }
+    }
+
+    /**********************************************************
+        LOGO
+    **********************************************************/
+    &__logo {
+        display: flex;
+        flex-direction: row;
+        font-size: 0;
+        font-family: $font-family-primary;
+        color: $color-light;
+        &:hover {
+            color: $color-secondary;
+            text-decoration: none;
+        }
+        &-image {
+            width: auto;
+            height: rem(32px);
+            @include media-breakpoint-up(lg) {
+                height: rem(48px);
+            }
+        }
+        &-text {
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: flex-start;
+            text-align: right;
+            margin-left: rem(12px);
+        }
+        &-city {
+            font-weight: 700;
+            font-size: rem(24px);
+            line-height: rem(14px);
+            @include media-breakpoint-up(lg) {
+                font-size: rem(36px);
+                line-height: rem(24px);
+            }
+        }
+        &-digital {
+            font-weight: 400;
+            font-size: rem(10px);
+            text-transform: lowercase;
+            @include media-breakpoint-up(lg) {
+                font-size: rem(14px);
+            }
+        }
+    }
+
+    /**********************************************************
+        ACTIONS
+    **********************************************************/
+    &__actions {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        flex-grow: 1;
+    }
+    &__change-lang {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    &__lang-icon {
+        display: none;
+        height: rem(16px);
+        width: rem(16px);
+        @include media-breakpoint-up(lg) {
+            display: inline-block;
+        }
+    }
+    &__lang {
+        @include link--secondary;
+        font-size: rem(12px);
+        margin-left: rem(8px);
+        @include media-breakpoint-up(lg) {
+            display: inline-block;
+            font-size: rem(14px);
+            margin-left: rem(16px);
+        }
+    }
+    &__btns {
+        align-self: center;
+        .site-header {
+            &__account-btn {
+                margin-left: rem(16px);
+                @include media-breakpoint-up(lg) {
+                    margin-left: rem(24px);
+                }
+                .icon {
+                    display: none;
+                    @include media-breakpoint-up(lg) {
+                        display: inline-block;
+                    }
+                }
+            }
+            &__submit-content-btn {
+                margin-left: rem(24px);
+            }
+            &__contact-btn {
+                margin-left: rem(16px);
+            }
+            &__submit-content-btn,
+            &__contact-btn {
+                display: none;
+                @include media-breakpoint-up(lg) {
+                    display: inline-block;
+                }
+            }
+        }
+    }
+
+    /**********************************************************
+        Primary Navigation
+    **********************************************************/
+    &__nav {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        &::after {
+            content: ' ';
+            font-size: 0;
+            position: absolute;
+            right: rem(100px);
+            top:0;
+            height: 100%;
+            width: 15%;
+            background: linear-gradient(to right, transparent, $color-primary);
+            @include media-breakpoint-up(lg) {
+                display: none;
+            }
+        }
+        &-list {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            flex-wrap: nowrap;
+            flex-grow: 1;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            overflow-y:hidden;
+            overflow-x:scroll;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            &::-webkit-scrollbar { 
+                display: none;
+            }
+            @include media-breakpoint-up(lg) {
+                justify-content: center;
+            }
+            .site-header {
+                &__submit-content-btn,
+                &__contact-btn {
+                    @include media-breakpoint-up(lg) {
+                        display: none;
+                    }
+                }
+            }
+        }
+        &-item {
+            margin-left: rem(16px);
+            &:first-of-type {
+                margin-left: 0;
+            }
+            @include media-breakpoint-up(lg) {
+                margin-left: rem(24px);
+                &:nth-last-of-type(1),
+                &:nth-last-of-type(2) {
+                    margin-left: 0;
+                }
+            }
+        }
+        &-link {
+            @include link--secondary;
+            font-size: rem(16px);
+            @include media-breakpoint-up(xl) {
+                font-size: rem(18px);
+            }
+        }
+        &--open {
+            .site-header {
+                &__nav {
+                    &-list {
+                        flex-direction: column;
+                        overflow-x: none;
+                        overflow-y: none;
+                        scrollbar-width: none;
+                        -ms-overflow-style: none;
+                        &::-webkit-scrollbar { 
+                            display: none;
+                        }
+                    }
+                    &-item {
+                        margin-left: rem($gutter);
+                        margin-bottom: rem(16px);
+                        &:nth-last-of-type(3) {
+                            margin-bottom: rem(32px);
+                        }
+                    }
+                }
+                &__toggle-nav-btn {
+                    align-self: flex-start;
+                }
+            }
+        }
+    }
+    &__toggle-nav-btn {
+        z-index: 100;
+        margin-left: rem($gutter);
+        @include btn--secondary-hollow;
+        @include btn--md;
+        @include media-breakpoint-up(lg) {
+            display: none;
+        }
+        .icon {
+            background-image: url("/images/icon-hamburger--secondary.svg");
+        }
+    }
+}

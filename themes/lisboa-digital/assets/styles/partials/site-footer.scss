@@ -1,0 +1,305 @@
+@import "../settings";
+@import "../bootstrap";
+@import "../rem";
+@import "link";
+@import "btn";
+@import "title";
+@import "text";
+@import "pattern";
+
+.site-footer {
+    margin-top: rem(160px);
+    &__row {
+        &:nth-child(1) {
+            max-width: $site-max-width;
+            padding: 0;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            @include media-breakpoint-up(lg) {
+                padding: 0 rem($gutter*2);
+                flex-direction: row-reverse;
+            }
+        }
+        &:nth-child(2) {
+            background-image: $color-primary-gradient;
+        }
+    }
+    &__separator {
+        height: 96px;
+        @include pattern-dots;
+        @include media-breakpoint-up(lg) {
+            width: 50%;
+            &:first-of-type {
+                background-position: right center;
+            }
+        }
+        &:first-of-type {
+            margin: 0 auto 0 0;
+        }
+        &:last-of-type {
+            margin: 0 0 0 auto;
+        }
+    }
+    &__community,
+    &__actions {
+        z-index: 10;
+        padding: rem($gutter*2) rem($gutter);
+        @include media-breakpoint-up(lg) {
+            width: 50%;
+            padding: rem($gutter*2);
+            margin-bottom: rem(-76px);
+        }
+    }
+    &__community {
+        display: flex;
+        flex-direction: column;
+        background-color: $color-secondary;
+        @include media-breakpoint-up(lg) {
+            flex-direction: row;
+            border-radius: rem(4px);
+            margin-left: rem(24px);
+        }
+        &-section {
+            align-self: flex-start;
+            text-align: left;
+            @include media-breakpoint-up(sm) {
+                align-self: center;
+                text-align: center;
+            }
+            @include media-breakpoint-up(lg) {
+                align-self: flex-start;
+                text-align: left;
+            }
+            &:last-of-type {
+                @include media-breakpoint-up(lg) {
+                    margin-left: rem($gutter*2);
+                    align-self: center;
+                    text-align: center;
+                }   
+            }
+        }
+        &-title {
+            @include section-title--dark;
+        }
+        &-description {
+            @include body--dark;
+        }
+        &-chat-btn {
+            @include btn--primary;
+            @include btn--md;
+            @include media-breakpoint-up(md) {
+                @include btn--lg;
+            } 
+            .icon {
+                background-image: url("/images/icon-chat--secondary.svg");
+            }
+        }
+    }
+    &__actions {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: center;
+        padding-bottom: rem($gutter);
+        @include media-breakpoint-up(sm) {
+            justify-content: center;
+        }
+        @include media-breakpoint-up(lg) {
+            justify-content: flex-start;
+            align-items: flex-end;
+            padding-left: 0;
+            padding-bottom: rem(88px);
+        }
+    }
+    &__account-btn,
+    &__submit-content-btn,
+    &__contact-btn {
+        @include btn--primary;
+        @include btn--md;
+        margin-bottom: rem($gutter);
+        @include media-breakpoint-up(md) {
+            @include btn--lg;
+        }
+    }
+    &__account-btn,
+    &__submit-content-btn {
+        margin-right: rem(8px);
+        @include media-breakpoint-up(sm) {
+            margin-right: rem(16px);
+        }
+    }
+    &__account-btn {
+        display: none;
+        @include media-breakpoint-up(sm) {
+            display: inline-block;
+        }
+        @include media-breakpoint-up(lg) {
+            display: none;
+        }
+        @include media-breakpoint-up(xl) {
+            display: inline-block;
+        }
+        .icon {
+            background-image: url("/images/icon-person--secondary.svg");
+        }
+    }
+    &__submit-content-btn {
+        .icon {
+            background-image: url("/images/icon-submit--secondary.svg");
+        }
+    }
+    &__contact-btn {
+        .icon {
+            background-image: url("/images/icon-envelope--secondary.svg");
+        }
+    }
+    &__main {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        max-width: $site-max-width;
+        margin: 0 auto;
+        padding: rem(32px) rem($gutter);
+        @include media-breakpoint-up(lg) {
+            flex-direction: row;
+            padding: rem(64px) rem($gutter*2);
+        }
+    }
+    &__navs,
+    &__stay-connected {
+        @include media-breakpoint-up(lg) {
+            align-self: flex-start;
+        }
+    }
+    &__navs {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        align-self: flex-start;
+        @include media-breakpoint-up(sm) {
+            align-self: center;
+            flex-direction: row;
+            align-items: flex-start;
+        }
+    }
+    &__nav {
+        position: relative;
+        margin-left: rem(55px);
+        margin-top: rem(40px);
+        @include media-breakpoint-up(sm) {
+            margin-right: rem(32px);
+            margin-left: rem(32px);
+            margin-top: 0;
+        }
+        &:first-of-type {
+            margin-top: 0;
+        }
+        &::before {
+            content: ' ';
+            position: absolute;
+            display: block;
+            font-size: 0;
+            top: 0;
+            left: rem(-70px);
+            width: rem(56px);
+            height: 100%;
+            background-image: url('/images/site-footer__nav-graphic.svg');
+            background-size: rem(56px) rem(28px);
+            background-position: right top;
+            background-repeat: no-repeat;
+            overflow: hidden;
+            @include media-breakpoint-up(sm) {
+                left: rem(-36px);
+                width: rem(8px);
+                background-image: url('/images/site-footer__nav-graphic--vertical.svg');
+                background-position: left top;
+                background-size: rem(8px) rem(560px);
+            }
+        }
+    }
+    &__heading {
+        @include light-title--light;
+        margin: 0;
+        margin-bottom: rem(16px);
+        @include media-breakpoint-up(lg) {
+            margin-bottom: rem(32px);
+        }
+    }
+    &__link {
+        @include link--secondary;
+        display: block;
+        margin-top: rem(16px);
+        &:first-of-type {
+            margin-top: 0;
+        }
+    }
+    &__stay-connected {
+        align-self: center;
+        text-align: center;
+        margin-top: rem(64px);
+        @include media-breakpoint-up(lg) {
+            margin-top: 0;
+            text-align: right;
+        }
+        .site-footer {
+            &__heading {
+                margin-bottom: rem(32px) !important;
+            }
+        }
+    }
+    &__hash-tag {
+        font-weight: 700;
+    }
+    &__social {
+        display: flex;
+        justify-content: center;
+        margin-bottom: rem(32px);
+        @include media-breakpoint-up(lg) {
+            justify-content: right;
+        }
+        .site-footer {
+            &__link {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 0;
+                margin: 0;
+                margin-left: rem(24px);
+                font-size: rem(14px);
+                @include media-breakpoint-up(md) {
+                    flex-direction: row;
+                    font-size: rem(15px);
+                }
+                @include media-breakpoint-up(lg) {
+                    font-size: rem(16px);
+                }
+                &:first-of-type {
+                    margin-left: 0;
+                }
+                img {
+                    height: rem(24px);
+                    width: rem(24px);
+                    margin-bottom: rem(12px);
+                    @include media-breakpoint-up(md) {
+                        margin-bottom: 0;
+                        display: inline-block;
+                        margin-right: rem(12px);
+                    }
+                }
+            }
+        }
+    }
+    &__newsletter-btn {
+        @include btn--secondary-hollow;
+        @include btn--md;
+        @include media-breakpoint-up(md) {
+            @include btn--lg;
+        }
+        .icon {
+            background-image: url("/images/icon-forward--secondary.svg");
+        }
+    }
+}
+

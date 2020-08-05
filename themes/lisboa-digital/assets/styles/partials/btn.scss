@@ -1,0 +1,113 @@
+@import "../settings";
+@import "../rem";
+
+@mixin btn {
+    display: inline-block;
+    font-family: $font-family-secondary;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+    border-radius: rem(50px);
+    &:focus {
+        outline-width: 1px;
+        outline-offset: rem(8px);
+        outline-style: dashed;
+        text-decoration: underline;
+    }
+    .icon {
+        display: inline-block;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        vertical-align: bottom;
+    }
+}
+
+@mixin btn--primary {
+    @include btn;
+    color: $color-secondary;
+    border: 1px solid $color-primary;
+    background-color: $color-primary;
+    &:hover {
+        color: $color-secondary;
+        border: 1px solid $color-primary;
+        background-color: $color-primary;
+    }
+    &:focus {
+        outline-color: $color-primary;
+    }
+}
+
+@mixin btn--primary-hollow {
+    @include btn;
+    color: $color-primary;
+    border: 1px solid $color-primary;
+    &:hover {
+        color: $color-primary;
+        border: 1px solid $color-primary;
+    }
+    &:focus {
+        outline-color: $color-primary;
+    }
+}
+
+@mixin btn--secondary {
+    @include btn;
+    color: $color-primary;
+    border: 1px solid $color-secondary;
+    background-color: $color-secondary;
+    &:hover {
+        color: $color-primary;
+        border: 1px solid $color-secondary;
+        background-color: $color-secondary;
+    }
+    &:focus {
+        outline-color: $color-secondary;
+    }
+}
+
+@mixin btn--secondary-hollow {
+    @include btn;
+    color: $color-secondary;
+    border: 1px solid $color-secondary;
+    &:hover {
+        color: $color-secondary;
+        border: 1px solid $color-secondary;
+    }
+    &:focus {
+        outline-color: $color-secondary;
+    }
+}
+
+@mixin btn--sm {
+    padding: rem(6px) rem(12px);
+    line-height: rem(12px);
+    font-size: rem(12px);
+    .icon {
+        margin-left: rem(6px);
+        height: rem(12px);
+        width: rem(12px);
+    }
+}
+
+@mixin btn--md {
+    padding: rem(8px) rem(16px);
+    line-height: rem(14px);
+    font-size: rem(14px);
+    .icon {
+        margin-left: rem(8px);
+        height: rem(14px);
+        width: rem(14px);
+    }
+}
+
+@mixin btn--lg {
+    padding: rem(10px) rem(20px);
+    line-height: rem(16px);
+    font-size: rem(16px);
+    .icon {
+        margin-left: rem(10px);
+        height: rem(16px);
+        width: rem(16px);
+    }
+}

@@ -1,0 +1,32 @@
+@import "../settings";
+@import "../bootstrap";
+@import "../rem";
+
+@mixin body {
+    font-family: $font-family-secondary;
+    font-weight: 400;
+    font-size: rem(14px);
+    @include media-breakpoint-up(md) {
+        font-size: rem(15px);
+    }
+    @include media-breakpoint-up(lg) {
+        font-size: rem(16px);
+    }
+}
+
+@mixin body--dark {
+    @include body;
+    color: $color-dark;
+}
+@mixin body--light {
+    @include body;
+    color: $color-light;
+}
+@mixin body--primary {
+    @include body;
+    color: $color-primary;
+}
+@mixin body--secondary {
+    @include body;
+    color: $color-secondary;
+}
