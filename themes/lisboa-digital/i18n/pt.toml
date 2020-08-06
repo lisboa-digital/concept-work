@@ -1,37 +1,111 @@
-lisbon.other                        = "Lisboa"
-digital.other                       = "Digital"
-community.other                     = "Comunidade"
-community_description.other         = "Temos um canal Discord onde podes falar e partilhar com os teus pares e comunidade."
+[lisbon]
+other = "Lisboa"
 
-nav_news.other                      = "Novidades"
-nav_events.other                    = "Eventos"
-nav_people.other                    = "Pessoas"
-nav_companies.other                 = "Empresas"
-nav_jobs.other                      = "Emprego"
-nav_education.other                 = "Educação"
-nav_resources.other                 = "Recursos"
-nav_investment.other                = "Investimento"
-nav_workspaces.other                = "Espaços"
-nav_the_city.other                  = "A Cidade"
-nav_the_project.other               = "O Projeto"
-nav_be_involved.other               = "Envolva-se"
-nav_privacy.other                   = "Privacidade"
-nav_accessibility.other             = "Acessibilidade"
+[digital]
+other = "Digital"
 
-nav_title_about.other               = "Sobre"
-nav_title_lang.other                = "Língua"
+[community]
+other = "Comunidade"
 
-icon_globe_alt.other                = "ícone globo"
+[community_description]
+other = "Temos um canal Discord onde podes falar e partilhar com os teus pares e comunidade."
 
-btn_account.other                   = "Conta"
-btn_submit_content.other            = "Submeta Conteúdo"
-btn_contact.other                   = "Contactos"
-btn_more.other                      = "Mais"
-btn_community_chat.other            = "Chat Comunitário"
+######################################### 
+#   NAVIGATION
+#########################################
 
-aria_main_nav.other                 = "páginas principais"
-aria_change_lang.other              = "alterar língua"
-aria_quick_actions.other            = "acções rápidas"
-aria_about_nav.other                = "páginas sobre"
-aria_website_nav.other              = "outras páginas"
-aria_social_nav.other               = "redes sociais"
+[nav_news]
+other = "Novidades"
+
+[nav_events]
+other = "Eventos"
+
+[nav_people]
+other = "Pessoas"
+
+[nav_companies]
+other = "Empresas"
+
+[nav_jobs]
+other = "Emprego"
+
+[nav_education]
+other = "Educação"
+
+[nav_resources]
+other = "Recursos"
+
+[nav_investment]
+other = "Investimento"
+
+[nav_workspaces]
+other = "Espaços"
+
+[nav_the_city]
+other = "A Cidade"
+
+[nav_the_project]
+other = "O Projeto"
+
+[nav_be_involved]
+other = "Envolva-se"
+
+[nav_privacy]
+other = "Privacidade"
+
+[nav_accessibility]
+other = "Acessibilidade"
+
+[nav_title_about]
+other = "Sobre"
+
+[nav_title_lang]
+other = "Língua"
+
+######################################### 
+#   ICONS
+#########################################
+
+[icon_globe_alt]
+other = "ícone globo"
+
+######################################### 
+#   BUTTONS
+#########################################
+
+[btn_account]
+other = "Conta"
+
+[btn_submit_content]
+other = "Submeta Conteúdo"
+
+[btn_contact]
+other = "Contactos"
+
+[btn_more]
+other = "Mais"
+
+[btn_community_chat]
+other = "Chat Comunitário"
+
+######################################### 
+#   ARIA
+#########################################
+
+[aria_main_nav]
+other = "páginas principais"
+
+[aria_change_lang]
+other = "alterar língua"
+
+[aria_quick_actions]
+other = "acções rápidas"
+
+[aria_about_nav]
+other = "páginas sobre"
+
+[aria_website_nav]
+other = "outras páginas"
+
+[aria_social_nav]
+other = "redes sociais"

@@ -1,37 +1,111 @@
-lisbon.other                        = "Lisbon"
-digital.other                       = "Digital"
-community.other                     = "Community"
-community_description.other         = "We have a Discord channel were you can talk and share with your community and peers."
+[lisbon]
+other = "Lisbon"
 
-nav_news.other                      = "News"
-nav_events.other                    = "Events"
-nav_people.other                    = "People"
-nav_companies.other                 = "Companies"
-nav_jobs.other                      = "Jobs"
-nav_education.other                 = "Education"
-nav_resources.other                 = "Resources"
-nav_investment.other                = "Investment"
-nav_workspaces.other                = "Workspaces"
-nav_the_city.other                  = "The City"
-nav_the_project.other               = "The Project"
-nav_be_involved.other               = "Be Involved"
-nav_privacy.other                   = "Privacy"
-nav_accessibility.other             = "Accessibility"
+[digital]
+other = "Digital"
 
-nav_title_about.other               = "About"
-nav_title_lang.other                = "Language"
+[community]
+other = "Community"
 
-icon_globe_alt.other                = "globe icon"
+[community_description]
+other = "We have a Discord channel were you can talk and share with your community and peers."
 
-btn_account.other                   = "Account"
-btn_submit_content.other            = "Submit Content"
-btn_contact.other                   = "Contact"
-btn_more.other                      = "More"
-btn_community_chat.other            = "Community Chat"
+######################################### 
+#   NAVIGATION
+#########################################
 
-aria_main_nav.other                 = "main pages"
-aria_change_lang.other              = "change language"
-aria_quick_actions.other            = "quick actions"
-aria_about_nav.other                = "about pages"
-aria_website_nav.other              = "other pages"
-aria_social_nav.other               = "social networks"
+[nav_news]
+other = "News"
+
+[nav_events]
+other = "Events"
+
+[nav_people]
+other = "People"
+
+[nav_companies]
+other = "Companies"
+
+[nav_jobs]
+other = "Jobs"
+
+[nav_education]
+other = "Education"
+
+[nav_resources]
+other = "Resources"
+
+[nav_investment]
+other = "Investment"
+
+[nav_workspaces]
+other = "Workspaces"
+
+[nav_the_city]
+other = "The City"
+
+[nav_the_project]
+other = "The Project"
+
+[nav_be_involved]
+other = "Be Involved"
+
+[nav_privacy]
+other = "Privacy"
+
+[nav_accessibility]
+other = "Accessibility"
+
+[nav_title_about]
+other = "About"
+
+[nav_title_lang]
+other = "Language"
+
+######################################### 
+#   ICONS
+#########################################
+
+[icon_globe_alt]
+other = "globe icon"
+
+######################################### 
+#   BUTTONS
+#########################################
+
+[btn_account]
+other = "Account"
+
+[btn_submit_content]
+other = "Submit Content"
+
+[btn_contact]
+other = "Contact"
+
+[btn_more]
+other = "More"
+
+[btn_community_chat]
+other = "Community Chat"
+
+######################################### 
+#   ARIA
+#########################################
+
+[aria_main_nav]
+other = "main pages"
+
+[aria_change_lang]
+other = "change language"
+
+[aria_quick_actions]
+other = "quick actions"
+
+[aria_about_nav]
+other = "about pages"
+
+[aria_website_nav]
+other = "other pages"
+
+[aria_social_nav]
+other = "social networks"
