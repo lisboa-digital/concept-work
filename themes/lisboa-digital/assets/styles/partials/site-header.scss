@@ -5,7 +5,6 @@
 .site-header {
     background-color: $color-primary;
     &__container {
-        // max-width: $site-max-width;
         margin: 0 auto;
         padding: 0 rem($gutter);
         @include media-breakpoint-up(lg) {
@@ -33,10 +32,6 @@
             }
         }
     }
-
-    /**********************************************************
-        LOGO
-    **********************************************************/
     &__logo {
         display: flex;
         flex-direction: row;
@@ -79,10 +74,6 @@
             }
         }
     }
-
-    /**********************************************************
-        ACTIONS
-    **********************************************************/
     &__actions {
         display: flex;
         flex-direction: row;
@@ -143,10 +134,6 @@
             }
         }
     }
-
-    /**********************************************************
-        Primary Navigation
-    **********************************************************/
     &__nav {
         position: relative;
         display: flex;
