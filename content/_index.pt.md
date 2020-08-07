@@ -7,7 +7,5 @@ description = "Permaneça informado. Descubra os próximos eventos. Encontre o p
         link = "the-city"
     [hero.image]
         alt = "fotografia de uma rua de Lisboa com um elétrico amarelo"
-        [hero.image.src]
-            default = "/images/photo-lisbon.jpg"
-            retina  = "/images/photo-lisbon@2x.jpg"
+        src = "photo-lisbon.jpg"
 +++

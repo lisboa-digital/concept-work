@@ -7,7 +7,5 @@ description = "Stay informed. Discover the next events. Find the next business p
         link = "the-city"
     [hero.image]
         alt = "photography of a Lisbon street with a yellow streetcar"
-        [hero.image.src]
-            default = "/images/photo-lisbon.jpg"
-            retina  = "/images/photo-lisbon@2x.jpg"
+        src = "photo-lisbon.jpg"
 +++
