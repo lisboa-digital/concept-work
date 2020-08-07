@@ -14,7 +14,8 @@
             }
         }
         &:last-of-type { 
-            // Hack to allow image resizing
+            // Hack to properly allow image resizing across browsers and devices
+            display: block;
             max-width: $site-max-width - ($gutter*2);
             margin: 0 auto;
         }
@@ -93,11 +94,10 @@
         }
     }
     &__image {
-        position: relative;
-        display: block;
         width: 100%;
         height: auto;
         @include media-breakpoint-up(lg) {
+            position: relative;
             bottom: rem(-48px);
         }
     }

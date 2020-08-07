@@ -22,6 +22,7 @@
 }
 
 .hero__row:last-of-type {
+  display: block;
   max-width: 1170px;
   margin: 0 auto;
 }
@@ -187,14 +188,13 @@
 }
 
 .hero__image {
-  position: relative;
-  display: block;
   width: 100%;
   height: auto;
 }
 
 @media (min-width: 992px) {
   .hero__image {
+    position: relative;
     bottom: -3rem;
   }
 }
