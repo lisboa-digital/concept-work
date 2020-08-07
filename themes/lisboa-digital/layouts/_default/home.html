@@ -3,4 +3,5 @@
 {{ end }}
 
 {{ define "body-content" }}
+{{ partial "hero" (dict "ctx" . "title" .Params.title "description" .Params.description "button" .Params.hero.button "image" .Params.hero.image) }}
 {{ end }}

@@ -9,3 +9,5 @@ $baseURL: "{{ $url.Path }}";
 @import "mixins/title";
 @import "rem";
 @import "bootstrap";
+
+@import "partials/hero";

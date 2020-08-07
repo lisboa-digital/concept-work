@@ -1,0 +1,104 @@
+.hero {
+    padding-top: rem(32px);
+    background-color: $color-primary;
+    background-image: $color-primary-gradient;
+    &__row {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        &:nth-of-type(4) {
+            height: 96px;
+            @include media-breakpoint-up(lg) {
+                display: none;
+            }
+        }
+        &:last-of-type { 
+            // Hack to allow image resizing
+            max-width: $site-max-width - ($gutter*2);
+            margin: 0 auto;
+        }
+    }
+    &__column {
+        flex-grow: 1;
+        &:first-of-type,
+        &:last-of-type {
+            display: none;
+            @include media-breakpoint-up(lg) {
+                display: block;
+            }
+        }
+        &:nth-of-type(2) {
+            max-width: $site-max-width;
+        }
+    }
+    &__graphic {
+        @include pattern-dots;
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    &__title,
+    &__description {
+        max-width: rem(940px);
+        padding: 0 rem($gutter);
+        margin: 0 auto;
+    }
+    &__title {
+        font-family: $font-family-primary;
+        font-weight: 700;
+        font-size: rem(36px);
+        line-height: rem(36px);
+        text-align: center;
+        color: $color-light;
+        margin-bottom: rem(4px);
+        @include media-breakpoint-up(sm) {
+            font-size: rem(40px);
+            line-height: rem(40px);
+            margin-bottom: rem(8px);
+            padding: 0 rem($gutter*2);
+        }
+        @include media-breakpoint-up(md) {
+            font-size: rem(48px);
+            line-height: rem(48px);
+            margin-bottom: rem(12px);
+            padding: 0 rem($gutter*4);
+        }
+        @include media-breakpoint-up(lg) {
+            font-size: rem(64px);
+            line-height: rem(64px);
+            margin-bottom: rem(24px);
+        }
+    }
+    &__description {
+        @include text-body;
+        @include text-body--light;
+        text-align: center;
+        margin: rem(4px) auto;
+        @include media-breakpoint-up(lg) {
+            margin: rem(24px) auto;
+            padding: 0 rem($gutter*2);
+        }
+    }
+    &__button {
+        @include btn;
+        @include btn--secondary;
+        @include btn--md;
+        margin-top: rem(32px);
+        margin-bottom: rem(20px);
+        @include media-breakpoint-up(lg) {
+            @include btn--lg;
+            margin-top: rem(24px);
+            margin-bottom: 0;
+        }
+    }
+    &__image {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: auto;
+        @include media-breakpoint-up(lg) {
+            bottom: rem(-48px);
+        }
+    }
+}

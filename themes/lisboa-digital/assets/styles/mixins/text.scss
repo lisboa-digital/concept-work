@@ -4,7 +4,7 @@
 
 @mixin text-body {
     font-family: $font-family-secondary;
-    font-weight: 400;
+    font-weight: 500;
     font-size: rem(14px);
     @include media-breakpoint-up(md) {
         font-size: rem(15px);
