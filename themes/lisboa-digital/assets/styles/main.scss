@@ -1,4 +1,5 @@
-$baseURL: "{{ .Site.BaseURL }}";
+{{ $url := urls.Parse .Site.BaseURL }}
+$baseURL: "{{ $url.Path }}";
 
 @import "settings";
 @import "mixins/btn";

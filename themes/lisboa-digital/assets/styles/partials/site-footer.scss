@@ -71,18 +71,21 @@
             }
         }
         &-title {
+            @include section-title;
             @include section-title--dark;
         }
         &-description {
-            @include body--dark;
+            @include text-body;
+            @include text-body--dark;
         }
         &-chat-btn {
-            @include btn--primary;
+            @include btn;
             @include btn--md;
+            @include btn--primary;
             @include media-breakpoint-up(md) {
                 @include btn--lg;
             } 
-            .icon {
+            > .btn__icon {
                 background-image: url($baseURL + "images/icon-chat--secondary.svg");
             }
         }
@@ -107,8 +110,9 @@
     &__account-btn,
     &__submit-content-btn,
     &__contact-btn {
-        @include btn--primary;
+        @include btn;
         @include btn--md;
+        @include btn--primary;
         margin-bottom: rem($gutter);
         @include media-breakpoint-up(md) {
             @include btn--lg;
@@ -132,17 +136,17 @@
         @include media-breakpoint-up(xl) {
             display: inline-block;
         }
-        .icon {
+        > .btn__icon {
             background-image: url($baseURL + "images/icon-person--secondary.svg");
         }
     }
     &__submit-content-btn {
-        .icon {
+        > .btn__icon {
             background-image: url($baseURL + "images/icon-submit--secondary.svg");
         }
     }
     &__contact-btn {
-        .icon {
+        > .btn__icon {
             background-image: url($baseURL + "images/icon-envelope--secondary.svg");
         }
     }
@@ -196,7 +200,7 @@
             left: rem(-70px);
             width: rem(56px);
             height: 100%;
-            background-image: url($baseURL + '/images/site-footer__nav-graphic.svg');
+            background-image: url($baseURL + 'images/site-footer__nav-graphic.svg');
             background-size: rem(56px) rem(28px);
             background-position: right top;
             background-repeat: no-repeat;
@@ -204,13 +208,14 @@
             @include media-breakpoint-up(sm) {
                 left: rem(-36px);
                 width: rem(8px);
-                background-image: url($baseURL + '/images/site-footer__nav-graphic--vertical.svg');
+                background-image: url($baseURL + 'images/site-footer__nav-graphic--vertical.svg');
                 background-position: left top;
                 background-size: rem(8px) rem(560px);
             }
         }
     }
     &__heading {
+        @include light-title;
         @include light-title--light;
         margin: 0;
         margin-bottom: rem(16px);
@@ -219,6 +224,7 @@
         }
     }
     &__link {
+        @include link;
         @include link--secondary;
         display: block;
         margin-top: rem(16px);
@@ -283,12 +289,13 @@
         }
     }
     &__newsletter-btn {
-        @include btn--secondary-hollow;
+        @include btn;
         @include btn--md;
+        @include btn--secondary-hollow;
         @include media-breakpoint-up(md) {
             @include btn--lg;
         }
-        .icon {
+        > .btn__icon {
             background-image: url($baseURL + "images/icon-forward--secondary.svg");
         }
     }

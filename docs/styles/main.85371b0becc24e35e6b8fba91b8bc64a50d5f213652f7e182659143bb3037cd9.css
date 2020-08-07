@@ -339,11 +339,11 @@ button:hover {
   letter-spacing: 0.04em;
   white-space: nowrap;
   border-radius: 3.125rem;
-  color: #FFE270;
-  border: 1px solid #FFE270;
   padding: 0.375rem 0.75rem;
   line-height: 0.75rem;
   font-size: 0.75rem;
+  color: #FFE270;
+  border: 1px solid #FFE270;
 }
 
 .site-header__account-btn:focus {
@@ -353,12 +353,18 @@ button:hover {
   text-decoration: underline;
 }
 
-.site-header__account-btn .icon {
+.site-header__account-btn > .btn__icon {
   display: inline-block;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   vertical-align: bottom;
+}
+
+.site-header__account-btn > .btn__icon {
+  margin-left: 0.375rem;
+  height: 0.75rem;
+  width: 0.75rem;
 }
 
 .site-header__account-btn:hover {
@@ -370,27 +376,21 @@ button:hover {
   outline-color: #FFE270;
 }
 
-.site-header__account-btn .icon {
-  margin-left: 0.375rem;
-  height: 0.75rem;
-  width: 0.75rem;
-}
-
 @media (min-width: 992px) {
   .site-header__account-btn {
     padding: 0.5rem 1rem;
     line-height: 0.875rem;
     font-size: 0.875rem;
   }
-  .site-header__account-btn .icon {
+  .site-header__account-btn > .btn__icon {
     margin-left: 0.5rem;
     height: 0.875rem;
     width: 0.875rem;
   }
 }
 
-.site-header__account-btn .icon {
-  background-image: url("https://lisboa-digital.github.io/concept-work/images/icon-person--secondary.svg");
+.site-header__account-btn > .btn__icon {
+  background-image: url("/concept-work/images/icon-person--secondary.svg");
 }
 
 .site-header__submit-content-btn {
@@ -400,12 +400,12 @@ button:hover {
   letter-spacing: 0.04em;
   white-space: nowrap;
   border-radius: 3.125rem;
-  color: #10428E;
-  border: 1px solid #FFE270;
-  background-color: #FFE270;
   padding: 0.375rem 0.75rem;
   line-height: 0.75rem;
   font-size: 0.75rem;
+  color: #10428E;
+  border: 1px solid #FFE270;
+  background-color: #FFE270;
 }
 
 .site-header__submit-content-btn:focus {
@@ -415,12 +415,18 @@ button:hover {
   text-decoration: underline;
 }
 
-.site-header__submit-content-btn .icon {
+.site-header__submit-content-btn > .btn__icon {
   display: inline-block;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   vertical-align: bottom;
+}
+
+.site-header__submit-content-btn > .btn__icon {
+  margin-left: 0.375rem;
+  height: 0.75rem;
+  width: 0.75rem;
 }
 
 .site-header__submit-content-btn:hover {
@@ -433,27 +439,21 @@ button:hover {
   outline-color: #FFE270;
 }
 
-.site-header__submit-content-btn .icon {
-  margin-left: 0.375rem;
-  height: 0.75rem;
-  width: 0.75rem;
-}
-
 @media (min-width: 992px) {
   .site-header__submit-content-btn {
     padding: 0.5rem 1rem;
     line-height: 0.875rem;
     font-size: 0.875rem;
   }
-  .site-header__submit-content-btn .icon {
+  .site-header__submit-content-btn > .btn__icon {
     margin-left: 0.5rem;
     height: 0.875rem;
     width: 0.875rem;
   }
 }
 
-.site-header__submit-content-btn .icon {
-  background-image: url("https://lisboa-digital.github.io/concept-work/images/icon-submit--primary.svg");
+.site-header__submit-content-btn > .btn__icon {
+  background-image: url("/concept-work/images/icon-submit--primary.svg");
 }
 
 .site-header__contact-btn {
@@ -463,12 +463,12 @@ button:hover {
   letter-spacing: 0.04em;
   white-space: nowrap;
   border-radius: 3.125rem;
-  color: #10428E;
-  border: 1px solid #FFE270;
-  background-color: #FFE270;
   padding: 0.375rem 0.75rem;
   line-height: 0.75rem;
   font-size: 0.75rem;
+  color: #10428E;
+  border: 1px solid #FFE270;
+  background-color: #FFE270;
 }
 
 .site-header__contact-btn:focus {
@@ -478,12 +478,18 @@ button:hover {
   text-decoration: underline;
 }
 
-.site-header__contact-btn .icon {
+.site-header__contact-btn > .btn__icon {
   display: inline-block;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   vertical-align: bottom;
+}
+
+.site-header__contact-btn > .btn__icon {
+  margin-left: 0.375rem;
+  height: 0.75rem;
+  width: 0.75rem;
 }
 
 .site-header__contact-btn:hover {
@@ -496,27 +502,21 @@ button:hover {
   outline-color: #FFE270;
 }
 
-.site-header__contact-btn .icon {
-  margin-left: 0.375rem;
-  height: 0.75rem;
-  width: 0.75rem;
-}
-
 @media (min-width: 992px) {
   .site-header__contact-btn {
     padding: 0.5rem 1rem;
     line-height: 0.875rem;
     font-size: 0.875rem;
   }
-  .site-header__contact-btn .icon {
+  .site-header__contact-btn > .btn__icon {
     margin-left: 0.5rem;
     height: 0.875rem;
     width: 0.875rem;
   }
 }
 
-.site-header__contact-btn .icon {
-  background-image: url("https://lisboa-digital.github.io/concept-work/images/icon-envelope--primary.svg");
+.site-header__contact-btn > .btn__icon {
+  background-image: url("/concept-work/images/icon-envelope--primary.svg");
 }
 
 .site-header {
@@ -690,12 +690,12 @@ button:hover {
   }
 }
 
-.site-header__btns .site-header__account-btn .icon {
+.site-header__btns .site-header__account-btn > .btn__icon {
   display: none;
 }
 
 @media (min-width: 992px) {
-  .site-header__btns .site-header__account-btn .icon {
+  .site-header__btns .site-header__account-btn > .btn__icon {
     display: inline-block;
   }
 }
@@ -733,7 +733,8 @@ button:hover {
   top: 0;
   height: 100%;
   width: 15%;
-  background: linear-gradient(to right, transparent, #10428E);
+  background-image: linear-gradient(to right, rgba(16, 66, 142, 0), #10428E);
+  background-repeat: no-repeat;
 }
 
 @media (min-width: 992px) {
@@ -853,11 +854,11 @@ button:hover {
   letter-spacing: 0.04em;
   white-space: nowrap;
   border-radius: 3.125rem;
-  color: #FFE270;
-  border: 1px solid #FFE270;
   padding: 0.5rem 1rem;
   line-height: 0.875rem;
   font-size: 0.875rem;
+  color: #FFE270;
+  border: 1px solid #FFE270;
 }
 
 .site-header__toggle-nav-btn:focus {
@@ -867,12 +868,18 @@ button:hover {
   text-decoration: underline;
 }
 
-.site-header__toggle-nav-btn .icon {
+.site-header__toggle-nav-btn > .btn__icon {
   display: inline-block;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   vertical-align: bottom;
+}
+
+.site-header__toggle-nav-btn > .btn__icon {
+  margin-left: 0.5rem;
+  height: 0.875rem;
+  width: 0.875rem;
 }
 
 .site-header__toggle-nav-btn:hover {
@@ -884,20 +891,18 @@ button:hover {
   outline-color: #FFE270;
 }
 
-.site-header__toggle-nav-btn .icon {
-  margin-left: 0.5rem;
-  height: 0.875rem;
-  width: 0.875rem;
-}
-
 @media (min-width: 992px) {
   .site-header__toggle-nav-btn {
     display: none;
   }
 }
 
-.site-header__toggle-nav-btn .icon {
-  background-image: url("https://lisboa-digital.github.io/concept-work/images/icon-hamburger--secondary.svg");
+.site-header__toggle-nav-btn > .btn__icon {
+  background-image: url("/concept-work/images/icon-hamburger--secondary.svg");
+}
+
+.site-header__toggle-nav-btn--close > .btn__icon {
+  background-image: url("/concept-work/images/icon-close--secondary.svg");
 }
 
 .site-footer {
@@ -1046,12 +1051,12 @@ button:hover {
   letter-spacing: 0.04em;
   white-space: nowrap;
   border-radius: 3.125rem;
-  color: #FFE270;
-  border: 1px solid #10428E;
-  background-color: #10428E;
   padding: 0.5rem 1rem;
   line-height: 0.875rem;
   font-size: 0.875rem;
+  color: #FFE270;
+  border: 1px solid #10428E;
+  background-color: #10428E;
 }
 
 .site-footer__community-chat-btn:focus {
@@ -1061,12 +1066,18 @@ button:hover {
   text-decoration: underline;
 }
 
-.site-footer__community-chat-btn .icon {
+.site-footer__community-chat-btn > .btn__icon {
   display: inline-block;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   vertical-align: bottom;
+}
+
+.site-footer__community-chat-btn > .btn__icon {
+  margin-left: 0.5rem;
+  height: 0.875rem;
+  width: 0.875rem;
 }
 
 .site-footer__community-chat-btn:hover {
@@ -1079,27 +1090,21 @@ button:hover {
   outline-color: #10428E;
 }
 
-.site-footer__community-chat-btn .icon {
-  margin-left: 0.5rem;
-  height: 0.875rem;
-  width: 0.875rem;
-}
-
 @media (min-width: 768px) {
   .site-footer__community-chat-btn {
     padding: 0.625rem 1.25rem;
     line-height: 1rem;
     font-size: 1rem;
   }
-  .site-footer__community-chat-btn .icon {
+  .site-footer__community-chat-btn > .btn__icon {
     margin-left: 0.625rem;
     height: 1rem;
     width: 1rem;
   }
 }
 
-.site-footer__community-chat-btn .icon {
-  background-image: url("https://lisboa-digital.github.io/concept-work/images/icon-chat--secondary.svg");
+.site-footer__community-chat-btn > .btn__icon {
+  background-image: url("/concept-work/images/icon-chat--secondary.svg");
 }
 
 .site-footer__actions {
@@ -1133,12 +1138,12 @@ button:hover {
   letter-spacing: 0.04em;
   white-space: nowrap;
   border-radius: 3.125rem;
-  color: #FFE270;
-  border: 1px solid #10428E;
-  background-color: #10428E;
   padding: 0.5rem 1rem;
   line-height: 0.875rem;
   font-size: 0.875rem;
+  color: #FFE270;
+  border: 1px solid #10428E;
+  background-color: #10428E;
   margin-bottom: 0.9375rem;
 }
 
@@ -1149,12 +1154,18 @@ button:hover {
   text-decoration: underline;
 }
 
-.site-footer__account-btn .icon, .site-footer__submit-content-btn .icon, .site-footer__contact-btn .icon {
+.site-footer__account-btn > .btn__icon, .site-footer__submit-content-btn > .btn__icon, .site-footer__contact-btn > .btn__icon {
   display: inline-block;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   vertical-align: bottom;
+}
+
+.site-footer__account-btn > .btn__icon, .site-footer__submit-content-btn > .btn__icon, .site-footer__contact-btn > .btn__icon {
+  margin-left: 0.5rem;
+  height: 0.875rem;
+  width: 0.875rem;
 }
 
 .site-footer__account-btn:hover, .site-footer__submit-content-btn:hover, .site-footer__contact-btn:hover {
@@ -1167,19 +1178,13 @@ button:hover {
   outline-color: #10428E;
 }
 
-.site-footer__account-btn .icon, .site-footer__submit-content-btn .icon, .site-footer__contact-btn .icon {
-  margin-left: 0.5rem;
-  height: 0.875rem;
-  width: 0.875rem;
-}
-
 @media (min-width: 768px) {
   .site-footer__account-btn, .site-footer__submit-content-btn, .site-footer__contact-btn {
     padding: 0.625rem 1.25rem;
     line-height: 1rem;
     font-size: 1rem;
   }
-  .site-footer__account-btn .icon, .site-footer__submit-content-btn .icon, .site-footer__contact-btn .icon {
+  .site-footer__account-btn > .btn__icon, .site-footer__submit-content-btn > .btn__icon, .site-footer__contact-btn > .btn__icon {
     margin-left: 0.625rem;
     height: 1rem;
     width: 1rem;
@@ -1218,16 +1223,16 @@ button:hover {
   }
 }
 
-.site-footer__account-btn .icon {
-  background-image: url("https://lisboa-digital.github.io/concept-work/images/icon-person--secondary.svg");
+.site-footer__account-btn > .btn__icon {
+  background-image: url("/concept-work/images/icon-person--secondary.svg");
 }
 
-.site-footer__submit-content-btn .icon {
-  background-image: url("https://lisboa-digital.github.io/concept-work/images/icon-submit--secondary.svg");
+.site-footer__submit-content-btn > .btn__icon {
+  background-image: url("/concept-work/images/icon-submit--secondary.svg");
 }
 
-.site-footer__contact-btn .icon {
-  background-image: url("https://lisboa-digital.github.io/concept-work/images/icon-envelope--secondary.svg");
+.site-footer__contact-btn > .btn__icon {
+  background-image: url("/concept-work/images/icon-envelope--secondary.svg");
 }
 
 .site-footer__main {
@@ -1294,7 +1299,7 @@ button:hover {
   left: -4.375rem;
   width: 3.5rem;
   height: 100%;
-  background-image: url("https://lisboa-digital.github.io/concept-work//images/site-footer__nav-graphic.svg");
+  background-image: url("/concept-work/images/site-footer__nav-graphic.svg");
   background-size: 3.5rem 1.75rem;
   background-position: right top;
   background-repeat: no-repeat;
@@ -1305,7 +1310,7 @@ button:hover {
   .site-footer__nav::before {
     left: -2.25rem;
     width: 0.5rem;
-    background-image: url("https://lisboa-digital.github.io/concept-work//images/site-footer__nav-graphic--vertical.svg");
+    background-image: url("/concept-work/images/site-footer__nav-graphic--vertical.svg");
     background-position: left top;
     background-size: 0.5rem 35rem;
   }
@@ -1447,11 +1452,11 @@ button:hover {
   letter-spacing: 0.04em;
   white-space: nowrap;
   border-radius: 3.125rem;
-  color: #FFE270;
-  border: 1px solid #FFE270;
   padding: 0.5rem 1rem;
   line-height: 0.875rem;
   font-size: 0.875rem;
+  color: #FFE270;
+  border: 1px solid #FFE270;
 }
 
 .site-footer__newsletter-btn:focus {
@@ -1461,12 +1466,18 @@ button:hover {
   text-decoration: underline;
 }
 
-.site-footer__newsletter-btn .icon {
+.site-footer__newsletter-btn > .btn__icon {
   display: inline-block;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   vertical-align: bottom;
+}
+
+.site-footer__newsletter-btn > .btn__icon {
+  margin-left: 0.5rem;
+  height: 0.875rem;
+  width: 0.875rem;
 }
 
 .site-footer__newsletter-btn:hover {
@@ -1478,25 +1489,19 @@ button:hover {
   outline-color: #FFE270;
 }
 
-.site-footer__newsletter-btn .icon {
-  margin-left: 0.5rem;
-  height: 0.875rem;
-  width: 0.875rem;
-}
-
 @media (min-width: 768px) {
   .site-footer__newsletter-btn {
     padding: 0.625rem 1.25rem;
     line-height: 1rem;
     font-size: 1rem;
   }
-  .site-footer__newsletter-btn .icon {
+  .site-footer__newsletter-btn > .btn__icon {
     margin-left: 0.625rem;
     height: 1rem;
     width: 1rem;
   }
 }
 
-.site-footer__newsletter-btn .icon {
-  background-image: url("https://lisboa-digital.github.io/concept-work/images/icon-forward--secondary.svg");
+.site-footer__newsletter-btn > .btn__icon {
+  background-image: url("/concept-work/images/icon-forward--secondary.svg");
 }

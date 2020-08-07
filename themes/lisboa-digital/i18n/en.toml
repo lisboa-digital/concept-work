@@ -85,6 +85,9 @@ other = "Contact"
 [btn_more]
 other = "More"
 
+[btn_close]
+other = "Close"
+
 [btn_community_chat]
 other = "Community Chat"
 

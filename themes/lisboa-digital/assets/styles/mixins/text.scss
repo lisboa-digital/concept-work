@@ -2,7 +2,7 @@
 @import "../bootstrap";
 @import "../rem";
 
-@mixin body {
+@mixin text-body {
     font-family: $font-family-secondary;
     font-weight: 400;
     font-size: rem(14px);
@@ -14,19 +14,15 @@
     }
 }
 
-@mixin body--dark {
-    @include body;
+@mixin text-body--dark {
     color: $color-dark;
 }
-@mixin body--light {
-    @include body;
+@mixin text-body--light {
     color: $color-light;
 }
-@mixin body--primary {
-    @include body;
+@mixin text-body--primary {
     color: $color-primary;
 }
-@mixin body--secondary {
-    @include body;
+@mixin text-body--secondary {
     color: $color-secondary;
 }

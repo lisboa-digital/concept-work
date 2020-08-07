@@ -95,6 +95,7 @@
         }
     }
     &__lang {
+        @include link;
         @include link--secondary;
         font-size: rem(12px);
         margin-left: rem(8px);
@@ -112,7 +113,7 @@
                 @include media-breakpoint-up(lg) {
                     margin-left: rem(24px);
                 }
-                .icon {
+                > .btn__icon {
                     display: none;
                     @include media-breakpoint-up(lg) {
                         display: inline-block;
@@ -147,7 +148,8 @@
             top:0;
             height: 100%;
             width: 15%;
-            background: linear-gradient(to right, transparent, $color-primary);
+            background-image: linear-gradient(to right, rgba($color-primary, 0), $color-primary);
+            background-repeat: no-repeat;
             @include media-breakpoint-up(lg) {
                 display: none;
             }
@@ -194,6 +196,7 @@
             }
         }
         &-link {
+            @include link;
             @include link--secondary;
             font-size: rem(16px);
             @include media-breakpoint-up(xl) {
@@ -230,13 +233,19 @@
     &__toggle-nav-btn {
         z-index: 100;
         margin-left: rem($gutter);
-        @include btn--secondary-hollow;
+        @include btn;
         @include btn--md;
+        @include btn--secondary-hollow;
         @include media-breakpoint-up(lg) {
             display: none;
         }
-        .icon {
+        > .btn__icon {
             background-image: url($baseURL + "images/icon-hamburger--secondary.svg");
+        }
+        &--close {
+            > .btn__icon {
+                background-image: url($baseURL + "images/icon-close--secondary.svg");
+            }
         }
     }
 }

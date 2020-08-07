@@ -15,22 +15,18 @@
 }
 
 @mixin section-title--dark {
-    @include section-title;
     color: $color-dark;
 }
 
 @mixin section-title--light {
-    @include section-title;
     color: $color-light;
 }
 
 @mixin section-title--primary {
-    @include section-title;
     color: $color-primary;
 }
 
 @mixin section-title--secondary {
-    @include section-title;
     color: $color-secondary;
 }
 
@@ -47,21 +43,17 @@
 }
 
 @mixin light-title--dark {
-    @include light-title;
     color: $color-dark;
 }
 
 @mixin light-title--light {
-    @include light-title;
     color: $color-light;
 }
 
 @mixin light-title--primary {
-    @include light-title;
     color: $color-primary;
 }
 
 @mixin light-title--secondary {
-    @include light-title;
     color: $color-secondary;
 }

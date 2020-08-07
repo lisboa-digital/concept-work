@@ -14,7 +14,7 @@
         outline-style: dashed;
         text-decoration: underline;
     }
-    .icon {
+    > .btn__icon {
         display: inline-block;
         background-position: center;
         background-repeat: no-repeat;
@@ -24,7 +24,6 @@
 }
 
 @mixin btn--primary {
-    @include btn;
     color: $color-secondary;
     border: 1px solid $color-primary;
     background-color: $color-primary;
@@ -39,7 +38,6 @@
 }
 
 @mixin btn--primary-hollow {
-    @include btn;
     color: $color-primary;
     border: 1px solid $color-primary;
     &:hover {
@@ -52,7 +50,6 @@
 }
 
 @mixin btn--secondary {
-    @include btn;
     color: $color-primary;
     border: 1px solid $color-secondary;
     background-color: $color-secondary;
@@ -67,7 +64,6 @@
 }
 
 @mixin btn--secondary-hollow {
-    @include btn;
     color: $color-secondary;
     border: 1px solid $color-secondary;
     &:hover {
@@ -83,7 +79,7 @@
     padding: rem(6px) rem(12px);
     line-height: rem(12px);
     font-size: rem(12px);
-    .icon {
+    > .btn__icon {
         margin-left: rem(6px);
         height: rem(12px);
         width: rem(12px);
@@ -94,7 +90,7 @@
     padding: rem(8px) rem(16px);
     line-height: rem(14px);
     font-size: rem(14px);
-    .icon {
+    > .btn__icon {
         margin-left: rem(8px);
         height: rem(14px);
         width: rem(14px);
@@ -105,7 +101,7 @@
     padding: rem(10px) rem(20px);
     line-height: rem(16px);
     font-size: rem(16px);
-    .icon {
+    > .btn__icon {
         margin-left: rem(10px);
         height: rem(16px);
         width: rem(16px);
