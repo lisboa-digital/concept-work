@@ -5,6 +5,56 @@ other = "Lisboa"
 other = "Digital"
 
 ######################################### 
+#   Months
+#########################################
+
+[January]
+other = "Janeiro"
+
+[February]
+other = "Fevereiro"
+
+[March]
+other = "Março"
+
+[April]
+other = "Abril"
+
+[May]
+other = "Maio"
+
+[June]
+other = "Junho"
+
+[July]
+other = "Julho"
+
+[August]
+other = "Agosto"
+
+[September]
+other = "Setembro"
+
+[October]
+other = "Outubro"
+
+[November]
+other = "Novembro"
+
+[December]
+other = "Dezembro"
+
+######################################### 
+#   LATEST NEWS
+#########################################
+
+[latest_news]
+other = "Últimas Notícias"
+
+[btn_more_news]
+other = "Mais Notícias"
+
+######################################### 
 #   COMMUNITY
 #########################################
 

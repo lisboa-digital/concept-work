@@ -1,0 +1,25 @@
+<div class="latest-news">
+    <div class="latest-news__heading">{{ T "latest_news" }}</div>
+    <ol class="latest-news__items">
+        {{ range $item := $.latest_news -}}
+        <li class="latest-news__item">
+            {{ $image := $.ctx.Resources.GetMatch $item.image.src -}}
+            {{- $image_default := $image.Resize "358x" -}}
+            {{- $image_retina := $image.Resize "716x" -}}
+            <a class="latest-news__link" href="{{ $item.url }}">
+                <img class="latest-news__image" src="{{ $image_default.RelPermalink }}" alt="{{ $item.image.alt }}" srcset="{{ $image_default.RelPermalink }} 1x, {{ $image_retina.RelPermalink }} 1.5x">
+                <p class="latest-news__title">{{ $item.title }}</p>
+            </a>
+            {{ $date := (time $item.date) -}}
+            <p class="latest-news__date">{{ printf "%d %s %d" $date.Day (T $date.Month) $date.Year }}</p>
+            <p class="latest-news__in">in {{ $item.in }}</p>
+            <ol class="latest-news__categories">
+                {{ range $category := $item.categories -}}
+                <li class="latest-news__category">{{ $category }}</li>
+                {{- end }}
+            </ol>
+        </li>
+        {{- end }}
+    </ol>
+    <a class="latest-news__more-news-btn" href="{{ relref $.ctx "news" }}">{{ T "btn_more_news" }}<span class="btn__icon"></span></a>
+</div>

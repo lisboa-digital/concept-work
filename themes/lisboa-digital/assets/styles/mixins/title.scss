@@ -3,6 +3,7 @@
 @import "../rem";
 
 @mixin section-title {
+    display: block;
     font-family: $font-family-primary;
     font-weight: 700;
     font-size: rem(24px);

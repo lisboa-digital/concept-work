@@ -1,5 +1,11 @@
 .site-footer {
-    margin-top: rem(160px);
+    margin-top: rem(108px);
+    @include media-breakpoint-up(md) {
+        margin-top: rem(132px);
+    }
+    @include media-breakpoint-up(lg) {
+        margin-top: rem(160px);
+    }
     &__row {
         &:nth-child(1) {
             max-width: $site-max-width;
@@ -54,6 +60,7 @@
         &-section {
             align-self: flex-start;
             text-align: left;
+            width: 100%; //ie hack
             @include media-breakpoint-up(sm) {
                 align-self: center;
                 text-align: center;

@@ -319,7 +319,7 @@ body {
 }
 
 a:focus {
-  outline-width: 1px;
+  outline-width: 2px;
   outline-offset: 0.5rem;
   outline-style: dashed;
 }
@@ -347,7 +347,7 @@ button:hover {
 }
 
 .site-header__account-btn:focus {
-  outline-width: 1px;
+  outline-width: 2px;
   outline-offset: 0.5rem;
   outline-style: dashed;
   text-decoration: underline;
@@ -409,7 +409,7 @@ button:hover {
 }
 
 .site-header__submit-content-btn:focus {
-  outline-width: 1px;
+  outline-width: 2px;
   outline-offset: 0.5rem;
   outline-style: dashed;
   text-decoration: underline;
@@ -472,7 +472,7 @@ button:hover {
 }
 
 .site-header__contact-btn:focus {
-  outline-width: 1px;
+  outline-width: 2px;
   outline-offset: 0.5rem;
   outline-style: dashed;
   text-decoration: underline;
@@ -862,7 +862,7 @@ button:hover {
 }
 
 .site-header__toggle-nav-btn:focus {
-  outline-width: 1px;
+  outline-width: 2px;
   outline-offset: 0.5rem;
   outline-style: dashed;
   text-decoration: underline;
@@ -906,7 +906,19 @@ button:hover {
 }
 
 .site-footer {
-  margin-top: 10rem;
+  margin-top: 6.75rem;
+}
+
+@media (min-width: 768px) {
+  .site-footer {
+    margin-top: 8.25rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .site-footer {
+    margin-top: 10rem;
+  }
 }
 
 .site-footer__row:nth-child(1) {
@@ -982,6 +994,7 @@ button:hover {
 .site-footer__community-section {
   align-self: flex-start;
   text-align: left;
+  width: 100%;
 }
 
 @media (min-width: 576px) {
@@ -1007,6 +1020,7 @@ button:hover {
 }
 
 .site-footer__community-title {
+  display: block;
   font-family: "Rajdhani", sans-serif;
   font-weight: 700;
   font-size: 1.5rem;
@@ -1060,7 +1074,7 @@ button:hover {
 }
 
 .site-footer__community-chat-btn:focus {
-  outline-width: 1px;
+  outline-width: 2px;
   outline-offset: 0.5rem;
   outline-style: dashed;
   text-decoration: underline;
@@ -1148,7 +1162,7 @@ button:hover {
 }
 
 .site-footer__account-btn:focus, .site-footer__submit-content-btn:focus, .site-footer__contact-btn:focus {
-  outline-width: 1px;
+  outline-width: 2px;
   outline-offset: 0.5rem;
   outline-style: dashed;
   text-decoration: underline;
@@ -1460,7 +1474,7 @@ button:hover {
 }
 
 .site-footer__newsletter-btn:focus {
-  outline-width: 1px;
+  outline-width: 2px;
   outline-offset: 0.5rem;
   outline-style: dashed;
   text-decoration: underline;

@@ -3,6 +3,7 @@ $baseURL: "{{ $url.Path }}";
 
 @import "settings";
 @import "mixins/btn";
+@import "mixins/category";
 @import "mixins/link";
 @import "mixins/pattern";
 @import "mixins/text";
@@ -12,10 +13,21 @@ $baseURL: "{{ $url.Path }}";
 
 @import "partials/hero";
 @import "partials/numbers";
+@import "partials/latest-news";
 
 .numbers {
     margin-top: rem(24px);
     @include media-breakpoint-up(lg) {
         margin-top: rem(96px);
+    }
+}
+
+.latest-news {
+    margin-top: rem(56px);
+    @include media-breakpoint-up(md) {
+        margin-top: rem(96px);
+    }
+    @include media-breakpoint-up(lg) {
+        margin-top: rem(120px);
     }
 }
