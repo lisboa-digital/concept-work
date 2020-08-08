@@ -4,11 +4,55 @@ other = "Lisboa"
 [digital]
 other = "Digital"
 
+######################################### 
+#   COMMUNITY
+#########################################
+
 [community]
 other = "Comunidade"
 
 [community_description]
 other = "Temos um canal Discord onde podes falar e partilhar com os teus pares e comunidade."
+
+######################################### 
+#   NUMBERS
+#########################################
+
+[numbers_companies]
+other = "Empresas"
+
+[numbers_education]
+other = "Cursos"
+
+[numbers_investors]
+other = "Investidores"
+
+[numbers_jobs]
+other = "Empregos"
+
+[numbers_people]
+other = "Perfis"
+
+[numbers_workspaces]
+other = "Espaços"
+
+[icon_numbers_companies]
+other = "iconografia de um edifício e pessoas"
+
+[icon_numbers_education]
+other = "iconografia de uma pessoa com um chapéu de graduado"
+
+[icon_numbers_investors]
+other = "iconografia de três pessoas e um símbolo monetário"
+
+[icon_numbers_jobs]
+other = "iconografia de um formulário de emprego com um lápis"
+
+[icon_numbers_people]
+other = "iconografia com três pessoas"
+
+[icon_numbers_workspaces]
+other = "iconografia de uma secretária de trabalho com um computador e uma caneca"
 
 ######################################### 
 #   NAVIGATION

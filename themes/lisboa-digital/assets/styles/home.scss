@@ -11,3 +11,11 @@ $baseURL: "{{ $url.Path }}";
 @import "bootstrap";
 
 @import "partials/hero";
+@import "partials/numbers";
+
+.numbers {
+    margin-top: rem(24px);
+    @include media-breakpoint-up(lg) {
+        margin-top: rem(96px);
+    }
+}

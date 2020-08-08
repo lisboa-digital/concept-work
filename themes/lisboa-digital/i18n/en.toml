@@ -4,11 +4,55 @@ other = "Lisbon"
 [digital]
 other = "Digital"
 
+######################################### 
+#   COMMUNITY
+#########################################
+
 [community]
 other = "Community"
 
 [community_description]
 other = "We have a Discord channel were you can talk and share with your community and peers."
+
+######################################### 
+#   NUMBERS
+#########################################
+
+[numbers_companies]
+other = "Companies"
+
+[numbers_education]
+other = "Courses"
+
+[numbers_investors]
+other = "Investors"
+
+[numbers_jobs]
+other = "Jobs"
+
+[numbers_people]
+other = "Profiles"
+
+[numbers_workspaces]
+other = "Workspaces"
+
+[icon_numbers_companies]
+other = "iconography with a building and people"
+
+[icon_numbers_education]
+other = "iconography of a person with a graduate cap"
+
+[icon_numbers_investors]
+other = "iconography of three people and a monetary symbol"
+
+[icon_numbers_jobs]
+other = "iconography of a job application and a pencil"
+
+[icon_numbers_people]
+other = "iconography with three persons"
+
+[icon_numbers_workspaces]
+other = "iconography of a work desk with a computer and a cup"
 
 ######################################### 
 #   NAVIGATION

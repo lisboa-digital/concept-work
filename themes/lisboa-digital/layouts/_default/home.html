@@ -7,4 +7,5 @@
 {{- $hero_image_retina := $hero_image.Resize "2268x" -}}
 {{- $hero_image_default := $hero_image.Resize "1134x" -}}
 {{ partial "hero" (dict "ctx" . "title" .Params.title "description" .Params.description "button" .Params.hero.button "image" (dict "alt" .Params.hero.image.alt "src" (dict "default" $hero_image_default.RelPermalink "retina" $hero_image_retina.RelPermalink))) }}
+{{ partial "numbers" . }}
 {{ end }}
