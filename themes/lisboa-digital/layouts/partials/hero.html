@@ -4,26 +4,29 @@
             <span class="hero__graphic">&nbsp;</span>
         </div>
         <div class="hero__column">
-            <h1 class="hero__title">{{ .title }}</h1>
+            <h1 class="hero__title">{{ $.ctx.Page.Title }}</h1>
         </div>
         <div class="hero__column">&nbsp;</div>
     </div>
     <div class="hero__row">
         <div class="hero__column">&nbsp;</div>
         <div class="hero__column">
-            <p class="hero__description">{{ .description }}</p>
+            <p class="hero__description">{{ $.ctx.Page.Description }}</p>
         </div>
         <div class="hero__column">
             <span class="hero__graphic">&nbsp;</span>
         </div>
     </div>
     <div class="hero__row">
-        <a class="hero__button" href="{{ relref .ctx .button.link }}">{{ .button.title }}</a>
+        <a class="hero__button" href="{{ relref .ctx $.hero.button.link }}">{{ $.hero.button.title }}</a>
     </div>
     <div class="hero__row">
         <span class="hero__graphic">&nbsp;</span>
     </div>
     <div class="hero__row">
-        <img class="hero__image" src="{{ .image.src.default }}" srcset="{{ .image.src.default }} 1x, {{ .image.src.retina  }} 1.5x" alt="{{ .image.alt }}">
+        {{ $image := $.ctx.Resources.GetMatch $.hero.image.src -}}
+        {{- $image_default := $image.Resize "1134x" -}}
+        {{- $image_retina := $image.Resize "2268x" -}}
+        <img class="hero__image" src="{{ $image_default.RelPermalink }}" srcset="{{ $image_default.RelPermalink }} 1x, {{ $image_retina.RelPermalink }} 1.5x" alt="{{ $.hero.image.alt }}">
     </div>
 </div>
