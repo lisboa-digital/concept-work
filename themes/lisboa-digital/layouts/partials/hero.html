@@ -1,7 +1,7 @@
 <div class="hero">
     <div class="hero__row">
         <div class="hero__column">
-            <span class="hero__graphic">&nbsp;</span>
+            <span class="hero__pattern">&nbsp;</span>
         </div>
         <div class="hero__column">
             <h1 class="hero__title">{{ $.ctx.Page.Title }}</h1>
@@ -14,14 +14,14 @@
             <p class="hero__description">{{ $.ctx.Page.Description }}</p>
         </div>
         <div class="hero__column">
-            <span class="hero__graphic">&nbsp;</span>
+            <span class="hero__pattern">&nbsp;</span>
         </div>
     </div>
     <div class="hero__row">
         <a class="hero__button" href="{{ relref .ctx $.hero.button.link }}">{{ $.hero.button.title }}</a>
     </div>
     <div class="hero__row">
-        <span class="hero__graphic">&nbsp;</span>
+        <span class="hero__pattern">&nbsp;</span>
     </div>
     <div class="hero__row">
         {{ $image := $.ctx.Resources.GetMatch $.hero.image.src -}}

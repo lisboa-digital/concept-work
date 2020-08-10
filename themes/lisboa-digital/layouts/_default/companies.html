@@ -1,1 +1,9 @@
-{{ define "body-content" }}{{ end }}
+{{ define "head-end" }}
+    {{ partial "style" (dict "src" "companies" "asTmpl" .) }}
+{{ end }}
+
+{{ define "body-content" }}
+<main>
+    {{ partial "page-header" (dict "page_header" (dict "title" .Page.Title "description" .Page.Description) "ctx" .) }}
+</main>
+{{ end }}

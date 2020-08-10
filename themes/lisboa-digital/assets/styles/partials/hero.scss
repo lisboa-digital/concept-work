@@ -33,7 +33,7 @@
             max-width: $site-max-width;
         }
     }
-    &__graphic {
+    &__pattern {
         @include pattern-dots;
         display: block;
         width: 100%;

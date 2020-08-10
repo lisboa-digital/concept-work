@@ -1043,6 +1043,7 @@ button:hover {
   font-family: "Quicksand", sans-serif;
   font-weight: 500;
   font-size: 0.875rem;
+  line-height: 150%;
   color: #0D0043;
 }
 

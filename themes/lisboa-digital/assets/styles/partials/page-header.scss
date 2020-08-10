@@ -1,0 +1,102 @@
+@import "call-to-action.scss";
+
+.page-header {
+    display: flex;
+    flex-direction: column;
+    background-color: $color-primary;
+    background-image: $color-primary-gradient;
+    padding-top: rem(24px);
+    padding-bottom: rem(50px);
+    @include media-breakpoint-up(md) {
+        flex-direction: row;
+        padding-top: rem(70px);
+        padding-bottom: rem(190px);
+    }
+    // &::after {
+    //     content: ' ';
+    //     display: block;
+    //     font-size: 0;
+    //     padding: 0;
+    //     margin: rem(-90px) auto 0 auto;
+    // }
+    &__side {
+        display: none;
+        @include media-breakpoint-up(md) {
+            display: block;
+            flex-grow: 1;
+        }
+    }
+    &__main {
+        display: flex;
+        flex-direction: column;
+        @include media-breakpoint-up(md) {
+            flex-direction: row;
+            flex-basis: $site-max-width;
+        }
+    }
+    &__section {
+        &:first-of-type {
+            margin: 0 rem($gutter) rem(24px) rem($gutter);
+            @include media-breakpoint-up(md) {
+                flex-basis: rem(360px);
+                margin-left: rem($gutter*2);
+                margin-bottom: 0;
+            }
+        }
+        &:last-of-type {
+            display: flex;
+            flex-direction: column;
+            .page-header__pattern {
+                height: rem(96px);
+            }
+            @include media-breakpoint-up(md) {
+                flex-grow: 1;
+                flex-direction: row;
+                .call-to-action {
+                    flex-basis: rem(360px);
+                    margin: 0 rem($gutter*2);
+                }
+                .page-header__pattern {
+                    flex-grow: 1;
+                    height: 100%;
+                    background-position: right;
+                }
+            }
+        }
+    }
+    &__title,
+    &__description {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        @include media-breakpoint-up(md) {
+            text-align: left;
+        }
+    }
+    &__title {
+        color: $color-light;
+        font-family: $font-family-primary;
+        font-weight: 700;
+        font-size: rem(36px);
+        line-height: 100%;
+        @include media-breakpoint-up(md) {
+            font-size: rem(64px);
+        }
+    }
+    &__description {
+        @include text-body;
+        @include text-body--light;
+        margin-top: rem(8px);
+        @include media-breakpoint-up(md) {
+            margin-top: rem(16px);
+        }
+    }
+    &__pattern {
+        @include pattern-dots;
+        max-width: 100%;
+        height: 100%;
+        @include media-breakpoint-up(md) {
+            background-position: left;
+        }
+    }
+}

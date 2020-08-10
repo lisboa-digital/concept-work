@@ -1,3 +1,4 @@
 +++
 url = "registar"
+title = "Registar"
 +++

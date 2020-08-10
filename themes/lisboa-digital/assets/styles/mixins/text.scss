@@ -6,6 +6,7 @@
     font-family: $font-family-secondary;
     font-weight: 500;
     font-size: rem(14px);
+    line-height: 150%;
     @include media-breakpoint-up(md) {
         font-size: rem(15px);
     }
