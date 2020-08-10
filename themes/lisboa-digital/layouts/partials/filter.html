@@ -1,0 +1,17 @@
+<aside class="filter">
+    <div class="filter__header">
+        <p class="filter__title">
+            <img class="filter__icon" src="{{ "/images/icon-settings--primary.svg" | relURL}}" alt="{{ T "icon_settings"}}">
+            {{ T "filter" }}
+        </p>
+        <button class="filter__toggle-btn">{{ T "filter_toggle" }}</button>
+    </div>
+    <form class="filter__form">
+        <div class="form-group">
+            <label class="filter__label" for="filter__keyword">{{ T "keyword" }}</label>
+            <input class="form-control filter__input" id="filter__keyword" type="text">
+        </div>
+        {{ partial "filter__categories" (dict "categories" $.filter.categories) }}
+        <button class="filter__apply-btn" type="submit">{{ T "filter_apply"}}</button>
+    </form>
+</aside>

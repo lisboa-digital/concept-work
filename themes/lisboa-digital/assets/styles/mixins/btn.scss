@@ -8,12 +8,7 @@
     letter-spacing: 0.04em;
     white-space: nowrap;
     border-radius: rem(50px);
-    &:focus {
-        outline-width: 2px;
-        outline-offset: rem(8px);
-        outline-style: dashed;
-        text-decoration: underline;
-    }
+    @include focus;
     > .btn__icon {
         display: inline-block;
         background-position: center;

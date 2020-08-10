@@ -8,8 +8,8 @@
     
     <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;700&display=swap" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet">
-    <link href="/concept-work/styles/main.f591efee43211f19f058fa4e20f579aaca5a86114df2bb44f7b49fb1fbfe5b47.css" rel="stylesheet">
-    <link href="/concept-work/styles/education-institutions.bfe8fc6b67d412f4bbcdbe97b6d9b9b5c62ccb4628ae2b003df5a19cb363399f.css" rel="stylesheet">
+    <link href="/concept-work/styles/main.9b4d5adace05a12c274c9e676569439b8f53cb67f5375d80bf91d973d352ff09.css" rel="stylesheet">
+    <link href="/concept-work/styles/education-institutions.ba2e8bea451af103ca27d1d38a2d0dfaaa9fe65001e7c0bea6ae7bdf344b2968.css" rel="stylesheet">
 
 </head>
 <body>
@@ -77,6 +77,44 @@
         <div class="page-header__pattern">&nbsp;</div>
     </div>
 </div>
+    <div class="page-body">
+        <aside class="filter">
+    <div class="filter__header">
+        <p class="filter__title">
+            <img class="filter__icon" src="/concept-work/images/icon-settings--primary.svg" alt="">
+            Filter
+        </p>
+        <button class="filter__toggle-btn">open/close filter</button>
+    </div>
+    <form class="filter__form">
+        <div class="form-group">
+            <label class="filter__label" for="filter__keyword">Keyword</label>
+            <input class="form-control filter__input" id="filter__keyword" type="text">
+        </div>
+        <fieldset class="form-group filter__categories">
+    <p class="filter__label">Category</p>
+    
+    <div class="form-check filter__category">
+        <input class="form-check-input filter__checkbox " type="checkbox" value="" id="all">
+        <label class="form-check-label filter__label " for="all">All</label>
+    </div>
+    <div class="form-check filter__category">
+        <input class="form-check-input filter__checkbox " type="checkbox" value="" id="uncategorized">
+        <label class="form-check-label filter__label " for="uncategorized">Uncategorized</label>
+    </div>
+    <div class="form-check filter__category">
+        <input class="form-check-input filter__checkbox " type="checkbox" value="" id="higher-education">
+        <label class="form-check-label filter__label " for="higher-education">Higher Education</label>
+    </div>
+    <div class="form-check filter__category">
+        <input class="form-check-input filter__checkbox " type="checkbox" value="" id="specialized">
+        <label class="form-check-label filter__label " for="specialized">Specialized</label>
+    </div>
+</fieldset>
+        <button class="filter__apply-btn" type="submit">Apply filter</button>
+    </form>
+</aside>
+    </div>
 </main>
 
     <footer class="site-footer">
@@ -136,5 +174,7 @@
     </div>
 </footer>
     <script src="/concept-work/scripts/main.ba4251e8e1f5ab82e93bc26e1a97e8085249d293dd50befcdf2a570b6b70b4f5.js" type="text/javascript" defer></script>
+    <script src="/concept-work/scripts/partials/filter.f3f09b79f8516cdc0bd52c29887260d09a64f88c5e88e2489852fa1fe19a4cad.js" type="text/javascript" defer></script>
+
 </body>
 </html>

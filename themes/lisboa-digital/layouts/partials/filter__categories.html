@@ -1,0 +1,10 @@
+<fieldset class="form-group filter__categories">
+    <p class="filter__label">{{ T "category" }}</p>
+    {{ range $category := $.categories -}}
+    {{ $id := $category | urlize }}
+    <div class="form-check filter__category">
+        <input class="form-check-input filter__checkbox " type="checkbox" value="" id="{{ $id }}">
+        <label class="form-check-label filter__label " for="{{ $id }}">{{ $category }}</label>
+    </div>
+    {{- end }}
+</fieldset>

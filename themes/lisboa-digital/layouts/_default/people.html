@@ -5,5 +5,12 @@
 {{ define "body-content" }}
 <main>
     {{ partial "page-header" (dict "page_header" (dict "title" .Page.Title "description" .Page.Description) "ctx" .) }}
+    <div class="page-body">
+        {{ partial "filter" (dict "filter" .Params.filter) }}
+    </div>
 </main>
+{{ end }}
+
+{{ define "body-end" }}
+    {{ partial "script" "partials/filter" }}
 {{ end }}

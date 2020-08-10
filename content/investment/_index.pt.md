@@ -7,4 +7,14 @@ description = "Opções para ajudá-lo a iniciar, desenvolver ou expandir as sua
     [call_to_action.button]
         name = "Veja o Glossário"
         link = "investment-glossary"
+[filter]
+    categories = [
+        "Todas",
+        "Sem categoria",
+        "Acceleradora",
+        "Anjo",
+        "Crowdfund",
+        "Capital Privado",
+        "Incubadora",
+        "Capital de Risco"] 
 +++

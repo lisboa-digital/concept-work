@@ -6,4 +6,15 @@ description = "Let’s learn something new"
     [call_to_action.button]
         name = "Education Institutions"
         link = "education-institutions"
+[filter]
+    categories = [
+        "All",
+        "Uncategorized",
+        "Bachelor",
+        "Master",
+        "Post-Graduation",
+        "Phd",
+        "Bootcamp",
+        "Specialized",
+        "Workshop"] 
 +++

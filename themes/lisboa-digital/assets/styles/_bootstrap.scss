@@ -7,6 +7,13 @@ $link-color:                            $color-primary;
 $link-hover-color:                      darken($color-primary, 15%);
 $font-family-base:                      $font-family-primary;
 $font-size-base:                        rem($font-size-default);
+$border-color:                          rgba($color-primary, 0.16);
+$input-font-family:                     $font-family-secondary;
+$input-color:                           $color-primary;
+$input-border-color:                    $border-color;
+$border-radius:                         rem(4px);
+$border-radius-lg:                      $border-radius;
+$border-radius-sm:                      $border-radius;
 
 @import "bootstrap/scss/functions";
 @import "bootstrap/scss/variables";

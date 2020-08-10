@@ -1,0 +1,10 @@
+.page-body {
+    margin: 0 auto;
+    margin-top: rem(-50px);
+    padding: rem($gutter);
+    max-width: $site-max-width;
+    @include media-breakpoint-up(md) {
+        margin-top: rem(-90px);
+        padding: rem($gutter*2);
+    }
+}

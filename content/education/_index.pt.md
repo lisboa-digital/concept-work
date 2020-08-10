@@ -7,4 +7,15 @@ description = "Vamos aprender algo novo"
     [call_to_action.button]
         name = "Instituições"
         link = "education-institutions"
+[filter]
+    categories = [
+        "Todos",
+        "Sem categoria",
+        "Licenciatura",
+        "Mestrado",
+        "Pós-Graduação",
+        "Doutoramento",
+        "Bootcamp",
+        "Especializado",
+        "Workshop"]  
 +++

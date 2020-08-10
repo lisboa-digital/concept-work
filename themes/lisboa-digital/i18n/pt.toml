@@ -206,3 +206,26 @@ other = "outras páginas"
 
 [aria_social_nav]
 other = "redes sociais"
+
+######################################### 
+#   FILTER
+#########################################
+
+[filter]
+other = "Filtro"
+
+[filter_toggle]
+other = "abrir/fechar filtro"
+
+[filter_apply]
+other = "Aplicar filtro"
+
+######################################### 
+#   OTHER
+#########################################
+
+[category]
+other = "Categoria"
+
+[keyword]
+other = "Palavra-chave"

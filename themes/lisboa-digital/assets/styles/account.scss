@@ -3,11 +3,7 @@ $baseURL: "{{ $url.Path }}";
 
 @import "settings";
 @import "mixins/btn";
-@import "mixins/category";
-@import "mixins/link";
-@import "mixins/pattern";
-@import "mixins/text";
-@import "mixins/title";
+@import "mixins";
 @import "rem";
 @import "bootstrap";
 

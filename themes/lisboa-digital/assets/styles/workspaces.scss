@@ -2,13 +2,12 @@
 $baseURL: "{{ $url.Path }}";
 
 @import "settings";
-@import "mixins/btn";
-@import "mixins/category";
-@import "mixins/link";
-@import "mixins/pattern";
-@import "mixins/text";
-@import "mixins/title";
+@import "mixins";
 @import "rem";
 @import "bootstrap";
 
+@import "bootstrap/scss/forms";
+
 @import "partials/page-header.scss";
+@import "partials/page-body.scss";
+@import "partials/filter.scss";
