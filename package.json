@@ -5,7 +5,7 @@
   "description": "Implemention stage of \"Lisboa Digital\" project",
   "scripts": {
     "clean": "npx rimraf resources public docs",
-    "serve": "npm run clean && hugo serve --bind 0.0.0.0 -p 1313 --noHTTPCache --ignoreCache --disableFastRender --renderToDisk --forceSyncStatic --i18n-warnings --gc",
+    "serve": "npm run clean && hugo serve --bind 0.0.0.0 -p 1313 --noHTTPCache --forceSyncStatic --i18n-warnings --gc",
     "build": "npm run clean && hugo -e gh_pages -d docs --ignoreCache --gc"
   },
   "author": "Pedro Pereira <a57127@campus.fcsh.unl.pt>",
