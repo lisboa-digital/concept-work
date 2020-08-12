@@ -1,0 +1,71 @@
+<div class="listing">
+    {{ $locations := false -}}
+    {{- if (isset . "listing") -}}
+    <ul class="listing__items">
+        {{ if (isset $.listing "item") -}}
+        {{- range $item := $.listing.item -}}
+        {{- $url := $item.url -}}
+        {{ if (isset $item "email_url") -}}
+        {{- $url = printf "mailto:%s" $item.url -}}
+        {{- end -}}
+        <li class="listing__item">
+            <div class="listing__figure-section">
+                {{ if (isset $item "image") -}}
+                {{- $image := $.ctx.Resources.GetMatch $item.image.src -}}
+                {{- $image_default := $image.Resize $.listing.sizes.default -}}
+                {{- $image_retina := $image.Resize $.listing.sizes.retina -}}
+                <a class="listing__anchor" href="{{ $url }}"><img class="listing__image" src="{{ $image_default.RelPermalink }}" srcset="{{ $image_default.RelPermalink }} 1x, {{ $image_retina.RelPermalink }} 1.5x" alt="{{ $item.image.alt }}"></a>
+                {{- end -}}
+                {{- if (isset $item "date_figure") -}}
+                {{- $date := (time $item.date) -}}
+                <div class="listing__date-figure">
+                    <p class="listing__day">{{ printf "%d" $date.Day }}</p>
+                    <p class="listing__month">{{ printf "%s" (substr (T $date.Month) 0 3) }}</p>
+                </div>
+                {{- end }}
+            </div>
+            <div class="listing__main-section">
+                {{ if (isset $item "title") -}}
+                <p class="listing__title"><a class="listing__anchor" href="{{ $url }}">{{ $item.title }}</a></p>
+                {{- end }}
+                {{ if (isset $item "show_url") -}}
+                <a class="listing__url" href="{{ $url }}">{{ $url }}</a>
+                {{- end }}
+                {{ if (isset $item "description") -}}
+                <p class="listing__description">{{ $item.description }}</p>
+                {{- end }}
+                {{ if (isset $item "date") -}}
+                {{- $date := (time $item.date) -}}
+                <p class="listing__date">{{ printf "%d %s %d" $date.Day (T $date.Month) $date.Year }}</p>
+                {{- end }}
+                {{ if (isset $item "in") -}}
+                <p class="listing__in">in {{ $item.in }}</p>
+                {{- end }}
+                {{ if (isset $item "categories") -}}
+                <ul class="listing__categories">
+                    {{ range $category := $item.categories -}}
+                    <li class="listing__category">{{ $category }}</li>
+                    {{- end }}
+                </ul>
+                {{- end }}
+                {{ if (isset $item "location") -}}
+                {{- $locations = true -}}
+                <div class="listing__location">
+                    <a class="listing__map-btn" href="#">{{ T "map" }}<span class="btn__icon"></span></a>
+                    <a class="listing__ar-btn" href="#">{{ T "ar" }}<span class="btn__icon"></span></a>
+                </div>
+                {{- end }}
+            </div>
+        </li>
+        {{- end -}}
+        {{- end }}
+    </ul>
+    {{ if $locations -}}
+    <div class="listing__locations">
+        <a class="listing__map-all-btn" href="#">{{ T "see_locations_map" }}<span class="btn__icon"></span></a>
+        <a class="listing__ar-all-btn" href="#">{{ T "see_locations_ar" }}<span class="btn__icon"></span></a>
+    </div>
+    {{- end }}
+    {{ partial "pagination" }}
+    {{- end }}
+</div>

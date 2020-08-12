@@ -9,9 +9,7 @@
         justify-content: center;
         &:nth-of-type(4) {
             height: 96px;
-            @include media-breakpoint-up(lg) {
-                display: none;
-            }
+            @include media-breakpoint-up(lg) { display: none; }
         }
         &:last-of-type { 
             // Hack to properly allow image resizing across browsers and devices
@@ -25,13 +23,9 @@
         &:first-of-type,
         &:last-of-type {
             display: none;
-            @include media-breakpoint-up(lg) {
-                display: block;
-            }
+            @include media-breakpoint-up(lg) { display: block; }
         }
-        &:nth-of-type(2) {
-            max-width: $site-max-width;
-        }
+        &:nth-of-type(2) { max-width: $site-max-width; }
     }
     &__pattern {
         @include pattern-dots;

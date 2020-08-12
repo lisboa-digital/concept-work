@@ -1,60 +1,32 @@
-@import "../settings";
-@import "../bootstrap";
-@import "../rem";
-
 @mixin section-title {
     display: block;
     font-family: $font-family-primary;
     font-weight: 700;
     font-size: rem(24px);
-    @include media-breakpoint-up(md) {
-        font-size: rem(30px);
-    }
-    @include media-breakpoint-up(lg) {
-        font-size: rem(36px);
-    }
+    @include media-breakpoint-up(md) { font-size: rem(30px); }
+    @include media-breakpoint-up(lg) { font-size: rem(36px); }
 }
 
-@mixin section-title--dark {
-    color: $color-dark;
-}
+@mixin section-title--dark { color: $color-dark; }
 
-@mixin section-title--light {
-    color: $color-light;
-}
+@mixin section-title--light { color: $color-light; }
 
-@mixin section-title--primary {
-    color: $color-primary;
-}
+@mixin section-title--primary { color: $color-primary; }
 
-@mixin section-title--secondary {
-    color: $color-secondary;
-}
+@mixin section-title--secondary { color: $color-secondary; }
 
 @mixin light-title {
     font-family: $font-family-primary;
     font-weight: 400;
     font-size: rem(20px);
-    @include media-breakpoint-up(md) {
-        font-size: rem(22px);
-    }
-    @include media-breakpoint-up(lg) {
-        font-size: rem(24px);
-    }
+    @include media-breakpoint-up(md) { font-size: rem(22px); }
+    @include media-breakpoint-up(lg) { font-size: rem(24px); }
 }
 
-@mixin light-title--dark {
-    color: $color-dark;
-}
+@mixin light-title--dark { color: $color-dark; }
 
-@mixin light-title--light {
-    color: $color-light;
-}
+@mixin light-title--light { color: $color-light; }
 
-@mixin light-title--primary {
-    color: $color-primary;
-}
+@mixin light-title--primary { color: $color-primary; }
 
-@mixin light-title--secondary {
-    color: $color-secondary;
-}
+@mixin light-title--secondary { color: $color-secondary; }

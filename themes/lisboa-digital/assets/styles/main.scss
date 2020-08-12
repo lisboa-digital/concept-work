@@ -8,21 +8,15 @@ $baseURL: "{{ $url.Path }}";
 
 @import "bootstrap/scss/reboot";
 
-body {
-    font-size: 16px;
-}
+body { font-size: 16px; }
 
-a {
-    @include focus;
-}
+a { @include focus; }
 
 button {
     border: none;
     background-color: transparent;
     @include focus;
-    &:hover {
-        text-decoration: underline;
-    }
+    &:hover { text-decoration: underline; }
 }
 
 @import "partials/site-header";

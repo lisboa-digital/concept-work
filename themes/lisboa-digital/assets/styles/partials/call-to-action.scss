@@ -24,11 +24,7 @@
         @include btn;
         @include btn--primary;
         @include btn--md;
-        @include media-breakpoint-up(md) {
-            @include btn--lg;
-        }
-        > .btn__icon {
-            background-image: url($baseURL + "images/icon-forward--secondary.svg");
-        }
+        @include btn--icon($baseURL + "images/icon-forward--secondary.svg");
+        @include media-breakpoint-up(md) { @include btn--lg; }
     }
 }

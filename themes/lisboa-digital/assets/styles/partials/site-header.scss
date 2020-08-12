@@ -7,9 +7,7 @@
     &__container {
         margin: 0 auto;
         padding: 0 rem($gutter);
-        @include media-breakpoint-up(lg) {
-            padding: 0 rem(($gutter*2));
-        }
+        @include media-breakpoint-up(lg) { padding: 0 rem(($gutter*2)); }
     }
     &__row {
         &:nth-of-type(1) {
@@ -38,6 +36,7 @@
         font-size: 0;
         font-family: $font-family-primary;
         color: $color-light;
+        overflow: hidden;
         &:hover {
             color: $color-secondary;
             text-decoration: none;
@@ -45,9 +44,7 @@
         &-image {
             width: auto;
             height: rem(32px);
-            @include media-breakpoint-up(lg) {
-                height: rem(48px);
-            }
+            @include media-breakpoint-up(lg) { height: rem(48px); }
         }
         &-text {
             display: flex;
@@ -69,9 +66,7 @@
             font-weight: 400;
             font-size: rem(10px);
             text-transform: lowercase;
-            @include media-breakpoint-up(lg) {
-                font-size: rem(14px);
-            }
+            @include media-breakpoint-up(lg) { font-size: rem(14px); }
         }
     }
     &__actions {
@@ -90,9 +85,7 @@
         display: none;
         height: rem(16px);
         width: rem(16px);
-        @include media-breakpoint-up(lg) {
-            display: inline-block;
-        }
+        @include media-breakpoint-up(lg) { display: inline-block; }
     }
     &__lang {
         @include link;
@@ -110,28 +103,18 @@
         .site-header {
             &__account-btn {
                 margin-left: rem(16px);
-                @include media-breakpoint-up(lg) {
-                    margin-left: rem(24px);
-                }
+                @include media-breakpoint-up(lg) { margin-left: rem(24px); }
                 > .btn__icon {
                     display: none;
-                    @include media-breakpoint-up(lg) {
-                        display: inline-block;
-                    }
+                    @include media-breakpoint-up(lg) { display: inline-block; }
                 }
             }
-            &__submit-content-btn {
-                margin-left: rem(24px);
-            }
-            &__contact-btn {
-                margin-left: rem(16px);
-            }
+            &__submit-content-btn { margin-left: rem(24px); }
+            &__contact-btn { margin-left: rem(16px); }
             &__submit-content-btn,
             &__contact-btn {
                 display: none;
-                @include media-breakpoint-up(lg) {
-                    display: inline-block;
-                }
+                @include media-breakpoint-up(lg) { display: inline-block; }
             }
         }
     }
@@ -150,9 +133,7 @@
             width: 15%;
             background-image: linear-gradient(to right, rgba($color-primary, 0), $color-primary);
             background-repeat: no-repeat;
-            @include media-breakpoint-up(lg) {
-                display: none;
-            }
+            @include media-breakpoint-up(lg) { display: none; }
         }
         &-list {
             display: flex;
@@ -167,41 +148,29 @@
             overflow-x:scroll;
             scrollbar-width: none;
             -ms-overflow-style: none;
-            &::-webkit-scrollbar { 
-                display: none;
-            }
-            @include media-breakpoint-up(lg) {
-                justify-content: center;
-            }
+            &::-webkit-scrollbar { display: none; }
+            @include media-breakpoint-up(lg) { justify-content: center; }
             .site-header {
                 &__submit-content-btn,
                 &__contact-btn {
-                    @include media-breakpoint-up(lg) {
-                        display: none;
-                    }
+                    @include media-breakpoint-up(lg) { display: none; }
                 }
             }
         }
         &-item {
             margin-left: rem(16px);
-            &:first-of-type {
-                margin-left: 0;
-            }
+            &:first-of-type { margin-left: 0; }
             @include media-breakpoint-up(lg) {
                 margin-left: rem(24px);
                 &:nth-last-of-type(1),
-                &:nth-last-of-type(2) {
-                    margin-left: 0;
-                }
+                &:nth-last-of-type(2) { margin-left: 0; }
             }
         }
         &-link {
             @include link;
             @include link--secondary;
             font-size: rem(16px);
-            @include media-breakpoint-up(xl) {
-                font-size: rem(18px);
-            }
+            @include media-breakpoint-up(xl) { font-size: rem(18px); }
         }
         &--open {
             .site-header {
@@ -212,21 +181,15 @@
                         overflow-y: none;
                         scrollbar-width: none;
                         -ms-overflow-style: none;
-                        &::-webkit-scrollbar { 
-                            display: none;
-                        }
+                        &::-webkit-scrollbar { display: none; }
                     }
                     &-item {
                         margin-left: rem($gutter);
                         margin-bottom: rem(16px);
-                        &:nth-last-of-type(3) {
-                            margin-bottom: rem(32px);
-                        }
+                        &:nth-last-of-type(3) { margin-bottom: rem(32px); }
                     }
                 }
-                &__toggle-nav-btn {
-                    align-self: flex-start;
-                }
+                &__toggle-nav-btn { align-self: flex-start; }
             }
         }
     }
@@ -236,16 +199,8 @@
         @include btn;
         @include btn--md;
         @include btn--secondary-hollow;
-        @include media-breakpoint-up(lg) {
-            display: none;
-        }
-        > .btn__icon {
-            background-image: url($baseURL + "images/icon-hamburger--secondary.svg");
-        }
-        &--close {
-            > .btn__icon {
-                background-image: url($baseURL + "images/icon-close--secondary.svg");
-            }
-        }
+        @include btn--icon($baseURL + "images/icon-hamburger--secondary.svg");
+        @include media-breakpoint-up(lg) { display: none; }
+        &--close { @include btn--icon($baseURL + "images/icon-close--secondary.svg"); }
     }
 }

@@ -7,6 +7,7 @@
     {{ partial "page-header" (dict "page_header" (dict "title" .Page.Title "description" .Page.Description "call_to_action" .Params.call_to_action) "ctx" .) }}
     <div class="page-body">
         {{ partial "filter" (dict "filter" .Params.filter) }}
+        {{ partial "listing" (dict "listing" .Params.listing "ctx" .) }}
     </div>
 </main>
 {{ end }}

@@ -1,10 +1,31 @@
 .page-body {
+    display: flex;
+    flex-direction: column;
     margin: 0 auto;
     margin-top: rem(-50px);
     padding: rem($gutter);
     max-width: $site-max-width;
     @include media-breakpoint-up(md) {
-        margin-top: rem(-90px);
+        margin-top: rem(-72px);
         padding: rem($gutter*2);
+    }
+    @include media-breakpoint-up(lg) {
+        flex-direction: row;
+        align-items: flex-start;
+        margin-top: rem(-120px);
+    }
+    .filter {
+        @include media-breakpoint-up(lg) { margin-top: rem(60px); }
+    }
+    .listing {
+        flex-grow: 1;
+        align-self: center;
+        margin-top: rem($gutter*2);
+        @include media-breakpoint-up(lg) {
+            align-self: flex-start;
+            padding: rem($gutter*2);
+            margin-top: 0;
+        }
+        @include media-breakpoint-up(xl) { padding: rem($gutter*4); }
     }
 }

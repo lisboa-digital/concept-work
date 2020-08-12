@@ -11,18 +11,12 @@ $baseURL: "{{ $url.Path }}";
 @import "partials/latest-news";
 
 .numbers {
-    margin-top: rem(24px);
-    @include media-breakpoint-up(lg) {
-        margin-top: rem(96px);
-    }
+    margin-top: rem(48px);
+    @include media-breakpoint-up(lg) { margin-top: rem(96px); }
 }
 
 .latest-news {
     margin-top: rem(56px);
-    @include media-breakpoint-up(md) {
-        margin-top: rem(96px);
-    }
-    @include media-breakpoint-up(lg) {
-        margin-top: rem(120px);
-    }
+    @include media-breakpoint-up(md) { margin-top: rem(96px); }
+    @include media-breakpoint-up(lg) { margin-top: rem(120px); }
 }

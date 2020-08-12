@@ -1,0 +1,204 @@
+.listing {
+    width: 100%; //IE Hack
+    background-color: white;
+    &__items,
+    &__items,
+    &__anchor,
+    &__day,
+    &__month,
+    &__title,
+    &__description,
+    &__url,
+    &__date,
+    &__in,
+    &__categories,
+    &__category {
+        // Reset
+        margin: 0;
+        padding: 0;
+    }
+    &__items,
+    &__category {
+        // Reset
+        list-style: none;
+    }
+    &__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-top: rem($gutter*2);
+        padding: 0 rem($gutter);
+        @include media-breakpoint-up(sm) { flex-direction: row; }
+        @include media-breakpoint-up(lg) { padding: 0; }
+        &:first-of-type { margin-top: 0;}
+    }
+    &__image {
+        width: 100%;
+        height: auto;
+        margin-bottom: rem($gutter);
+        @include media-breakpoint-up(sm) { width: rem(220px); }
+        @include media-breakpoint-up(md) { width: rem(280px); }
+        @include media-breakpoint-up(lg) { width: rem(220px); }
+        @include media-breakpoint-up(xl) { width: rem(280px); }
+    }
+    &__date-figure {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: rem(90px);
+        width: rem(90px);
+        border-radius: 100%;
+        color: $color-light;
+        background-color: $color-primary;
+        @include media-breakpoint-up(md) {
+            height: rem(120px);
+            width: rem(120px);
+        }
+    }
+    &__day {
+        font-family: $font-family-primary;
+        font-weight: 700;
+        font-size: rem(32px);
+        line-height: rem(24px);
+        @include media-breakpoint-up(md) {
+            font-size: rem(48px);
+            line-height: rem(32px);
+        }
+    }
+    &__month {
+        font-family: $font-family-secondary;
+        font-weight: 500;
+        font-size: rem(18px);
+        line-height: 100%;
+        margin-top: rem(4px);
+        @include media-breakpoint-up(md) { 
+            font-size: rem(24px);
+            margin-top: rem(8px);
+        }
+    }
+    &__main-section {
+        width: 100%; // IE Hack
+        @include media-breakpoint-up(sm) { 
+            flex-basis: 100%; // IE Hack
+            margin-left: rem($gutter*2);
+        }
+    }
+    &__description,
+    &__url,
+    &__date,
+    &__in,
+    &__categories { 
+        margin-top: rem(8px); 
+    }
+    &__title {
+        @include link;
+        @include link--primary;
+        font-size: rem(20px);
+        @include media-breakpoint-up(md) { font-size: rem(22px); }
+        @include media-breakpoint-up(xl) { font-size: rem(24px); }
+    }
+    &__description {
+        @include text-body;
+        color: $color-gray;
+    }
+    &__url {
+        @include link;
+        @include link--primary;
+        font-size: rem(12px);
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        hyphens: auto;
+        word-break: break-all; // Webkit hack
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        @include media-breakpoint-up(sm) { font-size: rem(14px); }
+        @include media-breakpoint-up(md) { font-size: rem(16px); }
+        &::before {
+            content: ' ';
+            display: inline-block;
+            font-size: 0;
+            height: rem(16px);
+            width: rem(16px);
+            margin-right: rem(12px);
+            background-image: url($baseURL + "images/icon-link--primary.svg");
+            background-size: rem(16px) rem(16px);
+            background-position: center center;
+            background-repeat: none;
+            vertical-align: middle;
+        }
+    }
+    &__date {
+        @include text-body;
+        font-weight: 700;
+        color: $color-gray;
+    }
+    &__in {
+        @include text-body;
+        color: $color-gray;
+        font-size: rem(10px);
+        @include media-breakpoint-up(sm) { font-size: rem(11px); }
+        @include media-breakpoint-up(md) { font-size: rem(12px); }
+    }
+    &__categories {
+        list-style: none;
+    }
+    &__category {
+        @include category;
+        @include category--dark;
+    }
+    &__location {
+        display: flex;
+        flex-direction: row;
+        margin-top: rem(24px); 
+    }
+    &__map-btn,
+    &__ar-btn {
+        @include btn;
+        @include btn--primary-hollow;
+        @include btn--sm;
+        margin-right: rem(16px);
+    }
+    &__map-btn {
+        @include btn--icon($baseURL + "images/icon-location--primary.svg");
+    }
+    &__ar-btn {
+        @include btn--icon($baseURL + "images/icon-camera--primary.svg");
+        @include media-breakpoint-up(lg) { display: none; }
+    }
+    &__locations {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: rem(48px);
+        overflow-wrap: normal;
+        @include media-breakpoint-up(md) { margin-top: rem(60px); }
+        @include media-breakpoint-up(lg) { align-items: flex-start; }
+    }
+    &__map-all-btn,
+    &__ar-all-btn {
+        @include btn;
+        @include btn--secondary;
+        @include btn--md;
+        margin-top: rem(16px);
+    }
+    &__map-all-btn {
+        @include btn--icon($baseURL + "images/icon-location--primary.svg");
+    }
+    &__ar-all-btn {
+        @include btn--icon($baseURL + "images/icon-camera--primary.svg");
+        @include media-breakpoint-up(lg) { display: none; }
+    }
+}
+
+@import "pagination";
+
+.listing {
+    .pagination {
+        margin-top: rem(80px);
+        @include media-breakpoint-up(lg) { justify-content: flex-start; }
+    }
+}

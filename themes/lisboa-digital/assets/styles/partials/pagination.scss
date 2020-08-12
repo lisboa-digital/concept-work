@@ -1,0 +1,36 @@
+.pagination {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    &__page-number,
+    &__previous,
+    &__next {
+        @include btn;
+        @include btn--primary-hollow;
+        @include btn--md;
+        margin: 0 rem(8px);
+    }
+    &__previous {
+        @include btn--icon-left;
+        @include btn--icon($baseURL + "images/icon-back--primary.svg");
+    }
+    &__next {
+        @include btn--icon($baseURL + "images/icon-forward--primary.svg");
+    }
+    &__page-number {
+        display: none;
+        padding: 0;
+        text-align: center;
+        line-height: rem(32px);
+        height: rem(32px);
+        width: rem(32px);
+        border-radius: rem(64px);
+        @include media-breakpoint-up(lg) { display: inline-block; }
+    }
+    &__page-number--selected {
+        display: inline-block;
+        border: none;
+        background-color: $color-light;
+    }
+}

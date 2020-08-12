@@ -11,3 +11,16 @@ $baseURL: "{{ $url.Path }}";
 @import "partials/page-header.scss";
 @import "partials/page-body.scss";
 @import "partials/filter.scss";
+@import "partials/listing.scss";
+
+.listing {
+    &__item { flex-direction: row; }
+    &__image {
+        width: rem(90px);
+        border-radius: 100%;
+        @include media-breakpoint-up(md) { width: rem(120px); }
+    }
+    &__main-section {
+        margin-left: rem($gutter*2); 
+    }
+}

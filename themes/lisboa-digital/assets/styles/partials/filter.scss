@@ -1,9 +1,11 @@
 .filter {
     background-color: $color-light;
     max-width: 100%;
-    padding: rem($gutter*2);
-    @include media-breakpoint-up(md) {
-        max-width: rem(360px);
+    padding: rem($gutter);
+    @include media-breakpoint-up(md) { padding: rem($gutter*2); }
+    @include media-breakpoint-up(lg) {
+        flex-basis: rem(360px);
+        min-width: rem(360px); 
     }
     &__header {
         display: flex;
@@ -12,18 +14,24 @@
         align-items: center;
     }
     &__title {
-        flex-grow: 1;
+        cursor: pointer;
         margin: 0;
+        flex-grow: 1;
         color: $color-primary;
         font-family: $font-family-primary;
         font-weight: 700;
-        font-size: rem(24px);
+        font-size: rem(20px);
         line-height: 100%;
+        @include media-breakpoint-up(md) { font-size: rem(24px); }
     }
     &__icon {
-        height: rem(24px);
-        width: rem(24px);
+        height: rem(20px);
+        width: rem(20px);
         margin-right: rem(16px);
+        @include media-breakpoint-up(md) {
+            height: rem(24px);
+            width: rem(24px);
+        }
     }
     &__toggle-btn {
         @include btn;
@@ -36,22 +44,14 @@
         background-image: url($baseURL + "images/icon-circle-plus--primary.svg");
         background-repeat: no-repeat;
         background-position: center center;
-        @include media-breakpoint-up(lg) {
-            display: none;
-        }
-        &--open {
-            background-image: url($baseURL + "images/icon-circle-minus--primary.svg");
-        }
+        @include media-breakpoint-up(lg) { display: none; }
+        &--open { background-image: url($baseURL + "images/icon-circle-minus--primary.svg"); }
     }
     &__form {
         display: none;
         margin-top: rem(16px);
-        @include media-breakpoint-up(md) {
-            margin-top: rem(32px);
-        }
-        &--open {
-            display: block;
-        }
+        @include media-breakpoint-up(md) { margin-top: rem(32px); }
+        &--open { display: block; }
     }
     &__label {
         @include text-body;
@@ -59,23 +59,25 @@
     }
     &__checkbox {
         @include focus;
-        + .filter__label {
-            margin-left: rem(10px);
-        }
+        + .filter__label { margin-left: rem(10px); }
     }
     &__categories {
         margin-top: rem(24px);
     }
     &__category {
         margin-bottom: rem(16px);
+        margin-left: rem($gutter);
+        display: inline-block;
+        @include media-breakpoint-up(lg) {
+            margin-left: 0;
+            display: block;
+        }
     }
     &__apply-btn {
         @include btn;
         @include btn--primary;
         @include btn--md;
         margin: rem(8px) 0 rem(24px) 0;
-        @include media-breakpoint-up(md) {
-            @include btn--lg;
-        }
+        @include media-breakpoint-up(md) { @include btn--lg; }
     }
 }

@@ -10,15 +10,9 @@
     @include media-breakpoint-up(md) {
         flex-direction: row;
         padding-top: rem(70px);
-        padding-bottom: rem(190px);
+        padding-bottom: rem(124px);
     }
-    // &::after {
-    //     content: ' ';
-    //     display: block;
-    //     font-size: 0;
-    //     padding: 0;
-    //     margin: rem(-90px) auto 0 auto;
-    // }
+    @include media-breakpoint-up(lg) { padding-bottom: rem(190px); }
     &__side {
         display: none;
         @include media-breakpoint-up(md) {
@@ -45,9 +39,9 @@
         }
         &:last-of-type {
             display: flex;
-            flex-direction: column;
-            .page-header__pattern {
-                height: rem(96px);
+            flex-direction: column-reverse;
+            .page-header__pattern { 
+                height: rem(96px); 
             }
             @include media-breakpoint-up(md) {
                 flex-grow: 1;
@@ -69,9 +63,7 @@
         margin: 0;
         padding: 0;
         text-align: center;
-        @include media-breakpoint-up(md) {
-            text-align: left;
-        }
+        @include media-breakpoint-up(md) { text-align: left; }
     }
     &__title {
         color: $color-light;
@@ -79,24 +71,18 @@
         font-weight: 700;
         font-size: rem(36px);
         line-height: 100%;
-        @include media-breakpoint-up(md) {
-            font-size: rem(64px);
-        }
+        @include media-breakpoint-up(md) { font-size: rem(64px); }
     }
     &__description {
         @include text-body;
         @include text-body--light;
         margin-top: rem(8px);
-        @include media-breakpoint-up(md) {
-            margin-top: rem(16px);
-        }
+        @include media-breakpoint-up(md) { margin-top: rem(16px); }
     }
     &__pattern {
         @include pattern-dots;
         max-width: 100%;
         height: 100%;
-        @include media-breakpoint-up(md) {
-            background-position: left;
-        }
+        @include media-breakpoint-up(md) { background-position: left; }
     }
 }

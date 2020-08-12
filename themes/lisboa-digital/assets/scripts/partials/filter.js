@@ -1,6 +1,7 @@
 import { breakpoints } from "../breakpoints";
 
 function filter__toggle() {
+  var title = document.querySelector(".filter__title");
   var toggleBtn = document.querySelector(".filter__toggle-btn");
   var content = document.querySelector(".filter__form");
 
@@ -18,6 +19,7 @@ function filter__toggle() {
   }
 
   toggleBtn.addEventListener("click", toggleContent);
+  title.addEventListener("click", toggleContent);
   window.addEventListener("resize", handleResize);
 
   handleResize(null);

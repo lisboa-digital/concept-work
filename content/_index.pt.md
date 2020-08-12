@@ -6,7 +6,7 @@ description = "Permaneça informado. Descubra os próximos eventos. Encontre o p
         title = "Sobre Lisboa"
         link = "the-city"
     [hero.image]
-        alt = "fotografia de uma rua de Lisboa com um elétrico amarelo"
+        alt = "rua de Lisboa com um elétrico amarelo"
         src = "photo-lisbon.jpg"
 [[latest_news]]
     title = "EatTasty entregou 250 mil almoços portugueses para escritórios em Lisboa e Madrid"
@@ -16,7 +16,7 @@ description = "Permaneça informado. Descubra os próximos eventos. Encontre o p
     categories = ["companies"]
     [latest_news.image] 
         src = "latest-news-1.jpg"
-        alt = "fotografia de uma mesa com um prato de almôndegas e massa"
+        alt = "mesa com um prato de almôndegas e massa"
 [[latest_news]]
     title = "Microsoft reúne 840 empresas em Lisboa"
     url = "#"
@@ -25,7 +25,7 @@ description = "Permaneça informado. Descubra os próximos eventos. Encontre o p
     categories = ["events"]
     [latest_news.image] 
         src = "latest-news-2.jpg"
-        alt = "figura com o número três delineado a vermelho sobre um fundo azul"
+        alt = "ilustração com o número três delineado a vermelho sobre um fundo azul"
 [[latest_news]]
     title = "Entrevista com Simão Cruz da Portugal Fintech"
     url = "#"

@@ -220,6 +220,38 @@ other = "open/close filter"
 [filter_apply]
 other = "Apply filter"
 
+[icon_settings]
+other = "iconography of three slider controls"
+
+######################################### 
+#   PAGINATION
+#########################################
+
+[aria_pagination]
+other = "pagination"
+
+[pagination_previous]
+other = "previous"
+
+[pagination_next]
+other = "next"
+
+######################################### 
+#   LISTING
+#########################################
+
+[map]
+other = "Map"
+
+[ar]
+other = "AR"
+
+[see_locations_map]
+other = "See locations on a Map"
+
+[see_locations_ar]
+other = "See locations through Camera"
+
 ######################################### 
 #   OTHER
 #########################################

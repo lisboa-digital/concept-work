@@ -9,36 +9,31 @@
     &__count,
     &__description,
     &__icon {
+        // Reset
         margin: 0;
         padding: 0;
     }
     &__item {
         text-align: center;
         margin-bottom: rem(12px);
-        width: rem(112px);
-        @include media-breakpoint-up(lg) {
-            width: rem(164px);
-        }
+        width: rem(120px);
+        @include media-breakpoint-up(sm) { width: rem(200px); }
+        @include media-breakpoint-up(md) { width: rem(120px); }
+        @include media-breakpoint-up(lg) { width: rem(164px); }
     }
     &__count {
         color: $color-dark;
         font-family: $font-family-primary;
         font-weight: 700;
         font-size: rem(32px);
-        @include media-breakpoint-up(md) {
-            font-size: rem(48px);
-        }
-        @include media-breakpoint-up(lg) {
-            font-size: rem(64px);
-        }
+        @include media-breakpoint-up(md) { font-size: rem(48px); }
+        @include media-breakpoint-up(lg) { font-size: rem(64px); }
     }
     &__description {
         @include text-body;
         @include text-body--dark;
         font-size: rem(14px);
-        @include media-breakpoint-up(lg) {
-            font-size: rem(16px);
-        }
+        @include media-breakpoint-up(lg) { font-size: rem(16px); }
     }
     &__icon {
         width: rem(56px);

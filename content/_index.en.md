@@ -6,7 +6,7 @@ description = "Stay informed. Discover the next events. Find the next business p
         title = "About Lisbon"
         link = "the-city"
     [hero.image]
-        alt = "photography of a Lisbon street with a yellow streetcar"
+        alt = "a Lisbon street with a yellow streetcar"
         src = "photo-lisbon.jpg"
 [[latest_news]]
     title = "EatTasty delivered 250 thousand portuguese lunches to offices in Lisbon and Madrid"
@@ -16,7 +16,7 @@ description = "Stay informed. Discover the next events. Find the next business p
     categories = ["companies"]
     [latest_news.image] 
         src = "latest-news-1.jpg"
-        alt = "photography of a table with a plate of meatballs and pasta"
+        alt = "a table with a plate of meatballs and pasta"
 [[latest_news]]
     title = "Microsoft gathers 840 companies in Lisbon"
     url = "#"
@@ -25,7 +25,7 @@ description = "Stay informed. Discover the next events. Find the next business p
     categories = ["events"]
     [latest_news.image] 
         src = "latest-news-2.jpg"
-        alt = "picture with a number three outlined with red over a blueish background"
+        alt = "illustration with a number three outlined with red over a blueish background"
 [[latest_news]]
     title = "Interview with Simão Cruz of Portugal Fintech"
     url = "#"

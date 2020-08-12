@@ -27,4 +27,72 @@ description = "Oportunidades de trabalho em Lisboa"
         "Produto",
         "Vendas",
         "UX"]
+[listing]
+    [listing.sizes]
+        default = "208x"
+        retina = "416x"
+    [[listing.item]]
+        title = "Engenheiro Back-end"
+        description = "tb.lx by Daimler Trucks & Buses"
+        url = "#"
+        categories = ["engenharia"]
+        [listing.item.image]
+            alt = "tb.lx logo"
+            src = "jobs-1.jpg"
+    [[listing.item]]
+        title = "Cientista de Dados"
+        description = "Hays"
+        url = "#"
+        categories = ["dados"]
+        [listing.item.image]
+            alt = "Hays logo"
+            src = "jobs-2.jpg"
+    [[listing.item]]
+        title = "Programador Full-Stack"
+        description = "Paylink Solutions"
+        url = "#"
+        categories = ["programação"]
+        [listing.item.image]
+            alt = "Paylink Solutions ogo"
+            src = "jobs-3.jpg"
+    [[listing.item]]
+        title = "Consultor de Segurança de Informação"
+        description = "Hays"
+        url = "#"
+        categories = ["engenharia"]
+        [listing.item.image]
+            alt = "Hays logo"
+            src = "jobs-4.jpg"
+    [[listing.item]]
+        title = "Gestor de Produto"
+        description = "Seedrs"
+        url = "#"
+        categories = ["gestão"]
+        [listing.item.image]
+            alt = "Seedrs logo"
+            src = "jobs-5.jpg"
+    [[listing.item]]
+        title = "Programdor Front-end Sénior"
+        description = "TUI GDN"
+        url = "#"
+        categories = ["programação"]
+        [listing.item.image]
+            alt = "TUI logo"
+            src = "jobs-6.jpg"
+    [[listing.item]]
+        title = "Software Tester"
+        description = "SISCOG"
+        url = "#"
+        categories = ["programação"]
+        [listing.item.image]
+            alt = "SISCOG logo"
+            src = "jobs-7.jpg"
+    [[listing.item]]
+        title = "Robótica de Drones - Programador C++"
+        description = "Pro-Drone"
+        url = "#"
+        categories = ["programação"]
+        [listing.item.image]
+            alt = "Pro-Done Logo"
+            src = "jobs-8.jpg"
 +++

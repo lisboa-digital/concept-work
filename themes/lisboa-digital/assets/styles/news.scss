@@ -11,3 +11,4 @@ $baseURL: "{{ $url.Path }}";
 @import "partials/page-header.scss";
 @import "partials/page-body.scss";
 @import "partials/filter.scss";
+@import "partials/listing.scss";

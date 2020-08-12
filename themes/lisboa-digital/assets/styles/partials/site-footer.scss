@@ -18,25 +18,17 @@
                 flex-direction: row-reverse;
             }
         }
-        &:nth-child(2) {
-            background-image: $color-primary-gradient;
-        }
+        &:nth-child(2) { background-image: $color-primary-gradient; }
     }
     &__separator {
         height: 96px;
         @include pattern-dots;
         @include media-breakpoint-up(lg) {
             width: 50%;
-            &:first-of-type {
-                background-position: right center;
-            }
+            &:first-of-type { background-position: right center; }
         }
-        &:first-of-type {
-            margin: 0 auto 0 0;
-        }
-        &:last-of-type {
-            margin: 0 0 0 auto;
-        }
+        &:first-of-type { margin: 0 auto 0 0; }
+        &:last-of-type { margin: 0 0 0 auto; }
     }
     &__community,
     &__actions {
@@ -89,12 +81,8 @@
             @include btn;
             @include btn--md;
             @include btn--primary;
-            @include media-breakpoint-up(md) {
-                @include btn--lg;
-            } 
-            > .btn__icon {
-                background-image: url($baseURL + "images/icon-chat--secondary.svg");
-            }
+            @include btn--icon($baseURL + "images/icon-chat--secondary.svg");
+            @include media-breakpoint-up(md) { @include btn--lg; }
         }
     }
     &__actions {
@@ -104,9 +92,7 @@
         justify-content: flex-start;
         align-items: center;
         padding-bottom: rem($gutter);
-        @include media-breakpoint-up(sm) {
-            justify-content: center;
-        }
+        @include media-breakpoint-up(sm) { justify-content: center; }
         @include media-breakpoint-up(lg) {
             justify-content: flex-start;
             align-items: flex-end;
@@ -121,41 +107,25 @@
         @include btn--md;
         @include btn--primary;
         margin-bottom: rem($gutter);
-        @include media-breakpoint-up(md) {
-            @include btn--lg;
-        }
+        @include media-breakpoint-up(md) { @include btn--lg; }
     }
     &__account-btn,
     &__submit-content-btn {
         margin-right: rem(8px);
-        @include media-breakpoint-up(sm) {
-            margin-right: rem(16px);
-        }
+        @include media-breakpoint-up(sm) { margin-right: rem(16px); }
     }
     &__account-btn {
         display: none;
-        @include media-breakpoint-up(sm) {
-            display: inline-block;
-        }
-        @include media-breakpoint-up(lg) {
-            display: none;
-        }
-        @include media-breakpoint-up(xl) {
-            display: inline-block;
-        }
-        > .btn__icon {
-            background-image: url($baseURL + "images/icon-person--secondary.svg");
-        }
+        @include btn--icon($baseURL + "images/icon-person--secondary.svg");
+        @include media-breakpoint-up(sm) { display: inline-block; }
+        @include media-breakpoint-up(lg) { display: none; }
+        @include media-breakpoint-up(xl) { display: inline-block; }
     }
     &__submit-content-btn {
-        > .btn__icon {
-            background-image: url($baseURL + "images/icon-submit--secondary.svg");
-        }
+        @include btn--icon($baseURL + "images/icon-submit--secondary.svg");
     }
     &__contact-btn {
-        > .btn__icon {
-            background-image: url($baseURL + "images/icon-envelope--secondary.svg");
-        }
+        @include btn--icon($baseURL + "images/icon-envelope--secondary.svg");
     }
     &__main {
         display: flex;
@@ -171,9 +141,7 @@
     }
     &__navs,
     &__stay-connected {
-        @include media-breakpoint-up(lg) {
-            align-self: flex-start;
-        }
+        @include media-breakpoint-up(lg) { align-self: flex-start; }
     }
     &__navs {
         flex-grow: 1;
@@ -195,9 +163,7 @@
             margin-left: rem(32px);
             margin-top: 0;
         }
-        &:first-of-type {
-            margin-top: 0;
-        }
+        &:first-of-type { margin-top: 0; }
         &::before {
             content: ' ';
             position: absolute;
@@ -226,18 +192,14 @@
         @include light-title--light;
         margin: 0;
         margin-bottom: rem(16px);
-        @include media-breakpoint-up(lg) {
-            margin-bottom: rem(32px);
-        }
+        @include media-breakpoint-up(lg) { margin-bottom: rem(32px); }
     }
     &__link {
         @include link;
         @include link--secondary;
         display: block;
         margin-top: rem(16px);
-        &:first-of-type {
-            margin-top: 0;
-        }
+        &:first-of-type { margin-top: 0; }
     }
     &__stay-connected {
         align-self: center;
@@ -248,21 +210,15 @@
             text-align: right;
         }
         .site-footer {
-            &__heading {
-                margin-bottom: rem(32px) !important;
-            }
+            &__heading { margin-bottom: rem(32px) !important; }
         }
     }
-    &__hash-tag {
-        font-weight: 700;
-    }
+    &__hash-tag { font-weight: 700; }
     &__social {
         display: flex;
         justify-content: center;
         margin-bottom: rem(32px);
-        @include media-breakpoint-up(lg) {
-            justify-content: right;
-        }
+        @include media-breakpoint-up(lg) { justify-content: right; }
         .site-footer {
             &__link {
                 display: flex;
@@ -276,12 +232,8 @@
                     flex-direction: row;
                     font-size: rem(15px);
                 }
-                @include media-breakpoint-up(lg) {
-                    font-size: rem(16px);
-                }
-                &:first-of-type {
-                    margin-left: 0;
-                }
+                @include media-breakpoint-up(lg) { font-size: rem(16px); }
+                &:first-of-type { margin-left: 0; }
                 img {
                     height: rem(24px);
                     width: rem(24px);
@@ -299,12 +251,8 @@
         @include btn;
         @include btn--md;
         @include btn--secondary-hollow;
-        @include media-breakpoint-up(md) {
-            @include btn--lg;
-        }
-        > .btn__icon {
-            background-image: url($baseURL + "images/icon-forward--secondary.svg");
-        }
+        @include btn--icon($baseURL + "images/icon-forward--secondary.svg");
+        @include media-breakpoint-up(md) { @include btn--lg; }
     }
 }
 

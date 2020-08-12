@@ -220,6 +220,38 @@ other = "abrir/fechar filtro"
 [filter_apply]
 other = "Aplicar filtro"
 
+[icon_settings]
+other = "iconografia com três controlos"
+
+######################################### 
+#   PAGINATION
+#########################################
+
+[aria_pagination]
+other = "paginação"
+
+[pagination_previous]
+other = "anterior"
+
+[pagination_next]
+other = "próximo"
+
+######################################### 
+#   LISTING
+#########################################
+
+[map]
+other = "Mapa"
+
+[ar]
+other = "AR"
+
+[see_locations_map]
+other = "Ver localizações no Mapa"
+
+[see_locations_ar]
+other = "Ver localizações pela Câmara"
+
 ######################################### 
 #   OTHER
 #########################################
