@@ -19,17 +19,18 @@
         <div class="site-footer__separator"></div>
         <div class="site-footer__main">
             <div class="site-footer__navs">
+                {{ $current := .Page.RelPermalink -}}
                 <nav class="site-footer__nav" aria-label="{{ T "aria_about_nav" }}">
                     <p class="site-footer__heading">{{ T "nav_title_about" }}</p>
-                    <a class="site-footer__link" href="{{ relref . "the-city" }}">{{ T "nav_the_city" }}</a>
-                    <a class="site-footer__link" href="{{ relref . "the-project" }}">{{ T "nav_the_project" }}</a>
-                    <a class="site-footer__link" href="{{ relref . "be-involved" }}">{{ T "nav_be_involved" }}</a>
+                    <a class="site-footer__link {{ if eq $current (relref . "the-city") }}site-footer__link--selected{{ end }}" href="{{ relref . "the-city" }}">{{ T "nav_the_city" }}</a>
+                    <a class="site-footer__link {{ if eq $current (relref . "the-project") }}site-footer__link--selected{{ end }}" href="{{ relref . "the-project" }}">{{ T "nav_the_project" }}</a>
+                    <a class="site-footer__link {{ if eq $current (relref . "be-involved") }}site-footer__link--selected{{ end }}" href="{{ relref . "be-involved" }}">{{ T "nav_be_involved" }}</a>
                 </nav>
                 <nav class="site-footer__nav" aria-label="{{ T "aria_website_nav" }}">
                     <p class="site-footer__heading">Website</p>
-                    <a class="site-footer__link" href="{{ relref . "cookies" }}">Cookies</a>
-                    <a class="site-footer__link" href="{{ relref . "privacy" }}">{{ T "nav_privacy" }}</a>
-                    <a class="site-footer__link" href="{{ relref . "accessibility" }}">{{ T "nav_accessibility" }}</a>
+                    <a class="site-footer__link {{ if eq $current (relref . "cookies") }}site-footer__link--selected{{ end }}" href="{{ relref . "cookies" }}">Cookies</a>
+                    <a class="site-footer__link {{ if eq $current (relref . "privacy") }}site-footer__link--selected{{ end }}" href="{{ relref . "privacy" }}">{{ T "nav_privacy" }}</a>
+                    <a class="site-footer__link {{ if eq $current (relref . "accessibility") }}site-footer__link--selected{{ end }}" href="{{ relref . "accessibility" }}">{{ T "nav_accessibility" }}</a>
                 </nav>
                 <nav class="site-footer__nav" aria-label="{{ T "aria_change_lang" }} (2)">
                     <p class="site-footer__heading">{{ T "nav_title_lang" }}</p>

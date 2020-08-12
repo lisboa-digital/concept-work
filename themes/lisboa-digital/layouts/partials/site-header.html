@@ -26,15 +26,16 @@
         <div class="site-header__row">
             <nav class="site-header__nav" aria-label="{{ T "aria_main_nav"}}">
                 <ul class="site-header__nav-list">
-                    <li class="site-header__nav-item"><a class="site-header__nav-link" href="{{ relref . "news" }}">{{ T "nav_news" }}</a></li>
-                    <li class="site-header__nav-item"><a class="site-header__nav-link" href="{{ relref . "events" }}">{{ T "nav_events" }}</a></li>
-                    <li class="site-header__nav-item"><a class="site-header__nav-link" href="{{ relref . "people" }}">{{ T "nav_people" }}</a></li>
-                    <li class="site-header__nav-item"><a class="site-header__nav-link" href="{{ relref . "companies" }}">{{ T "nav_companies" }}</a></li>
-                    <li class="site-header__nav-item"><a class="site-header__nav-link" href="{{ relref . "jobs" }}">{{ T "nav_jobs" }}</a></li>
-                    <li class="site-header__nav-item"><a class="site-header__nav-link" href="{{ relref . "education" }}">{{ T "nav_education" }}</a></li>
-                    <li class="site-header__nav-item"><a class="site-header__nav-link" href="{{ relref . "resources" }}">{{ T "nav_resources" }}</a></li>
-                    <li class="site-header__nav-item"><a class="site-header__nav-link" href="{{ relref . "investment" }}">{{ T "nav_investment" }}</a></li>
-                    <li class="site-header__nav-item"><a class="site-header__nav-link" href="{{ relref . "workspaces" }}">{{ T "nav_workspaces" }}</a></li>
+                    {{ $current := .Page.RelPermalink -}}
+                    <li class="site-header__nav-item"><a class="site-header__nav-link {{ if eq $current (relref . "news") }}site-header__nav-link--selected{{ end }}" href="{{ relref . "news" }}">{{ T "nav_news" }}</a></li>
+                    <li class="site-header__nav-item"><a class="site-header__nav-link {{ if eq $current (relref . "events") }}site-header__nav-link--selected{{ end }}" href="{{ relref . "events" }}">{{ T "nav_events" }}</a></li>
+                    <li class="site-header__nav-item"><a class="site-header__nav-link {{ if eq $current (relref . "people") }}site-header__nav-link--selected{{ end }}" href="{{ relref . "people" }}">{{ T "nav_people" }}</a></li>
+                    <li class="site-header__nav-item"><a class="site-header__nav-link {{ if eq $current (relref . "companies") }}site-header__nav-link--selected{{ end }}" href="{{ relref . "companies" }}">{{ T "nav_companies" }}</a></li>
+                    <li class="site-header__nav-item"><a class="site-header__nav-link {{ if eq $current (relref . "jobs") }}site-header__nav-link--selected{{ end }}" href="{{ relref . "jobs" }}">{{ T "nav_jobs" }}</a></li>
+                    <li class="site-header__nav-item"><a class="site-header__nav-link {{ if eq $current (relref . "education") }}site-header__nav-link--selected{{ end }}" href="{{ relref . "education" }}">{{ T "nav_education" }}</a></li>
+                    <li class="site-header__nav-item"><a class="site-header__nav-link {{ if eq $current (relref . "resources") }}site-header__nav-link--selected{{ end }}" href="{{ relref . "resources" }}">{{ T "nav_resources" }}</a></li>
+                    <li class="site-header__nav-item"><a class="site-header__nav-link {{ if eq $current (relref . "investment") }}site-header__nav-link--selected{{ end }}" href="{{ relref . "investment" }}">{{ T "nav_investment" }}</a></li>
+                    <li class="site-header__nav-item"><a class="site-header__nav-link {{ if eq $current (relref . "workspaces") }}site-header__nav-link--selected{{ end }}" href="{{ relref . "workspaces" }}">{{ T "nav_workspaces" }}</a></li>
                     <li class="site-header__nav-item">{{ partial "site-header/submit-content-btn" . }}</li>
                     <li class="site-header__nav-item">{{ partial "site-header/contact-btn" . }}</li>
                 </ul>
