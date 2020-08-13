@@ -6,7 +6,7 @@
   "scripts": {
     "clean": "npx rimraf resources public docs",
     "serve": "npm run clean && hugo serve --bind 0.0.0.0 -p 1313 --noHTTPCache --forceSyncStatic --i18n-warnings --gc",
-    "build": "npm run clean && hugo -e gh_pages -d docs --ignoreCache --gc"
+    "build:github": "npm run clean && hugo -e github --ignoreCache --gc"
   },
   "author": "Pedro Pereira <a57127@campus.fcsh.unl.pt>",
   "license": "MIT",
