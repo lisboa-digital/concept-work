@@ -34,10 +34,10 @@
                 </nav>
                 <nav class="site-footer__nav" aria-label="{{ T "aria_change_lang" }} (2)">
                     <p class="site-footer__heading">{{ T "nav_title_lang" }}</p>
-                    {{ $lang := .Lang }}
-                    {{ range .AllTranslations }}
+                    {{ $lang := .Lang -}}
+                    {{- range .AllTranslations -}}
                     <a class="site-footer__link {{ if eq $lang .Language.Lang }}site-footer__link--selected{{ end }}" href="{{ .RelPermalink }}">{{ .Language.LanguageName }}</a>
-                    {{ end }}
+                    {{- end }}
                 </nav>
             </div>
             <div class="site-footer__stay-connected">

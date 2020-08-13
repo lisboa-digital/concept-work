@@ -1,6 +1,6 @@
 {{ define "head-end" }}
     {{ partial "style" (dict "src" "education-institutions" "asTmpl" .) }}
-{{ end }}
+{{- end }}
 
 {{ define "body-content" }}
 <main>
@@ -10,8 +10,8 @@
         {{ partial "listing" (dict "listing" .Params.listing "ctx" .) }}
     </div>
 </main>
-{{ end }}
+{{- end }}
 
 {{ define "body-end" }}
     {{ partial "script" "partials/filter" }}
-{{ end }}
+{{- end }}

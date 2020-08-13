@@ -1,9 +1,9 @@
 {{ define "head-end" }}
     {{ partial "style" (dict "src" "contact" "asTmpl" .) }}
-{{ end }}
+{{- end }}
 
 {{ define "body-content" }}
 <main>
     {{ partial "page-header" (dict "page_header" (dict "title" .Page.Title "description" .Page.Description "call_to_action" .Params.call_to_action) "ctx" .) }}
 </main>
-{{ end }}
+{{- end }}

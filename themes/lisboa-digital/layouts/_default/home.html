@@ -1,6 +1,6 @@
 {{ define "head-end" }}
     {{ partial "style" (dict "src" "home" "asTmpl" . ) }}
-{{ end }}
+{{- end }}
 
 {{ define "body-content" }}
 <main>
@@ -8,4 +8,4 @@
 {{ partial "numbers" . }}
 {{ partial "latest-news" (dict "latest_news" .Params.latest_news "ctx" . ) }}
 </main>
-{{ end }}
+{{- end }}
