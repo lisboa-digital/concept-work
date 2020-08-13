@@ -5,5 +5,8 @@
 {{ define "body-content" }}
 <main>
     {{ partial "page-header" (dict "page_header" (dict "title" .Page.Title "description" .Page.Description) "ctx" .) }}
+    <div class="page-body page-body--mostly-text">
+        {{ .Page.Content }}
+    </div>
 </main>
 {{- end }}

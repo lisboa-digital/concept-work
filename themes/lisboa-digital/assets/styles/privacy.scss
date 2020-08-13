@@ -7,3 +7,9 @@ $baseURL: "{{ $url.Path }}";
 @import "bootstrap";
 
 @import "partials/page-header.scss";
+@import "partials/page-body.scss";
+@import "partials/legal.scss";
+
+.page-body {
+    display: block;
+}

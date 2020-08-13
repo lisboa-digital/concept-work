@@ -1,4 +1,0 @@
-+++
-url = "privacidade"
-title = "Privacidade"
-+++

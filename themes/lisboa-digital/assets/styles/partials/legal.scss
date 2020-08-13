@@ -1,0 +1,47 @@
+.legal {
+    &__title-1,
+    &__title-2,
+    &__link,
+    p,
+    a {
+        // Reset spacing
+        margin: 0;
+        padding: 0;
+    }
+    &__title-1,
+    &__title-2 {
+        @include section-title;
+        @include section-title--dark;
+    }
+    &__title-1 {
+        margin-top: rem(28px);
+        @include media-breakpoint-up(md) { margin-top: rem(42px); }
+        @include media-breakpoint-up(lg) { margin-top: rem(56px); }
+        &:first-of-type {
+            margin-top: 0;
+        }
+    }
+    &__title-2 {
+        @include section-title--sm;
+        margin-top: rem(16px);
+    }
+    &__text-container {
+        margin-left: rem($gutter);
+        @include text-body;
+        @include text-body--dark;
+        @include media-breakpoint-up(md) { 
+            margin-left: rem($gutter*2); 
+        }
+        a {
+            @include link;
+            @include link--primary;
+        }
+        p {
+            padding: rem(16px) 0;
+        }
+        input[type="checkbox"] {
+            margin-right: rem(16px);
+        }
+    }
+    
+}
