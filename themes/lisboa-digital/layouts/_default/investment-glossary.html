@@ -5,5 +5,20 @@
 {{ define "body-content" }}
 <main>
     {{ partial "page-header" (dict "page_header" (dict "title" .Page.Title "description" .Page.Description) "ctx" .) }}
+    <div class="page-body page-body--mostly-text">
+        {{ if (isset .Params "glossary") -}}
+        <ul class="glossary">
+        {{ range $item := .Params.glossary -}}
+            <li class="glossary__item">
+                <h2 class="glossary__title">{{ $item.title }}</h2>
+                <p class="glossary__description">{{ $item.description }}</p>
+                {{ if (isset $item "ref") -}}
+                <a class="glossary__reference" href="{{ $item.ref.url }}">{{ $item.ref.name }}</a>
+                {{- end }}
+            </li>
+        {{- end }}
+        </ul>
+        {{- end }}
+    </div>
 </main>
 {{- end }}

@@ -261,3 +261,6 @@ other = "Category"
 
 [keyword]
 other = "Keyword"
+
+[source]
+other = "Source"

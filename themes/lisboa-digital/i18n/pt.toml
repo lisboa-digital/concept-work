@@ -261,3 +261,6 @@ other = "Categoria"
 
 [keyword]
 other = "Palavra-chave"
+
+[source]
+other = "Fonte"

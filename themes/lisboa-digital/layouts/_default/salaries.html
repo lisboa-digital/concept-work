@@ -5,5 +5,29 @@
 {{ define "body-content" }}
 <main>
     {{ partial "page-header" (dict "page_header" (dict "title" .Page.Title "description" .Page.Description) "ctx" .) }}
+    <div class="page-body page-body--mostly-text">
+        {{ if (isset .Params "salaries") -}}
+        <div class="salaries">
+            <ul class="salaries__categories">
+                {{ range $category := .Params.salaries.categories -}}
+                <li class="salaries__category">
+                    <h2 class="salaries__title">{{ $category.title }}</h2>
+                    <ul class="salaries__items">
+                        {{ range $item := $category.items -}}
+                        <li class="salaries__item">
+                            <p class="salaries__type">{{ $item.type }}</p>
+                            <p class="salaries__value">{{ $item.value }} € k</p>
+                        </li>
+                        {{- end }}
+                    </ul>
+                </li>
+                {{- end }}
+            </ul>
+            <p class="salaries__source">{{ T "source" }}:
+                <a class="salaries__link" href="{{ .Params.salaries.source }}" target="_blank">{{ .Params.salaries.source }}</a>
+            </p>
+        </div>
+        {{- end }}
+    </div>
 </main>
 {{- end }}

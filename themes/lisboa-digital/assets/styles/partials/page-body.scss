@@ -29,3 +29,22 @@
         @include media-breakpoint-up(xl) { padding: rem($gutter*4); }
     }
 }
+
+.page-body--mostly-text {
+    max-width: ($site-max-width - ($gutter*4));
+    background-color: white;
+    margin-left: rem($gutter);
+    margin-right: rem($gutter);
+    padding: rem($gutter*4) rem($gutter*2);
+    padding-bottom: 0;
+    @include media-breakpoint-up(md) {
+        margin-left: rem($gutter*2);
+        margin-right: rem($gutter*2);
+    }
+    @include media-breakpoint-up(xl) {
+        margin-left: auto;
+        margin-right: auto;
+        padding: rem($gutter*4);
+        padding-bottom: 0;
+    }
+}
