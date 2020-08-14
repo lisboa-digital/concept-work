@@ -35,6 +35,7 @@
         a {
             @include link;
             @include link--primary;
+            @include link--break;
         }
         p {
             padding: rem(16px) 0;

@@ -426,6 +426,10 @@
   letter-spacing: 0.04em;
   font-size: 0.875rem;
   color: #10428E;
+  hyphens: auto;
+  word-break: break-all;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 @media (min-width: 768px) {
