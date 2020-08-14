@@ -27,10 +27,8 @@
         flex-direction: column;
         justify-content: flex-start;
         margin-top: rem($gutter*2);
-        padding: 0 rem($gutter);
         @include media-breakpoint-up(sm) { flex-direction: row; }
-        @include media-breakpoint-up(lg) { padding: 0; }
-        &:first-of-type { margin-top: 0;}
+        &:first-of-type { margin-top: 0; }
     }
     &__image {
         width: 100%;
@@ -96,7 +94,8 @@
     &__title {
         @include link;
         @include link--primary;
-        font-size: rem(20px);
+        font-size: rem(18px);
+        @include media-breakpoint-up(sm) { font-size: rem(20px); }
         @include media-breakpoint-up(md) { font-size: rem(22px); }
         @include media-breakpoint-up(xl) { font-size: rem(24px); }
     }

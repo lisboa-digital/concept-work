@@ -255,88 +255,127 @@
 }
 
 .page-body {
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-  margin-top: -3.125rem;
-  padding: 0.9375rem;
-  max-width: 1200px;
-}
-
-@media (min-width: 768px) {
-  .page-body {
-    margin-top: -4.5rem;
-    padding: 1.875rem;
-  }
-}
-
-@media (min-width: 992px) {
-  .page-body {
-    flex-direction: row;
-    align-items: flex-start;
-    margin-top: -7.5rem;
-  }
-}
-
-@media (min-width: 992px) {
-  .page-body .filter {
-    margin-top: 3.75rem;
-  }
-}
-
-.page-body .listing {
-  flex-grow: 1;
-  align-self: center;
-  margin-top: 1.875rem;
-}
-
-@media (min-width: 992px) {
-  .page-body .listing {
-    align-self: flex-start;
-    padding: 1.875rem;
-    margin-top: 0;
-  }
-}
-
-@media (min-width: 1200px) {
-  .page-body .listing {
-    padding: 3.75rem;
-  }
-}
-
-.page-body--mostly-text {
-  max-width: 1140px;
-  background-color: white;
-  margin-left: 0.9375rem;
-  margin-right: 0.9375rem;
-  padding: 3.75rem 1.875rem;
+  display: block;
+  margin: 0 0.9375rem;
+  margin-top: -1.875rem;
+  padding: 1.875rem;
   padding-bottom: 0;
+  background-color: white;
+  max-width: 1140px;
 }
 
 @media (min-width: 768px) {
-  .page-body--mostly-text {
+  .page-body {
+    margin-top: -3rem;
     margin-left: 1.875rem;
     margin-right: 1.875rem;
   }
 }
 
-@media (min-width: 1200px) {
-  .page-body--mostly-text {
-    margin-left: auto;
-    margin-right: auto;
+@media (min-width: 992px) {
+  .page-body {
+    margin-top: -5.5rem;
     padding: 3.75rem;
     padding-bottom: 0;
   }
 }
 
-.legal__title-1, .legal__title-2, .legal__link,
-.legal p,
-.legal a {
-  margin: 0;
-  padding: 0;
+@media (min-width: 1200px) {
+  .page-body {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
-.legal__title-1, .legal__title-2 {
+.page-body--has-listing {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  background-color: transparent;
+}
+
+@media (min-width: 992px) {
+  .page-body--has-listing {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+.page-body--has-listing .filter {
+  margin-bottom: 0.9375rem;
+}
+
+@media (min-width: 992px) {
+  .page-body--has-listing .filter {
+    margin-top: 3.75rem;
+  }
+}
+
+.page-body--has-listing .listing {
+  flex-grow: 1;
+  padding: 0.9375rem;
+}
+
+@media (min-width: 992px) {
+  .page-body--has-listing .listing {
+    padding: 1.875rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .page-body--has-listing .listing {
+    padding: 3.75rem;
+  }
+}
+
+.salaries {
+  width: 100%;
+}
+
+.salaries__categories, .salaries__items {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.salaries__categories {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.salaries__category {
+  width: 100%;
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 992px) {
+  .salaries__category {
+    width: 50%;
+    margin-bottom: 3.75rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .salaries__category:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .salaries__category:nth-of-type(odd) {
+    padding-right: 0.9375rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .salaries__category:nth-of-type(even) {
+    padding-left: 0.9375rem;
+  }
+}
+
+.salaries__title {
   display: block;
   font-family: "Rajdhani", sans-serif;
   font-weight: 700;
@@ -345,56 +384,28 @@
 }
 
 @media (min-width: 768px) {
-  .legal__title-1, .legal__title-2 {
+  .salaries__title {
     font-size: 1.875rem;
   }
 }
 
 @media (min-width: 992px) {
-  .legal__title-1, .legal__title-2 {
+  .salaries__title {
     font-size: 2.25rem;
   }
 }
 
-.legal__title-1 {
-  margin-top: 1.75rem;
+.salaries__items {
+  margin-top: 2rem;
 }
 
-@media (min-width: 768px) {
-  .legal__title-1 {
-    margin-top: 2.625rem;
-  }
+.salaries__item {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
 }
 
-@media (min-width: 992px) {
-  .legal__title-1 {
-    margin-top: 3.5rem;
-  }
-}
-
-.legal__title-1:first-of-type {
-  margin-top: 0;
-}
-
-.legal__title-2 {
-  font-size: 1rem;
-  margin-top: 1rem;
-}
-
-@media (min-width: 768px) {
-  .legal__title-2 {
-    font-size: 1.25rem;
-  }
-}
-
-@media (min-width: 992px) {
-  .legal__title-2 {
-    font-size: 1.5rem;
-  }
-}
-
-.legal__text-container {
-  margin-left: 0.9375rem;
+.salaries__type, .salaries__value {
   font-family: "Quicksand", sans-serif;
   font-weight: 500;
   font-size: 0.875rem;
@@ -403,53 +414,62 @@
 }
 
 @media (min-width: 768px) {
-  .legal__text-container {
+  .salaries__type, .salaries__value {
     font-size: 0.9375rem;
   }
 }
 
 @media (min-width: 992px) {
-  .legal__text-container {
+  .salaries__type, .salaries__value {
     font-size: 1rem;
   }
 }
 
+.salaries__type {
+  flex-grow: 1;
+  padding-right: 1rem;
+}
+
+.salaries__value {
+  flex-shrink: 1;
+  white-space: nowrap;
+}
+
+.salaries__source {
+  font-size: 0.875rem;
+}
+
 @media (min-width: 768px) {
-  .legal__text-container {
-    margin-left: 1.875rem;
+  .salaries__source {
+    font-size: 0.9375rem;
   }
 }
 
-.legal__text-container a {
+@media (min-width: 992px) {
+  .salaries__source {
+    font-size: 1rem;
+  }
+}
+
+.salaries__link {
   font-family: "Quicksand", sans-serif;
   font-weight: 700;
   text-decoration: underline;
   letter-spacing: 0.04em;
   color: #10428E;
+  display: block;
 }
 
-.legal__text-container a--selected {
+.salaries__link--selected {
   font-weight: 400;
   text-decoration: none;
 }
 
-.legal__text-container a--selected:hover {
+.salaries__link--selected:hover {
   text-decoration: none;
   cursor: default;
 }
 
-.legal__text-container a:hover, .legal__text-container a:focus, .legal__text-container a--selected {
+.salaries__link:hover, .salaries__link:focus, .salaries__link--selected {
   color: #0D0043;
-}
-
-.legal__text-container p {
-  padding: 1rem 0;
-}
-
-.legal__text-container input[type="checkbox"] {
-  margin-right: 1rem;
-}
-
-.page-body {
-  display: block;
 }

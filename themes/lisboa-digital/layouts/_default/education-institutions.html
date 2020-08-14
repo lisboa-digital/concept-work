@@ -5,7 +5,7 @@
 {{ define "body-content" }}
 <main>
     {{ partial "page-header" (dict "page_header" (dict "title" .Page.Title "description" .Page.Description) "ctx" .) }}
-    <div class="page-body">
+    <div class="page-body page-body--has-listing">
         {{ partial "filter" (dict "filter" .Params.filter) }}
         {{ partial "listing" (dict "listing" .Params.listing "ctx" .) }}
     </div>

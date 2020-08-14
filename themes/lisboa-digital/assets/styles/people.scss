@@ -20,7 +20,5 @@ $baseURL: "{{ $url.Path }}";
         border-radius: 100%;
         @include media-breakpoint-up(md) { width: rem(120px); }
     }
-    &__main-section {
-        margin-left: rem($gutter*2); 
-    }
+    &__main-section { margin-left: rem($gutter*2); }
 }

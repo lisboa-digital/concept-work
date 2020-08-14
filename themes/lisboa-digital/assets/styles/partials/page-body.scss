@@ -1,50 +1,50 @@
 .page-body {
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    margin-top: rem(-50px);
-    padding: rem($gutter);
-    max-width: $site-max-width;
-    @include media-breakpoint-up(md) {
-        margin-top: rem(-72px);
-        padding: rem($gutter*2);
-    }
-    @include media-breakpoint-up(lg) {
-        flex-direction: row;
-        align-items: flex-start;
-        margin-top: rem(-120px);
-    }
-    .filter {
-        @include media-breakpoint-up(lg) { margin-top: rem(60px); }
-    }
-    .listing {
-        flex-grow: 1;
-        align-self: center;
-        margin-top: rem($gutter*2);
-        @include media-breakpoint-up(lg) {
-            align-self: flex-start;
-            padding: rem($gutter*2);
-            margin-top: 0;
-        }
-        @include media-breakpoint-up(xl) { padding: rem($gutter*4); }
-    }
-}
-
-.page-body--mostly-text {
-    max-width: ($site-max-width - ($gutter*4));
-    background-color: white;
-    margin-left: rem($gutter);
-    margin-right: rem($gutter);
-    padding: rem($gutter*4) rem($gutter*2);
+    display: block;
+    margin: 0 rem($gutter);
+    margin-top: rem(-30px);
+    padding: rem($gutter*2);
     padding-bottom: 0;
+    background-color: white;
+    max-width: ($site-max-width - ($gutter*4));
     @include media-breakpoint-up(md) {
+        margin-top: rem(-48px);
         margin-left: rem($gutter*2);
         margin-right: rem($gutter*2);
+    }
+    @include media-breakpoint-up(lg) {
+        margin-top: rem(-88px);
+        padding: rem($gutter*4);
+        padding-bottom: 0;
     }
     @include media-breakpoint-up(xl) {
         margin-left: auto;
         margin-right: auto;
-        padding: rem($gutter*4);
-        padding-bottom: 0;
+    }
+}
+
+.page-body--has-listing {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    background-color: transparent;
+    @include media-breakpoint-up(lg) {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    .filter {
+        margin-bottom: rem($gutter);
+        @include media-breakpoint-up(lg) { 
+            margin-top: rem(60px); 
+        }
+    }
+    .listing {
+        flex-grow: 1;
+        padding: rem($gutter);
+        @include media-breakpoint-up(lg) {
+            padding: rem($gutter*2);
+        }
+        @include media-breakpoint-up(xl) { 
+            padding: rem($gutter*4); 
+        }
     }
 }

@@ -9,7 +9,3 @@ $baseURL: "{{ $url.Path }}";
 @import "partials/page-header.scss";
 @import "partials/page-body.scss";
 @import "partials/legal.scss";
-
-.page-body {
-    display: block;
-}

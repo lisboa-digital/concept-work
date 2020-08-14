@@ -20,20 +20,13 @@ $baseURL: "{{ $url.Path }}";
             content: ' ';
             position: absolute;
             top: 0;
-            left: rem(60px);
+            left: rem(45px);
             height: 100%;
             font-size: 0;
             border-left: 1px solid $color-primary;
-            @include media-breakpoint-up(md) {
-                left: rem(75px);
-            }
-            @include media-breakpoint-up(lg) {
-                left: rem(60px);
-            }
+            @include media-breakpoint-up(md) { left: rem(60px); }
         }
     }
     &__item { flex-direction: row; }
-    &__main-section {
-        margin-left: rem($gutter*2); 
-    }
+    &__main-section { margin-left: rem($gutter*2); }
 }
