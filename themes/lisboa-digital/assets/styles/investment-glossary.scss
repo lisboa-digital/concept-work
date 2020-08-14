@@ -57,8 +57,5 @@ $baseURL: "{{ $url.Path }}";
         @include link;
         @include link--primary;
         display: inline-block;
-        font-size: rem(14px);
-        @include media-breakpoint-up(md) { font-size: rem(15px); }
-        @include media-breakpoint-up(lg) { font-size: rem(16px); }
     }
 }

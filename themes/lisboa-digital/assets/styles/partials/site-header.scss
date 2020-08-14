@@ -90,11 +90,10 @@
     &__lang {
         @include link;
         @include link--secondary;
-        font-size: rem(12px);
+        @include link--sm;
         margin-left: rem(8px);
         @include media-breakpoint-up(lg) {
             display: inline-block;
-            font-size: rem(14px);
             margin-left: rem(16px);
         }
     }
@@ -158,8 +157,9 @@
             }
         }
         &-item {
-            margin-left: rem(16px);
+            margin-left: rem(12px);
             &:first-of-type { margin-left: 0; }
+            @include media-breakpoint-up(md) { margin-left: rem(16px); }
             @include media-breakpoint-up(lg) {
                 margin-left: rem(24px);
                 &:nth-last-of-type(1),
@@ -169,7 +169,10 @@
         &-link {
             @include link;
             @include link--secondary;
-            font-size: rem(16px);
+            font-size: rem(15px);
+            @include media-breakpoint-up(sm) { font-size: rem(16px); }
+            @include media-breakpoint-up(md) { font-size: rem(16px); }
+            @include media-breakpoint-up(lg) { font-size: rem(17px); }
             @include media-breakpoint-up(xl) { font-size: rem(18px); }
         }
         &--open {

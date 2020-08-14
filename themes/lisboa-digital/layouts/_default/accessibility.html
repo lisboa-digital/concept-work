@@ -7,7 +7,31 @@
     {{ partial "page-header" (dict "page_header" (dict "title" .Page.Title "description" .Page.Description) "ctx" .) }}
     <div class="page-body">
         <div class="accessibility">
-            
+            <div class="accessibility__intro">
+                {{ range $text := .Params.intro.text -}}
+                <p class="accessibility__text">{{ $text }}</p>
+                {{- end }}
+                <a class="accessibility__ref" href="{{ .Params.intro.ref }}" target="_blank" rel="noopener noreferrer">{{ .Params.intro.ref }}</a>
+            </div>
+            <div class="accessibility__level">
+                <h2 class="accessibility__title accessibility__title--lg">{{ .Params.level.title }}</h2>
+                <p class="accessibility__text">{{ .Params.level.description }}</p>
+            </div>
+            <div class="accessibility__case-for">
+                <h2 class="accessibility__title">{{ .Params.case_for.title }}</h2>
+                <div class="accessibility__highlight-quote">
+                    {{ range $text := .Params.case_for.text -}}
+                    <p class="accessibility__text">{{ $text }}</p>
+                    {{- end }}
+                    <a class="accessibility__ref" href="{{ .Params.case_for.ref }}" target="_blank" rel="noopener noreferrer">{{ .Params.case_for.ref }}</a>
+                </div>
+            </div>
+            <div class="accessibility__help-us">
+                <h2 class="accessibility__title accessibility__title--sm">{{ .Params.help_us.title }}</h2>
+                {{ range $text := .Params.help_us.text -}}
+                <p class="accessibility__text">{{ $text }}</p>
+                {{- end }}
+            </div>
         </div>
     </div>
 </main>

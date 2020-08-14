@@ -3,6 +3,9 @@
     font-weight: 700;
     text-decoration: underline;
     letter-spacing: 0.04em;
+    font-size: rem(14px);
+    @include media-breakpoint-up(md) { font-size: rem(15px); }
+    @include media-breakpoint-up(lg) { font-size: rem(16px); }
     &--selected {
         font-weight: 400;
         text-decoration: none;
@@ -25,4 +28,42 @@
     &:hover,
     &:focus,
     &--selected { color: $color-light; }
+}
+
+@mixin link--xs {
+    font-size: rem(10px);
+    @include media-breakpoint-up(md) { font-size: rem(11px); }
+    @include media-breakpoint-up(lg) { font-size: rem(12px); }
+}
+
+@mixin link--sm {
+    font-size: rem(12px);
+    @include media-breakpoint-up(md) { font-size: rem(13px); }
+    @include media-breakpoint-up(lg) { font-size: rem(14px); }
+}
+
+@mixin link--default {
+    font-size: rem(14px);
+    @include media-breakpoint-up(md) { font-size: rem(15px); }
+    @include media-breakpoint-up(lg) { font-size: rem(16px); }
+}
+
+@mixin link--lg {
+    font-size: rem(16px);
+    @include media-breakpoint-up(md) { font-size: rem(17px); }
+    @include media-breakpoint-up(lg) { font-size: rem(18px); }
+}
+
+@mixin link--xl {
+    font-size: rem(18px);
+    @include media-breakpoint-up(sm) { font-size: rem(20px); }
+    @include media-breakpoint-up(md) { font-size: rem(22px); }
+    @include media-breakpoint-up(xl) { font-size: rem(24px); }
+}
+
+@mixin link--break {
+    hyphens: auto;
+    word-break: break-all; // Webkit hack
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }

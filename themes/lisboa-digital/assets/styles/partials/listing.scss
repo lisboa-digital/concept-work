@@ -94,10 +94,7 @@
     &__title {
         @include link;
         @include link--primary;
-        font-size: rem(18px);
-        @include media-breakpoint-up(sm) { font-size: rem(20px); }
-        @include media-breakpoint-up(md) { font-size: rem(22px); }
-        @include media-breakpoint-up(xl) { font-size: rem(24px); }
+        @include link--xl;
     }
     &__description {
         @include text-body;
@@ -106,16 +103,10 @@
     &__url {
         @include link;
         @include link--primary;
-        font-size: rem(12px);
+        @include link--break;
         display: block;
         width: 100%;
         max-width: 100%;
-        hyphens: auto;
-        word-break: break-all; // Webkit hack
-        word-wrap: break-word;
-        overflow-wrap: break-word;
-        @include media-breakpoint-up(sm) { font-size: rem(14px); }
-        @include media-breakpoint-up(md) { font-size: rem(16px); }
         &::before {
             content: ' ';
             display: inline-block;

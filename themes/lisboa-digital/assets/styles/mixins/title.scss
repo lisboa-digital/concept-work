@@ -13,6 +13,12 @@
     @include media-breakpoint-up(lg) { font-size: rem(24px); }
 }
 
+@mixin section-title--lg {
+    font-size: rem(36px);
+    @include media-breakpoint-up(md) { font-size: rem(48px); }
+    @include media-breakpoint-up(lg) { font-size: rem(72px); }
+}
+
 @mixin section-title--dark { color: $color-dark; }
 
 @mixin section-title--light { color: $color-light; }

@@ -197,6 +197,7 @@
     &__link {
         @include link;
         @include link--secondary;
+        @include link--lg;
         display: block;
         margin-top: rem(16px);
         &:first-of-type { margin-top: 0; }
@@ -227,12 +228,8 @@
                 padding: 0;
                 margin: 0;
                 margin-left: rem(24px);
-                font-size: rem(14px);
-                @include media-breakpoint-up(md) {
-                    flex-direction: row;
-                    font-size: rem(15px);
-                }
-                @include media-breakpoint-up(lg) { font-size: rem(16px); }
+                @include link--default;
+                @include media-breakpoint-up(md) { flex-direction: row; }
                 &:first-of-type { margin-left: 0; }
                 img {
                     height: rem(24px);

@@ -327,3 +327,162 @@
     padding: 3.75rem;
   }
 }
+
+.salaries {
+  width: 100%;
+}
+
+.salaries__categories, .salaries__items {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.salaries__categories {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.salaries__category {
+  width: 100%;
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 992px) {
+  .salaries__category {
+    width: 50%;
+    margin-bottom: 3.75rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .salaries__category:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .salaries__category:nth-of-type(odd) {
+    padding-right: 0.9375rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .salaries__category:nth-of-type(even) {
+    padding-left: 0.9375rem;
+  }
+}
+
+.salaries__title {
+  display: block;
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #0D0043;
+}
+
+@media (min-width: 768px) {
+  .salaries__title {
+    font-size: 1.875rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .salaries__title {
+    font-size: 2.25rem;
+  }
+}
+
+.salaries__items {
+  margin-top: 2rem;
+}
+
+.salaries__item {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.salaries__type, .salaries__value {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 150%;
+  color: #0D0043;
+}
+
+@media (min-width: 768px) {
+  .salaries__type, .salaries__value {
+    font-size: 0.9375rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .salaries__type, .salaries__value {
+    font-size: 1rem;
+  }
+}
+
+.salaries__type {
+  flex-grow: 1;
+  padding-right: 1rem;
+}
+
+.salaries__value {
+  flex-shrink: 1;
+  white-space: nowrap;
+}
+
+.salaries__source {
+  font-size: 0.875rem;
+}
+
+@media (min-width: 768px) {
+  .salaries__source {
+    font-size: 0.9375rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .salaries__source {
+    font-size: 1rem;
+  }
+}
+
+.salaries__link {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 700;
+  text-decoration: underline;
+  letter-spacing: 0.04em;
+  font-size: 0.875rem;
+  color: #10428E;
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .salaries__link {
+    font-size: 0.9375rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .salaries__link {
+    font-size: 1rem;
+  }
+}
+
+.salaries__link--selected {
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.salaries__link--selected:hover {
+  text-decoration: none;
+  cursor: default;
+}
+
+.salaries__link:hover, .salaries__link:focus, .salaries__link--selected {
+  color: #0D0043;
+}
