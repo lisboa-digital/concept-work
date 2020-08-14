@@ -76,6 +76,7 @@
         }
     }
     &__button {
+        position: relative;
         @include btn;
         @include btn--secondary;
         @include btn--md;
@@ -86,6 +87,7 @@
             margin-top: rem(24px);
             margin-bottom: 0;
         }
+        @include btn--techy;
     }
     &__image {
         width: 100%;

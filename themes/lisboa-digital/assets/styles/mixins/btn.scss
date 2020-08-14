@@ -109,3 +109,28 @@
 @mixin btn--icon($url) {
     > .btn__icon { background-image: url($url); }
 }
+
+@mixin btn--techy {
+    &::after {
+        content: ' ';
+        position: absolute;
+        top: -11px;
+        left: -11px;
+        font-size: 0;
+        width: calc(100% + 11px);
+        height: calc(100% + 22px);
+        background-image: 
+            url($baseURL + "images/circuit-1.svg"),
+            url($baseURL + "images/circuit-2.svg"),
+            url($baseURL + "images/circuit-3.svg");
+        background-position:
+            25px 0,
+            85% bottom,
+            0 50%;
+        background-size:
+            26px 11px,
+            18px 11px,
+            11px 12px;
+        background-repeat: no-repeat;
+    }
+}
