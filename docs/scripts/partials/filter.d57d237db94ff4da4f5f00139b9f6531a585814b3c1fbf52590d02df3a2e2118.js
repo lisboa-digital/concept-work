@@ -13,16 +13,32 @@
     var title = document.querySelector(".filter__title");
     var toggleBtn = document.querySelector(".filter__toggle-btn");
     var content = document.querySelector(".filter__form");
+    var show = toggleBtn.getAttribute("data-show");
+    var hide = toggleBtn.getAttribute("data-hide");
+
+    function hideFilter() {
+      content.classList.remove("filter__form--open");
+      toggleBtn.classList.remove("filter__toggle-btn--open");
+      toggleBtn.innerHTML = toggleBtn.innerHTML.replace(hide, show);
+    }
+
+    function showFilter() {
+      content.classList.add("filter__form--open");
+      toggleBtn.classList.add("filter__toggle-btn--open");
+      toggleBtn.innerHTML = toggleBtn.innerHTML.replace(show, hide);
+    }
 
     function toggleContent(e) {
-      toggleBtn.classList.toggle("filter__toggle-btn--open");
-      content.classList.toggle("filter__form--open");
+      if (toggleBtn.innerHTML.indexOf(show) == -1) {
+        hideFilter();
+      } else {
+        showFilter();
+      }
     }
 
     function handleResize(e) {
       if (window.matchMedia("(min-width: " + breakpoints.lg + ")").matches) {
-        toggleBtn.classList.add("filter__toggle-btn--open");
-        content.classList.add("filter__form--open");
+        showFilter();
       }
     }
 

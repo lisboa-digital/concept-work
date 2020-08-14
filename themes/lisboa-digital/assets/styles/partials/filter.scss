@@ -35,17 +35,23 @@
     }
     &__toggle-btn {
         @include btn;
+        @include btn--primary-hollow;
+        @include btn--md;
+        @include btn--icon($baseURL + "images/icon-plus--primary.svg");
         flex-shrink: 1;
-        height: rem(30px);
-        width: rem(30px);
-        font-size: 0;
-        border: none;
-        background-size: 100%;
-        background-image: url($baseURL + "images/icon-circle-plus--primary.svg");
-        background-repeat: no-repeat;
-        background-position: center center;
+        // height: rem(30px);
+        // width: rem(30px);
+        // font-size: 0;
+        // border: none;
+        // background-size: 100%;
+        // background-image: url($baseURL + "images/icon-circle-plus--primary.svg");
+        // background-repeat: no-repeat;
+        // background-position: center center;
         @include media-breakpoint-up(lg) { display: none; }
-        &--open { background-image: url($baseURL + "images/icon-circle-minus--primary.svg"); }
+        &--open { 
+            @include btn--icon($baseURL + "images/icon-minus--primary.svg");
+            // background-image: url($baseURL + "images/icon-circle-minus--primary.svg"); 
+        }
     }
     &__form {
         display: none;

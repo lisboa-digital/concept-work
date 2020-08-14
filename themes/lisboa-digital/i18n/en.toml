@@ -215,7 +215,13 @@ other = "social networks"
 other = "Filter"
 
 [filter_toggle]
-other = "open/close filter"
+other = "toggle filter visibility"
+
+[filter_show]
+other = "Show"
+
+[filter_hide]
+other = "Hide"
 
 [filter_apply]
 other = "Apply filter"

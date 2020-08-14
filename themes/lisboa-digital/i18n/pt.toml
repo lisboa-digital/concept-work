@@ -215,7 +215,13 @@ other = "redes sociais"
 other = "Filtro"
 
 [filter_toggle]
-other = "abrir/fechar filtro"
+other = "alternar visibilidade do filtro"
+
+[filter_show]
+other = "Abrir"
+
+[filter_hide]
+other = "Fechar"
 
 [filter_apply]
 other = "Aplicar filtro"
