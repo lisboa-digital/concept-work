@@ -3,21 +3,23 @@
     <ol class="latest-news__items">
         {{ range $item := $.latest_news -}}
         <li class="latest-news__item">
-            {{ $image := $.ctx.Resources.GetMatch $item.image.src -}}
-            {{- $image_default := $image.Resize "358x" -}}
-            {{- $image_retina := $image.Resize "716x" -}}
-            <a class="latest-news__link" href="{{ $item.url }}">
-                <img class="latest-news__image" src="{{ $image_default.RelPermalink }}" alt="{{ $item.image.alt }}" srcset="{{ $image_default.RelPermalink }} 1x, {{ $image_retina.RelPermalink }} 1.5x">
-                <p class="latest-news__title">{{ $item.title }}</p>
-            </a>
-            {{ $date := (time $item.date) -}}
-            <p class="latest-news__date">{{ printf "%d %s %d" $date.Day (T $date.Month) $date.Year }}</p>
-            <p class="latest-news__in">in {{ $item.in }}</p>
-            <ol class="latest-news__categories">
-                {{ range $category := $item.categories -}}
-                <li class="latest-news__category">{{ $category }}</li>
-                {{- end }}
-            </ol>
+            <div class="latest-news__section">
+                {{ $image := $.ctx.Resources.GetMatch $item.image.src -}}
+                {{- $image_default := $image.Resize "358x" -}}
+                {{- $image_retina := $image.Resize "716x" -}}
+                <a class="latest-news__link" href="{{ $item.url }}"><img class="latest-news__image" src="{{ $image_default.RelPermalink }}" alt="{{ $item.image.alt }}" srcset="{{ $image_default.RelPermalink }} 1x, {{ $image_retina.RelPermalink }} 1.5x"></a>
+            </div>
+            <div class="latest-news__section">
+                <p class="latest-news__title"><a class="latest-news__link" href="{{ $item.url }}">{{ $item.title }}</a></p>
+                {{ $date := (time $item.date) -}}
+                <p class="latest-news__date">{{ printf "%d %s %d" $date.Day (T $date.Month) $date.Year }}</p>
+                <p class="latest-news__in">in {{ $item.in }}</p>
+                <ol class="latest-news__categories">
+                    {{ range $category := $item.categories -}}
+                    <li class="latest-news__category">{{ $category }}</li>
+                    {{- end }}
+                </ol>
+            </div>
         </li>
         {{- end }}
     </ol>
