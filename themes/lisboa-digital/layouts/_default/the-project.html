@@ -5,5 +5,29 @@
 {{ define "body-content" }}
 <main>
     {{ partial "page-header" (dict "page_header" (dict "title" .Page.Title "description" .Page.Description) "ctx" .) }}
+    <div class="page-body">
+        <div class="the-project">
+            <p class="the-project__intro">{{ .Params.intro }}</p>
+            <div class="the-project__templates-highlight">
+                <h2 class="the-project__title-1">{{ .Params.templates_highlight.title }}</h2>
+                <p class="the-project__description">{{ .Params.templates_highlight.description }}</p>
+            </div>
+            <div class="the-project__open-source">
+                <h2 class="the-project__title-2">{{ .Params.open_source.title }}</h2>
+                {{ range $description := .Params.open_source.description -}}
+                <p class="the-project__description">{{ $description }}</p>
+                {{- end }}
+                <a class="the-project__ref" href="{{ .Params.open_source.ref }}" target="_blank" rel="noopener noreferrer">{{ .Params.open_source.ref }}</a>
+            </div>
+            <div class="the-project__authorship">
+                <h2 class="the-project__title-2">{{ .Params.authorship.title }}</h2>
+                {{- $image := .Resources.GetMatch .Params.authorship.image.src -}}
+                {{- $image_default := $image.Resize "160x" -}}
+                {{- $image_retina := $image.Resize "320x" -}}
+                <img class="the-project__image" src="{{ $image_default.RelPermalink }}" srcset="{{ $image_default.RelPermalink }} 1x, {{ $image_retina.RelPermalink }} 1.5x" alt="{{ .Params.authorship.image.alt }}">
+                <p class="the-project__description">{{ .Params.authorship.description }}</p>
+            </div>
+        </div>
+    </div>
 </main>
 {{- end }}

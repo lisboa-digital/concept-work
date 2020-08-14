@@ -7,3 +7,104 @@ $baseURL: "{{ $url.Path }}";
 @import "bootstrap";
 
 @import "partials/page-header.scss";
+@import "partials/page-body.scss";
+
+.be-involved {
+    &__partners,
+    &__integrations {
+        margin-top: rem(48px);
+        @include media-breakpoint-up(md) { margin-top: rem(96px); }
+    }
+    &__contribute {}
+    &__ways,
+    &__way {
+        // Reset
+        margin: 0;
+        padding: 0;
+    }
+    &__ways {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        list-style: none;
+        margin-top: rem(32px);
+        @include media-breakpoint-up(md) { margin-top: rem(48px); }
+    }
+    &__way {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        margin-bottom: rem($gutter*2);
+        @include media-breakpoint-up(md) { width: 50%; }
+        &:nth-of-type(even) {
+            @include media-breakpoint-up(md) { 
+                padding-left: rem(20px); 
+            }
+        }
+        &:nth-of-type(odd) {
+            @include media-breakpoint-up(md) { 
+                padding-righ: rem(20px); 
+            }
+        }
+    }
+    &__number {
+        color: $color-dark;
+        padding-right: rem(20px);
+        font-family: $font-family-primary;
+        font-weight: 700;
+        line-height: 80%;
+        font-size: rem(56px);
+        @include media-breakpoint-up(md) { 
+            padding-right: rem(30px);
+            font-size: rem(72px); 
+        }
+        @include media-breakpoint-up(lg) {
+            padding-right: rem(40px);
+            font-size: rem(96px); 
+        }
+    }
+    &__partners {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+    &__partner {
+        width: rem(270px);
+        height: rem(168px);
+        margin-bottom: rem($gutter*2);
+        background-color: $color-secondary;
+        @include media-breakpoint-up(md) {
+            width: rem(320px);
+            height: rem(200px);
+        }
+        &:first-of-type { 
+            height: auto;
+            padding-right: rem($gutter*2);
+            background-color: transparent;
+        }
+    }
+    &__integrations {}
+    &__title,
+    &__description,
+    &__link {
+        // Reset
+        margin: 0;
+        padding: 0;
+    }
+    &__title {
+        @include section-title;
+        @include section-title--dark;
+        margin-bottom: rem($gutter);
+    }
+    &__description {
+        @include text-body;
+        @include text-body--dark;
+    }
+    &__link {
+        @include link;
+        @include link--primary;
+        display: block;
+    }
+}

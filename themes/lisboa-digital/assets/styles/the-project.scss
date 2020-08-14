@@ -7,3 +7,110 @@ $baseURL: "{{ $url.Path }}";
 @import "bootstrap";
 
 @import "partials/page-header.scss";
+@import "partials/page-body.scss";
+
+.the-project {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    &__intro,
+    &__templates-highlight,
+    &__authorship,
+    &__open-source {
+         width: 100%;
+    }
+    &__templates-highlight,
+    &__authorship,
+    &__open-source {
+        margin-top: rem(48px);
+        @include media-breakpoint-up(md) { margin-top: rem(78px); }
+    }
+    &__authorship,
+    &__open-source {
+        @include media-breakpoint-up(md) { width: 50%; }
+    }
+    &__intro {
+        color: $color-dark;
+        font-family: $font-family-secondary;
+        font-weight: 700;
+        font-size: rem(16px);
+        @include media-breakpoint-up(md) { font-size: rem(20px); }
+        @include media-breakpoint-up(lg) { font-size: rem(24px); }
+    }
+    &__templates-highlight {
+        padding: rem($gutter*2);
+        background-color: $color-secondary;
+        text-align: center;
+    }
+    
+    &__authorship {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        @include media-breakpoint-up(md) {
+            
+        }
+        .the-project {
+            &__title-2 {
+                width: 100%;
+            }
+            &__description {
+                width: 70%;
+                padding-left: rem($gutter);
+                @include media-breakpoint-up(sm) { width: 80%; }
+                @include media-breakpoint-up(md) { 
+                    width: 70%;
+                    padding-left: rem($gutter*2);
+                }
+                @include media-breakpoint-up(lg) { width: 75%; }
+
+            }
+            &__image {
+                width: 30%;
+                height: auto;
+                @include media-breakpoint-up(sm) { width: 20%; }
+                @include media-breakpoint-up(md) { width: 30%; }
+                @include media-breakpoint-up(lg) { width: 25%; }
+            }
+        }
+    }
+    &__open-source {
+        @include media-breakpoint-up(md) { padding-right: rem($gutter*2); }
+    }
+    &__title-1,
+    &__title-2,
+    &__description,
+    &__ref {
+        // Reset
+        border: 0;
+        padding: 0;
+    }
+    &__title-1,
+    &__title-2 {
+        margin-bottom: rem($gutter);
+        @include media-breakpoint-up(md) { margin-bottom: rem($gutter*2); }
+    }
+    &__title-1 {
+        color: $color-dark;
+        font-family: $font-family-secondary;
+        font-weight: 700;
+        font-size: rem(24px);
+        @include media-breakpoint-up(md) { font-size: rem(30px); }
+        @include media-breakpoint-up(lg) { font-size: rem(36px); }
+    }
+    &__title-2 {
+        @include section-title;
+        @include section-title--dark;
+        @include section-title--sm;
+    }
+    &__description {
+        @include text-body;
+        @include text-body--dark;
+    }
+    &__ref {
+        @include link;
+        @include link--primary;
+        display: block;
+    }
+}

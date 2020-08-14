@@ -5,5 +5,36 @@
 {{ define "body-content" }}
 <main>
     {{ partial "page-header" (dict "page_header" (dict "title" .Page.Title "description" .Page.Description) "ctx" .) }}
+    <div class="page-body">
+        <div class="be-involved">
+            <div class="be-involved__contribute">
+                <h2 class="be-involved__title">{{ .Params.contribute.title }}</h2>
+                <p class="be-involved__description">{{ .Params.contribute.description }}</p>
+                <ul class="be-involved__ways">
+                    {{ range $item := .Params.contribute.ways -}}
+                    <li class="be-involved__way">
+                        <p class="be-involved__number">{{ $item.pos }}</p>
+                        <p class="be-involved__description">{{ $item.description | safeHTML }}{{ if (isset $item "ref") }}<a class="be-involved__link" href="{{ $item.ref }}" target="_blank" rel="noopener noreferrer">{{ $item.ref }}</a>{{ end }}</p>
+                    </li>
+                    {{- end }}
+                </ul>
+            </div>
+            <div class="be-involved__partners">
+                <div class="be-involved__partner">
+                    <h2 class="be-involved__title">{{ .Params.partners.title }}</h2>
+                    <p class="be-involved__description">{{ .Params.partners.description }}</p>
+                </div>
+                <div class="be-involved__partner">&nbsp;</div>
+                <div class="be-involved__partner">&nbsp;</div>
+                <div class="be-involved__partner">&nbsp;</div>
+                <div class="be-involved__partner">&nbsp;</div>
+                <div class="be-involved__partner">&nbsp;</div>
+            </div>
+            <div class="be-involved__integrations">
+                <h2 class="be-involved__title">{{ .Params.integrations.title }}</h2>
+                <p class="be-involved__description">{{ .Params.integrations.description }}</p>
+            </div>
+        </div>
+    </div>
 </main>
 {{- end }}

@@ -253,3 +253,264 @@
     background-position: left;
   }
 }
+
+.page-body {
+  display: block;
+  margin: 0 0.9375rem;
+  margin-top: -1.875rem;
+  padding: 1.875rem;
+  padding-bottom: 0;
+  background-color: white;
+  max-width: 1140px;
+}
+
+@media (min-width: 768px) {
+  .page-body {
+    margin-top: -3rem;
+    margin-left: 1.875rem;
+    margin-right: 1.875rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .page-body {
+    margin-top: -5.5rem;
+    padding: 3.75rem;
+    padding-bottom: 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  .page-body {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.page-body--has-listing {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  background-color: transparent;
+}
+
+@media (min-width: 992px) {
+  .page-body--has-listing {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+.page-body--has-listing .filter {
+  margin-bottom: 0.9375rem;
+}
+
+@media (min-width: 992px) {
+  .page-body--has-listing .filter {
+    margin-top: 3.75rem;
+  }
+}
+
+.page-body--has-listing .listing {
+  flex-grow: 1;
+  padding: 0.9375rem;
+}
+
+@media (min-width: 992px) {
+  .page-body--has-listing .listing {
+    padding: 1.875rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .page-body--has-listing .listing {
+    padding: 3.75rem;
+  }
+}
+
+.be-involved__partners, .be-involved__integrations {
+  margin-top: 3rem;
+}
+
+@media (min-width: 768px) {
+  .be-involved__partners, .be-involved__integrations {
+    margin-top: 6rem;
+  }
+}
+
+.be-involved__ways, .be-involved__way {
+  margin: 0;
+  padding: 0;
+}
+
+.be-involved__ways {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  list-style: none;
+  margin-top: 2rem;
+}
+
+@media (min-width: 768px) {
+  .be-involved__ways {
+    margin-top: 3rem;
+  }
+}
+
+.be-involved__way {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 1.875rem;
+}
+
+@media (min-width: 768px) {
+  .be-involved__way {
+    width: 50%;
+  }
+}
+
+@media (min-width: 768px) {
+  .be-involved__way:nth-of-type(even) {
+    padding-left: 1.25rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .be-involved__way:nth-of-type(odd) {
+    padding-righ: 1.25rem;
+  }
+}
+
+.be-involved__number {
+  color: #0D0043;
+  padding-right: 1.25rem;
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 700;
+  line-height: 80%;
+  font-size: 3.5rem;
+}
+
+@media (min-width: 768px) {
+  .be-involved__number {
+    padding-right: 1.875rem;
+    font-size: 4.5rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .be-involved__number {
+    padding-right: 2.5rem;
+    font-size: 6rem;
+  }
+}
+
+.be-involved__partners {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.be-involved__partner {
+  width: 16.875rem;
+  height: 10.5rem;
+  margin-bottom: 1.875rem;
+  background-color: #FFE270;
+}
+
+@media (min-width: 768px) {
+  .be-involved__partner {
+    width: 20rem;
+    height: 12.5rem;
+  }
+}
+
+.be-involved__partner:first-of-type {
+  height: auto;
+  padding-right: 1.875rem;
+  background-color: transparent;
+}
+
+.be-involved__title, .be-involved__description, .be-involved__link {
+  margin: 0;
+  padding: 0;
+}
+
+.be-involved__title {
+  display: block;
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #0D0043;
+  margin-bottom: 0.9375rem;
+}
+
+@media (min-width: 768px) {
+  .be-involved__title {
+    font-size: 1.875rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .be-involved__title {
+    font-size: 2.25rem;
+  }
+}
+
+.be-involved__description {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 150%;
+  color: #0D0043;
+}
+
+@media (min-width: 768px) {
+  .be-involved__description {
+    font-size: 0.9375rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .be-involved__description {
+    font-size: 1rem;
+  }
+}
+
+.be-involved__link {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 700;
+  text-decoration: underline;
+  letter-spacing: 0.04em;
+  font-size: 0.875rem;
+  color: #10428E;
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .be-involved__link {
+    font-size: 0.9375rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .be-involved__link {
+    font-size: 1rem;
+  }
+}
+
+.be-involved__link--selected {
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.be-involved__link--selected:hover {
+  text-decoration: none;
+  cursor: default;
+}
+
+.be-involved__link:hover, .be-involved__link:focus, .be-involved__link--selected {
+  color: #0D0043;
+}
