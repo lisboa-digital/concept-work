@@ -26,7 +26,7 @@
             </div>
             <div class="listing__main-section">
                 {{ if (isset $item "title") -}}
-                <p class="listing__title"><a class="listing__anchor" href="{{ $url }}">{{ $item.title }}</a></p>
+                <h2 class="listing__title"><a class="listing__anchor" href="{{ $url }}">{{ $item.title }}</a></h2>
                 {{- end }}
                 {{ if (isset $item "show_url") -}}
                 <a class="listing__url" href="{{ $url }}">{{ $url }}</a>
