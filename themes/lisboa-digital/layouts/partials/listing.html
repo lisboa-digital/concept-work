@@ -14,7 +14,7 @@
                 {{- $image := $.ctx.Resources.GetMatch $item.image.src -}}
                 {{- $image_default := $image.Resize $.listing.sizes.default -}}
                 {{- $image_retina := $image.Resize $.listing.sizes.retina -}}
-                <a class="listing__anchor" href="{{ $url }}"><img class="listing__image" src="{{ $image_default.RelPermalink }}" srcset="{{ $image_default.RelPermalink }} 1x, {{ $image_retina.RelPermalink }} 1.5x" alt="{{ $item.image.alt }}"></a>
+                <a class="listing__anchor" href="{{ $url }}" target="_blank" rel="noopener noreferrer"><img class="listing__image" src="{{ $image_default.RelPermalink }}" srcset="{{ $image_default.RelPermalink }} 1x, {{ $image_retina.RelPermalink }} 1.5x" alt="{{ $item.image.alt }}"></a>
                 {{- end -}}
                 {{- if (isset $item "date_figure") -}}
                 {{- $date := (time $item.date) -}}
@@ -26,10 +26,10 @@
             </div>
             <div class="listing__main-section">
                 {{ if (isset $item "title") -}}
-                <h2 class="listing__title"><a class="listing__anchor" href="{{ $url }}">{{ $item.title }}</a></h2>
+                <h2 class="listing__title"><a class="listing__anchor" href="{{ $url }}" target="_blank" rel="noopener noreferrer">{{ $item.title }}</a></h2>
                 {{- end }}
                 {{ if (isset $item "show_url") -}}
-                <a class="listing__url" href="{{ $url }}">{{ $url }}</a>
+                <a class="listing__url" href="{{ $url }}" target="_blank" rel="noopener noreferrer">{{ $url }}</a>
                 {{- end }}
                 {{ if (isset $item "description") -}}
                 <p class="listing__description">{{ $item.description }}</p>

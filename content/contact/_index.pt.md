@@ -6,5 +6,5 @@ description = "Reporte um bug, deixe uma sugestão ou partilhe algo"
     description = "Também temos um canal no Discord"
     [call_to_action.button]
         name = "Fale connosco"
-        url = "#"
+        url = "https://discord.com/"
 +++

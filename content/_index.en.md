@@ -10,7 +10,7 @@ description = "Stay informed. Discover the next events. Find the next business p
         src = "photo-lisbon.jpg"
 [[latest_news]]
     title = "EatTasty delivered 250 thousand portuguese lunches to offices in Lisbon and Madrid"
-    url = "#"
+    url = "https://observador.pt/2020/01/28/eattasty-entregou-250-mil-almocos-portugueses-a-escritorios-em-lisboa-e-madrid"
     date = "2019-12-04"
     in = "Observador"
     categories = ["companies"]
@@ -19,7 +19,7 @@ description = "Stay informed. Discover the next events. Find the next business p
         alt = "a table with a plate of meatballs and pasta"
 [[latest_news]]
     title = "Microsoft gathers 840 companies in Lisbon"
-    url = "#"
+    url = "https://jornaleconomico.sapo.pt/noticias/microsoft-reune-840-empresas-e-startups-em-lisboa-539585"
     date = "2019-10-31"
     in = "Jornal Económico"
     categories = ["events"]
@@ -28,9 +28,9 @@ description = "Stay informed. Discover the next events. Find the next business p
         alt = "illustration with a number three outlined with red over a blueish background"
 [[latest_news]]
     title = "Interview with Simão Cruz of Portugal Fintech"
-    url = "#"
+    url = "https://www.eu-startups.com/2019/11/the-story-of-a-blossoming-startup-scene-interview-with-sima%cc%83o-cruz-of-portugal-fintech/"
     date = "2019-06-26"
-    in = "Start Up Lisboa"
+    in = "EU-Startups"
     categories = ["people"]
     [latest_news.image] 
         src = "latest-news-3.jpg"

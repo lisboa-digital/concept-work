@@ -34,7 +34,7 @@ description = "Oportunidades de trabalho em Lisboa"
     [[listing.item]]
         title = "Engenheiro Back-end"
         description = "tb.lx by Daimler Trucks & Buses"
-        url = "#"
+        url = "https://tblx.freshteam.com/jobs.io"
         categories = ["engenharia"]
         [listing.item.image]
             alt = "tb.lx logo"
@@ -42,7 +42,7 @@ description = "Oportunidades de trabalho em Lisboa"
     [[listing.item]]
         title = "Cientista de Dados"
         description = "Hays"
-        url = "#"
+        url = "https://m.hays.pt/search/?q=&locationf=LISBOA"
         categories = ["dados"]
         [listing.item.image]
             alt = "Hays logo"
@@ -50,7 +50,7 @@ description = "Oportunidades de trabalho em Lisboa"
     [[listing.item]]
         title = "Programador Full-Stack"
         description = "Paylink Solutions"
-        url = "#"
+        url = "https://www.linkedin.com/jobs/search?keywords=Paylink Solutions&location=Lisboa"
         categories = ["programação"]
         [listing.item.image]
             alt = "Paylink Solutions ogo"
@@ -58,7 +58,7 @@ description = "Oportunidades de trabalho em Lisboa"
     [[listing.item]]
         title = "Consultor de Segurança de Informação"
         description = "Hays"
-        url = "#"
+        url = "https://m.hays.pt/search/?q=&locationf=LISBOA#"
         categories = ["engenharia"]
         [listing.item.image]
             alt = "Hays logo"
@@ -66,7 +66,7 @@ description = "Oportunidades de trabalho em Lisboa"
     [[listing.item]]
         title = "Gestor de Produto"
         description = "Seedrs"
-        url = "#"
+        url = "https://www.seedrs.com/careers#current-vacancies"
         categories = ["gestão"]
         [listing.item.image]
             alt = "Seedrs logo"
@@ -74,7 +74,7 @@ description = "Oportunidades de trabalho em Lisboa"
     [[listing.item]]
         title = "Programdor Front-end Sénior"
         description = "TUI GDN"
-        url = "#"
+        url = "https://careers.tuigroup.com/jobs"
         categories = ["programação"]
         [listing.item.image]
             alt = "TUI logo"
@@ -82,7 +82,7 @@ description = "Oportunidades de trabalho em Lisboa"
     [[listing.item]]
         title = "Software Tester"
         description = "SISCOG"
-        url = "#"
+        url = "https://www.siscog.pt/en/careers/"
         categories = ["programação"]
         [listing.item.image]
             alt = "SISCOG logo"
@@ -90,7 +90,7 @@ description = "Oportunidades de trabalho em Lisboa"
     [[listing.item]]
         title = "Robótica de Drones - Programador C++"
         description = "Pro-Drone"
-        url = "#"
+        url = "https://www.prodrone.io/careers.html"
         categories = ["programação"]
         [listing.item.image]
             alt = "Pro-Done Logo"

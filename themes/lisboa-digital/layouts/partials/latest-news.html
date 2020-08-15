@@ -7,10 +7,10 @@
                 {{ $image := $.ctx.Resources.GetMatch $item.image.src -}}
                 {{- $image_default := $image.Resize "358x" -}}
                 {{- $image_retina := $image.Resize "716x" -}}
-                <a class="latest-news__link" href="{{ $item.url }}"><img class="latest-news__image" src="{{ $image_default.RelPermalink }}" alt="{{ $item.image.alt }}" srcset="{{ $image_default.RelPermalink }} 1x, {{ $image_retina.RelPermalink }} 1.5x"></a>
+                <a class="latest-news__link" href="{{ $item.url }}" target="_blank" rel="noopener noreferrer"><img class="latest-news__image" src="{{ $image_default.RelPermalink }}" alt="{{ $item.image.alt }}" srcset="{{ $image_default.RelPermalink }} 1x, {{ $image_retina.RelPermalink }} 1.5x"></a>
             </div>
             <div class="latest-news__section">
-                <p class="latest-news__title"><a class="latest-news__link" href="{{ $item.url }}">{{ $item.title }}</a></p>
+                <p class="latest-news__title"><a class="latest-news__link" href="{{ $item.url }}" target="_blank" rel="noopener noreferrer">{{ $item.title }}</a></p>
                 {{ $date := (time $item.date) -}}
                 <p class="latest-news__date">{{ printf "%d %s %d" $date.Day (T $date.Month) $date.Year }}</p>
                 <p class="latest-news__in">in {{ $item.in }}</p>

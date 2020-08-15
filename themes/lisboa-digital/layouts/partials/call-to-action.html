@@ -7,11 +7,12 @@
 {{- if (isset $.call_to_action "button") -}}
     {{- if (isset $.call_to_action.button "link") -}}
         {{- $href = (relref $.ctx $.call_to_action.button.link) -}}
+        <a class="call-to-action__button" href="{{ $href }}">{{ $.call_to_action.button.name }}<span class="btn__icon"></span></a>
     {{- end -}}
     {{- if (isset $.call_to_action.button "url") -}}
         {{- $href = $.call_to_action.button.url -}}
+        <a class="call-to-action__button" href="{{ $href }}" target="_blank" rel="noopener noreferrer">{{ $.call_to_action.button.name }}<span class="btn__icon"></span></a>
     {{- end -}}
-    <a class="call-to-action__button" href="{{ $href }}">{{ $.call_to_action.button.name }}<span class="btn__icon"></span></a>
 {{- end -}}
 </div>
 {{- end -}}

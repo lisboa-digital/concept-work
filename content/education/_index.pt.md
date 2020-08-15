@@ -25,7 +25,7 @@ description = "Vamos aprender algo novo"
     [[listing.item]]
         title = "Tecnologias Criativas"
         description = "Universidade IADE"
-        url = "#"
+        url = "https://www.iade.europeia.pt/cursos/licenciaturas/licenciaturas-globais/creative-technologies"
         categories = ["Licenciatura"]
         [listing.item.image]
             alt = "logótipo da Universidade IADE"
@@ -33,7 +33,7 @@ description = "Vamos aprender algo novo"
     [[listing.item]]
         title = "Ciência de Dados"
         description = "Faculdade de Ciências da Universidade de Lisboa"
-        url = "#"
+        url = "https://fenix.ciencias.ulisboa.pt/degrees/mcd"
         categories = ["Mestrado"]
         [listing.item.image]
             alt = "logótipo da Faculdade de Ciências da Universidade de Lisboa"
@@ -41,7 +41,7 @@ description = "Vamos aprender algo novo"
     [[listing.item]]
         title = "Estratégia Digital"
         description = "EDIT."
-        url = "#"
+        url = "https://edit.com.pt/formacao/curso-marketing-digital-online-lisboa/"
         categories = ["Workshop"]
         [listing.item.image]
             alt = "logótipo da EDIT."
@@ -49,7 +49,7 @@ description = "Vamos aprender algo novo"
     [[listing.item]]
         title = "Tecnologias de Informação"
         description = "Faculdade de Ciências da Universidade de Lisboa"
-        url = "#"
+        url = "https://fenix.ciencias.ulisboa.pt/degrees/tecnologias-de-informacao-564500436615450"
         categories = ["Licenciatura"]
         [listing.item.image]
             alt = "logótipo da Faculdade de Ciências da Universidade de Lisboa"
@@ -57,7 +57,7 @@ description = "Vamos aprender algo novo"
     [[listing.item]]
         title = "Tecnologias de Produção e Transformação Agroindustrial"
         description = "NOVA Escola de Ciências e Tecnologia"
-        url = "#"
+        url = "https://www.fct.unl.pt/ensino/curso/mestrado-em-tecnologias-de-producao-e-transformacao-agro-industrial"
         categories = ["Mestrado"]
         [listing.item.image]
             alt = "logótipo da NOVA Escola de Ciências e Tecnologia"
@@ -65,7 +65,7 @@ description = "Vamos aprender algo novo"
     [[listing.item]]
         title = "UX/UI Design"
         description = "Ironhack"
-        url = "#"
+        url = "https://www.ironhack.com/pt/ux-ui-design"
         categories = ["Especializado"]
         [listing.item.image]
             alt = "logótipo da Ironhack"
