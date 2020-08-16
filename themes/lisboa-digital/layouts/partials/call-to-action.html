@@ -1,7 +1,7 @@
 {{ if $.call_to_action -}}
 <div class="call-to-action">
 {{ if $.call_to_action.description }}
-    <p class="call-to-action__description">{{ $.call_to_action.description }}</p>
+    <p class="call-to-action__description">{{ $.call_to_action.description | safeHTML }}</p>
 {{- end -}}
 {{ $href := "" -}}
 {{- if (isset $.call_to_action "button") -}}

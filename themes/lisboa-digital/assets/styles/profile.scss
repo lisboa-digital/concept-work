@@ -1,0 +1,19 @@
+{{ $url := urls.Parse .Site.BaseURL }}
+$baseURL: "{{ $url.Path }}";
+
+@import "settings";
+@import "mixins";
+@import "rem";
+@import "bootstrap";
+
+@import "bootstrap/scss/forms";
+@import "bootstrap/scss/custom-forms";
+
+@import "partials/page-header.scss";
+@import "partials/page-body.scss";
+@import "partials/page-form.scss";
+
+.page-form__column:last-of-type {
+    margin-top: rem(80px);
+    @include media-breakpoint-up(md) { margin-top: 0; }
+}

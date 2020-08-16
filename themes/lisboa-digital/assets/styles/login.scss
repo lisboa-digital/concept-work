@@ -6,4 +6,17 @@ $baseURL: "{{ $url.Path }}";
 @import "rem";
 @import "bootstrap";
 
+@import "bootstrap/scss/forms";
+@import "bootstrap/scss/custom-forms";
+
 @import "partials/page-header.scss";
+@import "partials/page-body.scss";
+@import "partials/page-form.scss";
+
+.page-body {
+    @include media-breakpoint-up(md) {
+        max-width: $site-max-width/2;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

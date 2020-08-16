@@ -1,19 +1,29 @@
 // Overwrite Bootstrap variables here
 // See: bootstrap/scss/_variables.scss
 
-$body-bg:                               #FFFFFF;
-$body-color:                            $color-dark;
-$link-color:                            $color-primary;
-$link-hover-color:                      darken($color-primary, 15%);
-$font-family-base:                      $font-family-primary;
-$font-size-base:                        rem($font-size-default);
-$border-color:                          rgba($color-primary, 0.16);
-$input-font-family:                     $font-family-secondary;
-$input-color:                           $color-primary;
-$input-border-color:                    $border-color;
-$border-radius:                         rem(4px);
-$border-radius-lg:                      $border-radius;
-$border-radius-sm:                      $border-radius;
+$body-bg:                                   #FFFFFF;
+$body-color:                                $color-dark;
+$link-color:                                $color-primary;
+$link-hover-color:                          darken($color-primary, 15%);
+$font-family-base:                          $font-family-primary;
+$font-size-base:                            rem($font-size-default);
+$border-radius:                             rem(4px);
+$border-radius-lg:                          $border-radius;
+$border-radius-sm:                          $border-radius;
+$border-color:                              rgba($color-primary, 0.2);
+$input-font-family:                         $font-family-secondary;
+$input-font-size:                           rem(15px);
+$input-color:                               $color-gray;
+$input-border-color:                        $border-color;
+$input-transition:                          0;
+$custom-control-indicator-border-color:     $border-color;
+$custom-control-indicator-checked-color:    $color-light;
+$custom-control-indicator-checked-bg:       $color-primary;
+$custom-forms-transition:                   0;
+$custom-select-bg-size:                     10px 8px;
+$custom-select-indicator:                   url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='8' viewBox='0 0 10 8'><path fill='#{$color-gray}' d='M4.13397 7.5C4.51887 8.16667 5.48113 8.16667 5.86603 7.5L9.33013 1.5C9.71503 0.833334 9.2339 0 8.4641 0H1.5359C0.766098 0 0.284973 0.833333 0.669873 1.5L4.13397 7.5Z'/></svg>");
+
+
 
 @import "bootstrap/scss/functions";
 @import "bootstrap/scss/variables";

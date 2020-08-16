@@ -1,0 +1,61 @@
+{{ define "head-end" }}
+    {{ partial "style" (dict "src" "new-workspace" "asTmpl" .) }}
+{{- end }}
+
+{{ define "body-content" }}
+<main>
+    {{ partial "page-header" (dict "page_header" (dict "title" .Page.Title "description" .Page.Description) "ctx" .) }}
+    <div class="page-body">
+        <form class="page-form">
+            <div class="page-form__row">
+                <div class="form-group page-form__column">
+                    <label for="name">{{ T "form_name" }} <span class="page-form__note">({{ T "form_required" }})</span></label>
+                    <input id="name" type="text" class="form-control">
+                </div>
+                <div class="form-group page-form__column">
+                    <label for="categories">{{ T "form_categories" }}</label>
+                    <select id="categories" class="custom-select">
+                        <option selected>Office</option>
+                        <option>...</option>
+                    </select>
+                </div>
+            </div>
+            <div class="page-form__row">
+                <div class="form-group page-form__column">
+                    <label for="latitude">{{ T "form_latitude" }}</label>
+                    <input id="latitude" type="text" class="form-control">
+                </div>
+                <div class="form-group page-form__column">
+                    <label for="longitude">{{ T "form_longitude" }}</label>
+                    <input id="longitude" type="text" class="form-control">
+                </div>
+            </div>
+            <div class="page-form__row">
+                <div class="form-group page-form__column">
+                    <label for="url">{{ T "form_url" }} <span class="page-form__note">({{ T "form_required" }})</span></label>
+                    <input id="url" type="text" class="form-control">
+                </div>
+                <div class="form-group page-form__column">
+                    <div class="form-group">
+                        <label>{{ T "form_image" }} <span class="page-form__note">({{ T "form_required" }})</span></label>
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="image">
+                            <label class="custom-file-label" for="image">{{ T "form_upload_file"}}</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="page-form__row">
+                <div class="form-group page-form__column">
+                    <label for="description">{{ T "form_description" }} <span class="page-form__note">({{ T "form_required" }})</span></label>
+                    <textarea id="description" rows="8" class="form-control"></textarea>
+                </div>
+            </div>
+            {{ partial "page-form__accept" . }}
+            <div class="page-form__row">
+                <button class="page-form__submit-btn" type="submit">{{ T "form_submit" }}<span class="btn__icon"></span></button>
+            </div>
+        </form>
+    </div>
+</main>
+{{- end }}

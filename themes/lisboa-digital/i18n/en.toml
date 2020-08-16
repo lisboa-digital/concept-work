@@ -259,6 +259,102 @@ other = "See locations on a Map"
 other = "See locations through Camera"
 
 ######################################### 
+#   FORMS
+#########################################
+
+[form_required]
+other = "Required"
+
+[form_one_or_more]
+other = "Select one or more"
+
+[form_name]
+other = "Name"
+
+[form_email]
+other = "E-mail"
+
+[form_password]
+other = "Password"
+
+[form_password_repeat]
+other = "Repeat Password"
+
+[form_country]
+other = "Country"
+
+[form_region]
+other = "Region"
+
+[form_categories]
+other = "Categories"
+
+[form_phone]
+other = "Phone Number"
+
+[form_url]
+other = "Url"
+
+[form_image]
+other = "Image"
+
+[form_subject]
+other = "Subject"
+
+[form_latitude]
+other = "Latitude"
+
+[form_longitude]
+other = "Longitude"
+
+[form_message]
+other = "Message"
+
+[form_description]
+other = "Description"
+
+[form_accept]
+other = "I understand and accept the"
+
+[form_privacy]
+other = "Privacy Policy"
+
+[form_submit]
+other = "Submit"
+
+[form_upload_file]
+other = "Upload File"
+
+######################################### 
+#   Newsletter
+#########################################
+
+[newsletter_subscribe]
+other = "Subscribe"
+
+[newsletter_unsubscribe]
+other = "Unsubscribe"
+
+######################################### 
+#   Account
+#########################################
+
+[account_login]
+other = "Login"
+
+[account_create]
+other = "Create Account"
+
+[account_change_information]
+other = "Change Account Information"
+
+[account_change_password]
+other = "Change Account Password"
+
+[account_submit_today]
+other = "What would you like to submit today?"
+
+######################################### 
 #   OTHER
 #########################################
 

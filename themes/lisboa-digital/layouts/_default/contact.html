@@ -5,5 +5,55 @@
 {{ define "body-content" }}
 <main>
     {{ partial "page-header" (dict "page_header" (dict "title" .Page.Title "description" .Page.Description "call_to_action" .Params.call_to_action) "ctx" .) }}
+    <div class="page-body">
+        <form class="page-form">
+            <div class="page-form__row">
+                <div class="form-group page-form__column">
+                    <label for="name">{{ T "form_name" }} <span class="page-form__note">({{ T "form_required" }})</span></label>
+                    <input id="name" type="text" class="form-control">
+                </div>
+                <div class="form-group page-form__column">
+                    <label for="email">{{ T "form_email" }} <span class="page-form__note">({{ T "form_required" }})</span></label>
+                    <input id="email" type="text" class="form-control">
+                </div>
+            </div>
+            <div class="page-form__row">
+                <div class="form-group page-form__column">
+                    <label for="country">{{ T "form_country" }}</label>
+                    <select id="country" class="custom-select">
+                        <option selected>Portugal</option>
+                        <option>...</option>
+                    </select>
+                </div>
+                <div class="form-group page-form__column">
+                    <label for="region">{{ T "form_region" }}</label>
+                    <select id="region" class="custom-select">
+                        <option selected>Lisboa</option>
+                        <option>...</option>
+                    </select>
+                </div>
+            </div>
+            <div class="page-form__row">
+                <div class="form-group page-form__column">
+                    <label for="phone">{{ T "form_phone" }}</label>
+                    <input id="phone" type="text" class="form-control">
+                </div>
+                <div class="form-group page-form__column">
+                    <label for="subject">{{ T "form_subject" }} <span class="page-form__note">({{ T "form_required" }})</span></label>
+                    <input id="subject" type="text" class="form-control">
+                </div>
+            </div>
+            <div class="page-form__row">
+                <div class="form-group page-form__column">
+                    <label for="message">{{ T "form_message" }} <span class="page-form__note">({{ T "form_required" }})</span></label>
+                    <textarea id="message" rows="12" class="form-control"></textarea>
+                </div>
+            </div>
+            {{ partial "page-form__accept" . }}
+            <div class="page-form__row">
+                <button class="page-form__submit-btn" type="submit">{{ T "form_submit" }}<span class="btn__icon"></span></button>
+            </div>
+        </form>
+    </div>
 </main>
 {{- end }}

@@ -1,0 +1,41 @@
+{{ define "head-end" }}
+    {{ partial "style" (dict "src" "profile" "asTmpl" .) }}
+{{- end }}
+
+{{ define "body-content" }}
+<main>
+    {{ partial "page-header" (dict "page_header" (dict "title" .Page.Title "description" .Page.Description) "ctx" .) }}
+    <div class="page-body">
+        <div class="page-form">
+            <div class="page-form__row">
+                <form class="page-form__column">
+                    <div class="form-group ">
+                        <label for="name">{{ T "form_name" }} <span class="page-form__note">({{ T "form_required" }})</span></label>
+                        <input id="name" type="text" class="form-control">
+                    </div>
+                    <div class="form-group ">
+                        <label for="email">{{ T "form_email" }} <span class="page-form__note">({{ T "form_required" }})</span></label>
+                        <input id="email" type="text" class="form-control">
+                    </div>
+                    <div class="">
+                        <button class="page-form__submit-btn" type="submit">{{ T "account_change_information" }}<span class="btn__icon"></span></button>
+                    </div>
+                </form>
+                <form class="page-form__column">
+                    <div class="form-group ">
+                        <label for="password">{{ T "form_password" }} <span class="page-form__note">({{ T "form_required" }})</span></label>
+                        <input id="password" type="password" class="form-control">
+                    </div>
+                    <div class="form-group ">
+                        <label for="password2">{{ T "form_password_repeat" }} <span class="page-form__note">({{ T "form_required" }})</span></label>
+                        <input id="password2" type="password" class="form-control">
+                    </div>
+                    <div class="">
+                        <button class="page-form__submit-btn" type="submit">{{ T "account_change_password" }}<span class="btn__icon"></span></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
+{{- end }}

@@ -1,4 +1,4 @@
 +++
-url = "registar"
-title = "Registar"
+url = "criar-conta"
+title = "Criar Conta"
 +++

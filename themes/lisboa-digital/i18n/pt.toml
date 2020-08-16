@@ -259,6 +259,102 @@ other = "Ver localizações no Mapa"
 other = "Ver localizações pela Câmara"
 
 ######################################### 
+#   FORMS
+#########################################
+
+[form_required]
+other = "Necessário"
+
+[form_one_or_more]
+other = "Seleccionar um ou mais"
+
+[form_name]
+other = "Nome"
+
+[form_email]
+other = "E-mail"
+
+[form_password]
+other = "Password"
+
+[form_password_repeat]
+other = "Repetir Password"
+
+[form_country]
+other = "País"
+
+[form_region]
+other = "Região"
+
+[form_categories]
+other = "Categorias"
+
+[form_phone]
+other = "Número de Contacto"
+
+[form_url]
+other = "Url"
+
+[form_image]
+other = "Imagem"
+
+[form_subject]
+other = "Assunto"
+
+[form_latitude]
+other = "Latitude"
+
+[form_longitude]
+other = "Longitude"
+
+[form_message]
+other = "Mensagem"
+
+[form_description]
+other = "Descrição"
+
+[form_accept]
+other = "Eu entendo e concordo com a"
+
+[form_privacy]
+other = "Política de Privacidade"
+
+[form_submit]
+other = "Submeter"
+
+[form_upload_file]
+other = "Carregar Ficheiro"
+
+######################################### 
+#   Newsletter
+#########################################
+
+[newsletter_subscribe]
+other = "Subscrever"
+
+[newsletter_unsubscribe]
+other = "Remover E-mail"
+
+######################################### 
+#   Account
+#########################################
+
+[account_login]
+other = "Login"
+
+[account_create]
+other = "Criar Conta"
+
+[account_change_information]
+other = "Alterar Informação da Conta"
+
+[account_change_password]
+other = "Alterar Password da Conta"
+
+[account_submit_today]
+other = "O que deseja submeter hoje?"
+
+######################################### 
 #   OTHER
 #########################################
 

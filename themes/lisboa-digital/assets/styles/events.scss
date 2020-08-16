@@ -7,6 +7,7 @@ $baseURL: "{{ $url.Path }}";
 @import "bootstrap";
 
 @import "bootstrap/scss/forms";
+@import "bootstrap/scss/custom-forms";
 
 @import "partials/page-header.scss";
 @import "partials/page-body.scss";

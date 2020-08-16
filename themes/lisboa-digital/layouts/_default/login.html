@@ -5,5 +5,28 @@
 {{ define "body-content" }}
 <main>
     {{ partial "page-header" (dict "page_header" (dict "title" .Page.Title "description" .Page.Description "call_to_action" .Params.call_to_action) "ctx" .) }}
+    <div class="page-body">
+        <form class="page-form" action="{{ relref . "account" }}">
+            <div class="page-form__row">
+                <div class="form-group page-form__column">
+                    <label for="email">{{ T "form_email" }}</label>
+                    <input id="email" type="text" class="form-control">
+                </div>
+            </div>
+            <div class="page-form__row">
+                <div class="form-group page-form__column">
+                    <label for="password">{{ T "form_password" }}</label>
+                    <input id="password" type="password" class="form-control">
+                </div>
+            </div>
+            <div class="page-form__row">
+                <button class="page-form__submit-btn" type="submit">{{ T "account_login" }}<span class="btn__icon"></span></button>
+            </div>
+            <div class="page-form__row">
+                <a class="page-form__link" href="{{ relref . "register" }}">{{ T "account_create" }}</a>
+            </div>
+        </form>
+    </div>
+
 </main>
 {{- end }}

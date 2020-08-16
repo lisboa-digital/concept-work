@@ -5,5 +5,27 @@
 {{ define "body-content" }}
 <main>
     {{ partial "page-header" (dict "page_header" (dict "title" .Page.Title "description" .Page.Description) "ctx" .) }}
+    <div class="page-body">
+        <form class="page-form">
+            <div class="page-form__row">
+                <div class="form-group page-form__column">
+                    <label for="email">{{ T "form_email" }} <span class="page-form__note">({{ T "form_required" }})</span></label>
+                    <input id="email" type="text" class="form-control">
+                </div>
+            </div>
+            <div class="page-form__row">
+                {{ range $opt := .Params.options -}}
+                {{- $id := ($opt | urlize) -}}
+                <div class="custom-control custom-checkbox page-form__inline-option">
+                    <input class="custom-control-input" type="checkbox" value="" id="{{ $id }}">
+                    <label class="custom-control-label" for="{{ $id }}">{{ $opt }}</label>
+                </div>
+                {{- end }}
+            </div>
+            <div class="page-form__row">
+                <button class="page-form__submit-btn" type="submit">{{ T "newsletter_unsubscribe" }}<span class="btn__icon"></span></button>
+            </div>
+        </form>
+    </div>
 </main>
 {{- end }}
