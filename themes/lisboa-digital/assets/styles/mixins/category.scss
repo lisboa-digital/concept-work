@@ -3,9 +3,9 @@
     font-family: $font-family-secondary;
     font-weight: 700;
     font-size: rem(10px);
-    line-height: rem(8px);
+    line-height: 125%;
     letter-spacing: 0.04em;
-    padding: rem(6px) rem(8px);
+    padding: rem(4px) rem(8px);
     border-radius: rem(16px);
     text-transform: uppercase;
     @include media-breakpoint-up(md) { font-size: rem(10px); }
