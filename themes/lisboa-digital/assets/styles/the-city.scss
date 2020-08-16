@@ -7,3 +7,240 @@ $baseURL: "{{ $url.Path }}";
 @import "bootstrap";
 
 @import "partials/page-header.scss";
+@import "partials/page-body.scss";
+
+.page-body {
+    background-color: transparent;
+    padding: 0;
+}
+
+.the-city {
+    &__highlight {
+        display: block;
+        @include media-breakpoint-up(md) {
+            display: flex;
+            flex-direction: row;
+        }
+        &:nth-of-type(1) {
+            .the-city {
+                &__container {
+                    &:first-of-type {
+                        @include media-breakpoint-up(md) { width: 60%; }
+                    }
+                    &:last-of-type {
+                        @include media-breakpoint-up(md) {
+                            width: 40%;
+                            padding-top: rem(72px);
+                            padding-left: rem(32px);
+                            padding-right: rem(32px);
+                        }
+                        @include media-breakpoint-up(lg) {
+                            padding-top: rem(120px);
+                            padding-left: rem(57px);
+                            padding-right: rem(57px);
+                        }
+                    }
+                }
+                &__ref {
+                    @include link--default;
+                }
+            }
+        }
+        &:nth-of-type(2) {
+            margin-top: rem(48px);
+            @include media-breakpoint-up(md) {
+                flex-direction: row-reverse;
+                margin-top: rem(-($gutter*2));
+            }
+            .the-city {
+                &__container {
+                    &:first-of-type {
+                        @include media-breakpoint-up(md) { width: 50%; }
+                    }
+                    &:last-of-type {
+                        @include media-breakpoint-up(md) {
+                            width: 50%;
+                            text-align: right;
+                            padding-top: rem(52px);
+                            padding-left: rem(32px);
+                            padding-right: rem(32px);
+                        }
+                        @include media-breakpoint-up(lg) {
+                            padding-top: rem(72px);
+                            padding-left: rem(57px);
+                            padding-right: rem(57px);
+                        }
+                    }
+                }
+                &__source {
+                    @include media-breakpoint-up(md) { margin-top: rem(72px); }
+                }
+            }
+        }
+        .the-city {
+            &__title {
+                margin-top: rem($gutter);
+                @include media-breakpoint-up(md) { margin-top: 0; }
+            }
+        }
+    }
+    &__container {
+        width: 100%;
+    }
+    &__numbers {
+        display: flex;
+        flex-direction: column;
+        margin-top: rem(48px);
+        @include media-breakpoint-up(md) {
+            flex-direction: row;
+            margin-top: rem(100px);
+        }
+        &:nth-of-type(2) {
+            @include media-breakpoint-up(md) { flex-direction: row-reverse; }
+            .the-city {
+                &__container {
+                    &:last-of-type {
+                        background-color: $color-light;
+                    }
+                }
+            }
+        }
+        &:nth-of-type(3) {
+            @include media-breakpoint-up(md) { margin-top: rem(-($gutter*2)); }
+            .the-city {
+                &__container {
+                    &:first-of-type {
+                        @include media-breakpoint-up(md) {
+                            text-align: right;
+                            padding-top: rem(42px);
+                        }
+                        @include media-breakpoint-up(md) {
+                            padding-top: rem(60px);
+                        }
+                    }
+                    &:last-of-type {
+                        background-color: $color-secondary;
+                    }
+                }
+            }
+        }
+        .the-city {
+            &__container {
+                &:first-of-type {
+                    @include media-breakpoint-up(md) {
+                        width: 40%;
+                        padding: rem(16px) rem(32px) 0 rem(32px);
+                    }
+                    @include media-breakpoint-up(lg) {
+                        padding: rem(24px) rem(52px) 0 rem(52px);
+                    }
+                }
+                &:last-of-type {
+                    margin-top: rem($gutter);
+                    @include media-breakpoint-up(md) {
+                        width: 60%;
+                        margin-top: 0;
+                    }
+                }
+            }
+        }
+    }
+    &__list,
+    &__item,
+    &__image
+    &__title,
+    &__source,
+    &__ref,
+    &__number,
+    &__unit,
+    &__description {
+        // Reset
+        margin: 0;
+        padding: 0;
+    }
+    &__list {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        list-style: none;
+        padding: rem(32px);
+        padding-bottom: 0;
+        @include media-breakpoint-up(md) { 
+            padding: rem(60px);
+            padding-bottom: 0;
+        }
+    }
+    &__item {
+        text-align: center;
+        width: rem(120px);
+        margin-bottom: rem(32px);
+        @include media-breakpoint-up(sm) { 
+            width: rem(160px);
+        }
+        @include media-breakpoint-up(md) { 
+            width: rem(140px);
+            margin-bottom: rem(60px); 
+        }
+        @include media-breakpoint-up(lg) { 
+            width: rem(160px);
+        }
+    }
+    &__image {
+        width: 100%;
+        height: auto;
+    }
+    &__title {
+        font-family: $font-family-secondary;
+        font-weight: 700;
+        line-height: 125%;
+        font-size: rem(24px);
+        @include media-breakpoint-up(md) { font-size: rem(28px); }
+        @include media-breakpoint-up(lg) { font-size: rem(36px); }
+        &--sm {
+            line-height: 150%;
+            font-size: rem(16px);
+            @include media-breakpoint-up(md) { font-size: rem(20px); }
+            @include media-breakpoint-up(lg) { font-size: rem(24px); }
+        }
+        &--lg {
+            line-height: 110%;
+            font-size: rem(30px);
+            @include media-breakpoint-up(md) { font-size: rem(38px); }
+            @include media-breakpoint-up(lg) { font-size: rem(48px); }
+        }
+    }
+    &__source {
+        @include text-body;
+        @include text-body--dark;
+        @include text-body--sm;
+    }
+    &__ref {
+        @include link;
+        @include link--primary;
+        @include link--sm;
+        display: block;
+    }
+    &__number,
+    &__unit {
+        color: $color-dark;
+        font-family: $font-family-primary;
+        font-weight: 700;
+    }
+    &__number {
+        line-height: rem(48px);
+        font-size: rem(36px);
+        @include media-breakpoint-up(md) { font-size: rem(48px); }
+        @include media-breakpoint-up(lg) { font-size: rem(64px); }
+    }
+    &__unit {
+        font-size: rem(18px);
+        @include media-breakpoint-up(md) { font-size: rem(20px); }
+        @include media-breakpoint-up(lg) { font-size: rem(24px); }
+    }
+    &__description {
+        @include text-body;
+        @include text-body--dark;
+        @include text-body--sm;
+    }
+}

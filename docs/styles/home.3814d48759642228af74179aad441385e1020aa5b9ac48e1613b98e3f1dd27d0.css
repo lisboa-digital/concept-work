@@ -99,8 +99,8 @@
 .hero__description {
   font-family: "Quicksand", sans-serif;
   font-weight: 500;
-  font-size: 0.875rem;
   line-height: 150%;
+  font-size: 0.875rem;
   color: #EBF3FF;
   text-align: center;
   margin: 0.25rem auto;
@@ -275,8 +275,8 @@
 .numbers__description {
   font-family: "Quicksand", sans-serif;
   font-weight: 500;
-  font-size: 0.875rem;
   line-height: 150%;
+  font-size: 0.875rem;
   color: #0D0043;
   font-size: 0.875rem;
 }

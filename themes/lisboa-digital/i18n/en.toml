@@ -270,3 +270,9 @@ other = "Keyword"
 
 [source]
 other = "Source"
+
+[images_source]
+other = "Images source"
+
+[numbers_source]
+other = "Numbers from"

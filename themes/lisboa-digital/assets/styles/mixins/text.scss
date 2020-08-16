@@ -1,8 +1,18 @@
 @mixin text-body {
     font-family: $font-family-secondary;
     font-weight: 500;
-    font-size: rem(14px);
     line-height: 150%;
+    @include text-body--default;
+}
+
+@mixin text-body--sm {
+    font-size: rem(12px);
+    @include media-breakpoint-up(md) { font-size: rem(13px); }
+    @include media-breakpoint-up(lg) { font-size: rem(14px); }
+}
+
+@mixin text-body--default {
+    font-size: rem(14px);
     @include media-breakpoint-up(md) { font-size: rem(15px); }
     @include media-breakpoint-up(lg) { font-size: rem(16px); }
 }

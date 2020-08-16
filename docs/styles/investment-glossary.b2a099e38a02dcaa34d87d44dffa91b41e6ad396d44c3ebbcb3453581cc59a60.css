@@ -23,8 +23,8 @@
 .call-to-action__description {
   font-family: "Quicksand", sans-serif;
   font-weight: 500;
-  font-size: 0.875rem;
   line-height: 150%;
+  font-size: 0.875rem;
   color: #0D0043;
   margin-bottom: 1rem;
 }
@@ -216,8 +216,8 @@
 .page-header__description {
   font-family: "Quicksand", sans-serif;
   font-weight: 500;
-  font-size: 0.875rem;
   line-height: 150%;
+  font-size: 0.875rem;
   color: #EBF3FF;
   margin-top: 0.5rem;
 }
@@ -252,4 +252,198 @@
   .page-header__pattern {
     background-position: left;
   }
+}
+
+.page-body {
+  display: block;
+  margin: 0 0.9375rem;
+  margin-top: -1.875rem;
+  padding: 1.875rem;
+  padding-bottom: 0;
+  background-color: white;
+  max-width: 1140px;
+}
+
+@media (min-width: 768px) {
+  .page-body {
+    margin-top: -3rem;
+    margin-left: 1.875rem;
+    margin-right: 1.875rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .page-body {
+    margin-top: -5.5rem;
+    padding: 3.75rem;
+    padding-bottom: 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  .page-body {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.page-body--has-listing {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  background-color: transparent;
+}
+
+@media (min-width: 992px) {
+  .page-body--has-listing {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+.page-body--has-listing .filter {
+  margin-bottom: 0.9375rem;
+}
+
+@media (min-width: 992px) {
+  .page-body--has-listing .filter {
+    margin-top: 3.75rem;
+  }
+}
+
+.page-body--has-listing .listing {
+  flex-grow: 1;
+  padding: 0.9375rem;
+}
+
+@media (min-width: 992px) {
+  .page-body--has-listing .listing {
+    padding: 1.875rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .page-body--has-listing .listing {
+    padding: 3.75rem;
+  }
+}
+
+.glossary {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.glossary__item {
+  width: 100%;
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+  .glossary__item {
+    width: 50%;
+    margin-bottom: 3.75rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .glossary__item:nth-of-type(odd) {
+    padding-right: 0.9375rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .glossary__item:nth-of-type(even) {
+    padding-left: 0.9375rem;
+  }
+}
+
+.glossary__title, .glossary__description, .glossary__reference {
+  padding: 0;
+  margin: 0;
+}
+
+.glossary__description, .glossary__reference {
+  margin-top: 1rem;
+}
+
+.glossary__title {
+  display: block;
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #0D0043;
+  line-height: 100%;
+}
+
+@media (min-width: 768px) {
+  .glossary__title {
+    font-size: 1.875rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .glossary__title {
+    font-size: 2.25rem;
+  }
+}
+
+.glossary__description {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+  line-height: 150%;
+  font-size: 0.875rem;
+  color: #0D0043;
+}
+
+@media (min-width: 768px) {
+  .glossary__description {
+    font-size: 0.9375rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .glossary__description {
+    font-size: 1rem;
+  }
+}
+
+.glossary__reference {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 700;
+  text-decoration: underline;
+  letter-spacing: 0.04em;
+  font-size: 0.875rem;
+  color: #10428E;
+  display: inline-block;
+}
+
+@media (min-width: 768px) {
+  .glossary__reference {
+    font-size: 0.9375rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .glossary__reference {
+    font-size: 1rem;
+  }
+}
+
+.glossary__reference--selected {
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.glossary__reference--selected:hover {
+  text-decoration: none;
+  cursor: default;
+}
+
+.glossary__reference:hover, .glossary__reference:focus, .glossary__reference--selected {
+  color: #0D0043;
 }

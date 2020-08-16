@@ -270,3 +270,9 @@ other = "Palavra-chave"
 
 [source]
 other = "Fonte"
+
+[images_source]
+other = "Fonte das imagens"
+
+[numbers_source]
+other = "Fonte dos números"

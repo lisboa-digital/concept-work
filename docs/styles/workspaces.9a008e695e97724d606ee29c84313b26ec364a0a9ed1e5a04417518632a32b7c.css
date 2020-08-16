@@ -471,8 +471,8 @@ textarea.form-control {
 .call-to-action__description {
   font-family: "Quicksand", sans-serif;
   font-weight: 500;
-  font-size: 0.875rem;
   line-height: 150%;
+  font-size: 0.875rem;
   color: #0D0043;
   margin-bottom: 1rem;
 }
@@ -664,8 +664,8 @@ textarea.form-control {
 .page-header__description {
   font-family: "Quicksand", sans-serif;
   font-weight: 500;
-  font-size: 0.875rem;
   line-height: 150%;
+  font-size: 0.875rem;
   color: #EBF3FF;
   margin-top: 0.5rem;
 }
@@ -909,8 +909,8 @@ textarea.form-control {
 .filter__label {
   font-family: "Quicksand", sans-serif;
   font-weight: 500;
-  font-size: 0.875rem;
   line-height: 150%;
+  font-size: 0.875rem;
   color: #0D0043;
 }
 
@@ -1197,8 +1197,8 @@ textarea.form-control {
 .listing__description {
   font-family: "Quicksand", sans-serif;
   font-weight: 500;
-  font-size: 0.875rem;
   line-height: 150%;
+  font-size: 0.875rem;
   color: #525252;
 }
 
@@ -1273,8 +1273,8 @@ textarea.form-control {
 .listing__date {
   font-family: "Quicksand", sans-serif;
   font-weight: 500;
-  font-size: 0.875rem;
   line-height: 150%;
+  font-size: 0.875rem;
   font-weight: 700;
   color: #525252;
 }
@@ -1294,8 +1294,8 @@ textarea.form-control {
 .listing__in {
   font-family: "Quicksand", sans-serif;
   font-weight: 500;
-  font-size: 0.875rem;
   line-height: 150%;
+  font-size: 0.875rem;
   color: #525252;
   font-size: 0.625rem;
 }
@@ -1589,32 +1589,4 @@ textarea.form-control {
   .listing .pagination {
     justify-content: flex-start;
   }
-}
-
-.listing__items {
-  position: relative;
-}
-
-.listing__items::before {
-  content: ' ';
-  position: absolute;
-  top: 0;
-  left: 2.8125rem;
-  height: 100%;
-  font-size: 0;
-  border-left: 1px solid #10428E;
-}
-
-@media (min-width: 768px) {
-  .listing__items::before {
-    left: 3.75rem;
-  }
-}
-
-.listing__item {
-  flex-direction: row;
-}
-
-.listing__main-section {
-  margin-left: 1.875rem;
 }

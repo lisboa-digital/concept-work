@@ -5,5 +5,60 @@
 {{ define "body-content" }}
 <main>
     {{ partial "page-header" (dict "page_header" (dict "title" .Page.Title "description" .Page.Description) "ctx" .) }}
+    <div class="page-body">
+        <div class="the-city">
+            <div class="the-city__highlights">
+                {{ $highlights := .Params.highlights.items -}}
+                {{ $highlight := index $highlights 0 -}}
+                <div class="the-city__highlight">
+                    <div class="the-city__container">
+                        {{- $image := .Resources.GetMatch $highlight.image.src -}}
+                        {{- $image_default := $image.Resize "676x" -}}
+                        {{- $image_retina := $image.Resize "1352x" -}}
+                        <img class="the-city__image" src="{{ $image_default.RelPermalink }}" srcset="{{ $image_default.RelPermalink }} 1x, {{ $image_retina.RelPermalink }} 1.5x" alt="{{ $highlight.image.alt }}">
+                    </div>
+                    <div class="the-city__container">
+                        <p class="the-city__title the-city__title--lg">{{ $highlight.title }}</p>
+                        <a class="the-city__ref" href="{{ $highlight.ref.url }}" target="_blank" rel="noopener noreferrer">{{ $highlight.ref.name }}</a>
+                    </div>
+                </div>
+                {{ $highlight := index $highlights 1 -}}
+                <div class="the-city__highlight">
+                    <div class="the-city__container">
+                        {{- $image := .Resources.GetMatch $highlight.image.src -}}
+                        {{- $image_default := $image.Resize "518x" -}}
+                        {{- $image_retina := $image.Resize "1036x" -}}
+                        <img class="the-city__image" src="{{ $image_default.RelPermalink }}" srcset="{{ $image_default.RelPermalink }} 1x, {{ $image_retina.RelPermalink }} 1.5x" alt="{{ $highlight.image.alt }}">
+                    </div>
+                    <div class="the-city__container">
+                        <p class="the-city__title the-city__title--sm">{{ $highlight.title }}</p>
+                        <p class="the-city__source">{{ T "images_source" }}:
+                            <a class="the-city__ref" href="{{ .Params.highlights.source.url }}" target="_blank" rel="noopener noreferrer">{{ .Params.highlights.source.name }}</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            {{ range $numbers := .Params.numbers -}}
+            <div class="the-city__numbers">
+                <div class="the-city__container">
+                    <p class="the-city__title">{{ $numbers.title }}</p>
+                    <p class="the-city__source">{{ T "numbers_source" }}:
+                        <a class="the-city__ref" href="{{ $numbers.source.url }}" target="_blank" rel="noopener noreferrer">{{ $numbers.source.name }}</a>
+                    </p>
+                </div>
+                <div class="the-city__container">
+                    <ul class="the-city__list">
+                        {{ range $number := $numbers.items -}}
+                        <li class="the-city__item">
+                            <p class="the-city__number">{{ $number.number }}{{ if (isset $number "unit") }}<span class="the-city__unit">{{ $number.unit }}</span>{{ end }}</p>
+                            <p class="the-city__description">{{ $number.description }}</p>
+                        </li>
+                        {{- end }}
+                    </ul>
+                </div>
+            </div>
+            {{- end }}
+        </div>
+    </div>
 </main>
 {{- end }}
