@@ -325,6 +325,9 @@ other = "Submit"
 [form_upload_file]
 other = "Upload File"
 
+[form_browse]
+other = "Browse"
+
 ######################################### 
 #   Newsletter
 #########################################

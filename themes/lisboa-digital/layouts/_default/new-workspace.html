@@ -40,7 +40,7 @@
                         <label>{{ T "form_image" }} <span class="page-form__note">({{ T "form_required" }})</span></label>
                         <div class="custom-file">
                             <input type="file" class="custom-file-input" id="image">
-                            <label class="custom-file-label" for="image">{{ T "form_upload_file"}}</label>
+                            <label class="custom-file-label" for="image" data-browse="{{ T "form_browse"}}">{{ T "form_upload_file"}}</label>
                         </div>
                     </div>
                 </div>
@@ -58,4 +58,8 @@
         </form>
     </div>
 </main>
+{{- end }}
+
+{{ define "body-end" }}
+    {{ partial "script" "bs-custom-file-input" }}
 {{- end }}

@@ -325,6 +325,9 @@ other = "Submeter"
 [form_upload_file]
 other = "Carregar Ficheiro"
 
+[form_browse]
+other = "Procurar"
+
 ######################################### 
 #   Newsletter
 #########################################
