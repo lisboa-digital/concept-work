@@ -4,9 +4,8 @@
   "version": "1.0.0",
   "description": "Implemention stage of \"Lisboa Digital\" project",
   "scripts": {
-    "clean": "npx rimraf resources public docs",
-    "dev": "npm run clean && hugo serve --bind 0.0.0.0 -p 1313 --noHTTPCache --forceSyncStatic --i18n-warnings --gc",
-    "build:github": "npm run clean && hugo -e github --ignoreCache --gc"
+    "dev": "hugo serve --bind 0.0.0.0 -p 1313 --noHTTPCache --forceSyncStatic --i18n-warnings --gc",
+    "build:github": "npx rimraf docs && hugo -e github --ignoreCache --gc"
   },
   "author": "Pedro Pereira <a57127@campus.fcsh.unl.pt>",
   "license": "MIT",
