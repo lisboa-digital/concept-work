@@ -1,0 +1,45 @@
+@import "logo";
+
+.locations-header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: $color-primary;
+    padding: rem($gutter);
+    @include media-breakpoint-up(md) {padding: rem($gutter*2);}
+    &__nav {
+        &:last-of-type {
+            flex-grow: 1;
+            text-align: right;
+            padding-left: rem($gutter);
+        }
+    }
+    &__back-btn,
+    &__map-btn,
+    &__ar-btn {
+        @include btn;
+        @include btn--sm;
+        @include media-breakpoint-up(md) { @include btn--md; }
+    }
+    &__back-btn {
+        @include btn--secondary-hollow;
+        @include btn--icon-left;
+        @include btn--icon($baseURL + "images/icon-back--secondary.svg");
+    }
+    &__map-btn,
+    &__ar-btn {
+        @include btn--secondary;
+        margin-top: rem($gutter/2);
+        margin-left: rem($gutter/2);
+        @include media-breakpoint-up(sm) { margin-top: 0; }
+        @include media-breakpoint-up(md) { margin-left: rem($gutter); }
+    }
+    &__map-btn {
+        @include btn--icon($baseURL + "images/icon-camera--primary.svg");
+    }
+    &__ar-btn {
+        @include btn--icon($baseURL + "images/icon-location--primary.svg");
+    }
+}

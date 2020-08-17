@@ -191,6 +191,9 @@ other = "Edit"
 [btn_delete]
 other = "Delete"
 
+[btn_back]
+other = "Back"
+
 ######################################### 
 #   ARIA
 #########################################
@@ -212,6 +215,12 @@ other = "other pages"
 
 [aria_social_nav]
 other = "social networks"
+
+[aria_back_nav]
+other = "navigate back"
+
+[aria_switch_locations_view]
+other = "switch locations view"
 
 ######################################### 
 #   FILTER
@@ -384,3 +393,12 @@ other = "Images source"
 
 [numbers_source]
 other = "Numbers from"
+
+[view_on_google_maps]
+other = "view on Google Maps"
+
+[switch_to_map]
+other = "Switch to Map"
+
+[switch_to_ar]
+other = "Switch to Ar"

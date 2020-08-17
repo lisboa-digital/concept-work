@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Lisbon</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="/concept-work/styles/main.4ac378ec5a83e277b037ad8e7675c172f6e77402ede4b14b84548b42f813c75e.css" rel="stylesheet">
+    <link href="/concept-work/styles/map.86db9687350754f42ee1291b0c560e77d452702d16925e85cdc02e9830275714.css" rel="stylesheet">
+</head>
+<body>
+<main>
+    <header class="locations-header">
+    <nav class="locations-header__nav" aria-label="navigate back">
+        <a class="logo" href="/concept-work/en/">
+    <img class="logo-image" src="/concept-work/images/logo.svg" alt="logo">
+    <div class="logo-text">
+        <span class="logo-city">Lisbon</span>
+        <span class="logo-digital">Digital</span>
+    </div>
+</a>
+    </nav>
+    <nav class="locations-header__nav" aria-label="switch locations view">
+        <a class="locations-header__back-btn" href="javascript:history.back()"><span class="btn__icon"></span>Back</a>
+        
+        <a class="locations-header__ar-btn" href="/concept-work/en/ar/">Switch to Ar<span class="btn__icon"></span></a>
+    </nav>
+</header>
+    <div id="map"></div>
+    <div id="locations-data" style="display:none;">
+        <div class="location"
+            data-latitude="38.7290741"
+            data-longitude="-9.1442332">
+            <p class="location__title">Beta-i</p>
+            <p class="location__address">
+                Av. Duque de Loulé 12 6º e 7º andar,<br>
+                1050-090 Lisboa
+            </p>
+            <a class="location__link" href="https://www.google.com/maps?q=38.7290741,-9.1442332" target="_blank" rel="noopener noreferrer">view on Google Maps</a>
+        </div>
+        <div class="location" 
+            data-latitude="38.7089658"
+            data-longitude="-9.1445495">
+            <p class="location__title">Bright Pixel</p>
+            <p class="location__address">
+                Rua da Emenda 19,<br>
+                1200-169 Lisboa
+            </p>
+            <a class="location__link" href="https://www.google.com/maps?q=38.7089658,-9.1445495" target="_blank" rel="noopener noreferrer">view on Google Maps</a>
+        </div>
+        <div class="location" 
+            data-latitude="38.7100308"
+            data-longitude="-9.1364514">
+            <p class="location__title">Startup Lisboa</p>
+            <p class="location__address">
+                Rua da Prata 80,<br>
+                1100-415 Lisboa
+            </p>
+            <a class="location__link" href="https://www.google.com/maps?q=38.7100308,-9.1364514" target="_blank" rel="noopener noreferrer">view on Google Maps</a>
+        </div>
+    </div>
+</main>
+    <script src="/concept-work/scripts/map.91a1330dfcf2b9baac455e1fb2cb5bb895999b51cd6abc0d5ca2bc1f582d7519.js" type="text/javascript" defer></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+.location {
+    &__title,
+    &__address {
+        @include text-body;
+        @include text-body--light;
+    }
+    &__title {
+        font-weight: 700;
+    }
+    &__address {}
+    &__title {}
+    &__address {}
+    &__link {
+        @include link;
+        @include link--secondary;
+        @include link--sm;
+        color: $color-secondary !important;
+        &:hover {
+            color: $color-light !important;
+        }
+    }
+}

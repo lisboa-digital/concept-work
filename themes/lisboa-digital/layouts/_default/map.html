@@ -1,0 +1,46 @@
+{{ define "head-end" }}
+    {{ partial "style" (dict "src" "map" "asTmpl" .) }}
+{{- end }}
+
+{{ define "body-content" }}
+<main>
+    {{ partial "locations-header" (dict "map" true "ctx" . ) }}
+    <div id="map"></div>
+    <div id="locations-data" style="display:none;">
+        <div class="location"
+            data-latitude="38.7290741"
+            data-longitude="-9.1442332">
+            <p class="location__title">Beta-i</p>
+            <p class="location__address">
+                Av. Duque de Loulé 12 6º e 7º andar,<br>
+                1050-090 Lisboa
+            </p>
+            <a class="location__link" href="https://www.google.com/maps?q=38.7290741,-9.1442332" target="_blank" rel="noopener noreferrer">{{ T "view_on_google_maps" }}</a>
+        </div>
+        <div class="location" 
+            data-latitude="38.7089658"
+            data-longitude="-9.1445495">
+            <p class="location__title">Bright Pixel</p>
+            <p class="location__address">
+                Rua da Emenda 19,<br>
+                1200-169 Lisboa
+            </p>
+            <a class="location__link" href="https://www.google.com/maps?q=38.7089658,-9.1445495" target="_blank" rel="noopener noreferrer">{{ T "view_on_google_maps" }}</a>
+        </div>
+        <div class="location" 
+            data-latitude="38.7100308"
+            data-longitude="-9.1364514">
+            <p class="location__title">Startup Lisboa</p>
+            <p class="location__address">
+                Rua da Prata 80,<br>
+                1100-415 Lisboa
+            </p>
+            <a class="location__link" href="https://www.google.com/maps?q=38.7100308,-9.1364514" target="_blank" rel="noopener noreferrer">{{ T "view_on_google_maps" }}</a>
+        </div>
+    </div>
+</main>
+{{- end}}
+
+{{ define "body-end" }}
+    {{ partial "script" "map" }}
+{{- end }}

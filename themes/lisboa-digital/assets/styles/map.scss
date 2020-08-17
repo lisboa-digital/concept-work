@@ -1,0 +1,34 @@
+{{ $url := urls.Parse .Site.BaseURL }}
+$baseURL: "{{ $url.Path }}";
+
+@import "settings";
+@import "mixins";
+@import "rem";
+@import "bootstrap";
+
+@import "leaflet/dist/leaflet";
+
+html,
+body,
+main {
+    height: 100%;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+#map {
+    flex-grow: 1;
+    width: 100%;
+    height: 100%;
+}
+
+.leaflet-popup-content-wrapper,
+.leaflet-popup-tip {
+    background-color: $color-primary !important;
+}
+
+@import "partials/locations";
+@import "partials/locations-header"; 

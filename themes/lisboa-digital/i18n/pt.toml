@@ -191,6 +191,9 @@ other = "Edit"
 [btn_delete]
 other = "Delete"
 
+[btn_back]
+other = "Voltar"
+
 ######################################### 
 #   ARIA
 #########################################
@@ -212,6 +215,12 @@ other = "outras páginas"
 
 [aria_social_nav]
 other = "redes sociais"
+
+[aria_back_nav]
+other = "voltar atrás"
+
+[aria_switch_locations_view]
+other = "mudar a vista das localizações"
 
 ######################################### 
 #   FILTER
@@ -384,3 +393,12 @@ other = "Fonte das imagens"
 
 [numbers_source]
 other = "Fonte dos números"
+
+[view_on_google_maps]
+other = "ver no Google Maps"
+
+[switch_to_map]
+other = "Mudar para Mapa"
+
+[switch_to_ar]
+other = "Mudar para AR"

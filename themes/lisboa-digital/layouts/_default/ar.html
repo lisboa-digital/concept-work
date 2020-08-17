@@ -1,0 +1,14 @@
+{{ define "head-end" }}
+    {{ partial "style" (dict "src" "ar" "asTmpl" .) }}
+{{- end }}
+
+{{ define "body-content" }}
+{{ partial "locations-header" (dict "ar" true "ctx" . ) }}
+<main>
+
+</main>
+{{- end}}
+
+{{ define "body-end" }}
+    {{ partial "script" "ar" }}
+{{- end }}

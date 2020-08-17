@@ -1,0 +1,39 @@
+.logo {
+    display: flex;
+    flex-direction: row;
+    font-size: 0;
+    font-family: $font-family-primary;
+    color: $color-light;
+    overflow: hidden;
+    &:hover {
+        color: $color-secondary;
+        text-decoration: none;
+    }
+    &-image {
+        width: auto;
+        height: rem(32px);
+        @include media-breakpoint-up(lg) { height: rem(48px); }
+    }
+    &-text {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: flex-start;
+        text-align: right;
+        margin-left: rem(12px);
+    }
+    &-city {
+        font-weight: 700;
+        font-size: rem(24px);
+        line-height: rem(14px);
+        @include media-breakpoint-up(lg) {
+            font-size: rem(36px);
+            line-height: rem(24px);
+        }
+    }
+    &-digital {
+        font-weight: 400;
+        font-size: rem(10px);
+        text-transform: lowercase;
+        @include media-breakpoint-up(lg) { font-size: rem(14px); }
+    }
+}

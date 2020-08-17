@@ -51,8 +51,8 @@
                 {{ if (isset $item "location") -}}
                 {{- $locations = true -}}
                 <div class="listing__location">
-                    <a class="listing__map-btn" href="#">{{ T "map" }}<span class="btn__icon"></span></a>
-                    <a class="listing__ar-btn" href="#">{{ T "ar" }}<span class="btn__icon"></span></a>
+                    <a class="listing__map-btn" href="{{ relref $.ctx "map" }}">{{ T "map" }}<span class="btn__icon"></span></a>
+                    <a class="listing__ar-btn" href="{{ relref $.ctx "ar" }}">{{ T "ar" }}<span class="btn__icon"></span></a>
                 </div>
                 {{- end }}
             </div>
@@ -62,8 +62,8 @@
     </ul>
     {{ if $locations -}}
     <div class="listing__locations">
-        <a class="listing__map-all-btn" href="#">{{ T "see_locations_map" }}<span class="btn__icon"></span></a>
-        <a class="listing__ar-all-btn" href="#">{{ T "see_locations_ar" }}<span class="btn__icon"></span></a>
+        <a class="listing__map-all-btn" href="{{ relref $.ctx "map" }}">{{ T "see_locations_map" }}<span class="btn__icon"></span></a>
+        <a class="listing__ar-all-btn" href="{{ relref $.ctx "ar" }}">{{ T "see_locations_ar" }}<span class="btn__icon"></span></a>
     </div>
     {{- end }}
     {{ partial "pagination" }}

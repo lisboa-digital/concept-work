@@ -1,0 +1,10 @@
+<header class="locations-header">
+    <nav class="locations-header__nav" aria-label="{{ T "aria_back_nav" }}">
+        {{ partial "logo" .ctx }}
+    </nav>
+    <nav class="locations-header__nav" aria-label="{{ T "aria_switch_locations_view" }}">
+        <a class="locations-header__back-btn" href="javascript:history.back()"><span class="btn__icon"></span>{{ T "btn_back" }}</a>
+        {{ if (isset . "ar") -}}<a class="locations-header__map-btn" href="{{ relref .ctx "map" }}">{{ T "switch_to_map" }}<span class="btn__icon"></span></a>{{- end }}
+        {{ if (isset . "map") -}}<a class="locations-header__ar-btn" href="{{ relref .ctx "ar" }}">{{ T "switch_to_ar" }}<span class="btn__icon"></span></a>{{- end }}
+    </nav>
+</header>

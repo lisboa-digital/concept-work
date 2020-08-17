@@ -1,13 +1,7 @@
 <header class="site-header">
     <div class="site-header__container">
         <div class="site-header__row">
-            <a class="site-header__logo" href="{{ "/" | relLangURL }}">
-                <img class="site-header__logo-image" src="{{"/images/logo.svg" | relURL}}" alt="logo">
-                <div class="site-header__logo-text">
-                    <span class="site-header__logo-city">{{ T "lisbon" }}</span>
-                    <span class="site-header__logo-digital">{{ T "digital" }}</span>
-                </div>
-            </a>
+            {{ partial "logo" .}}
             <div class="site-header__actions">
                 <nav class="site-header__change-lang" aria-label="{{ T "aria_change_lang"}}">
                     <img class="site-header__lang-icon" src="{{"/images/icon-globe--light.svg"  | relURL}}" alt="{{ T "icon_globe_alt" }}" aria-hidden="true">

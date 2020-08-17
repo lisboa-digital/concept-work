@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language }}">
+<head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {{- if .Page.Title -}}
+            {{- printf "%s - %s" .Site.Title .Page.Title -}}
+        {{- else -}}
+            {{- .Site.Title -}}
+        {{- end -}}
+    </title>
+    {{ if .Page.Description -}}
+    <meta name="description" content="{{ .Page.Description }}">
+    {{- end }}
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet">
+    {{ partial "style" (dict "src" "main" "asTmpl" . ) }}
+    {{- block "head-end" . -}}{{ end }}
+</head>
+<body>
+    {{- block "body-start" . -}}{{ end }}
+    {{- block "body-content" . -}}{{ end }}
+    {{- block "body-end" . -}}{{ end }}
+</body>
+</html>
