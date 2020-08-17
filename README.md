@@ -12,9 +12,8 @@ Feel free to contribute, fork and distribute.
 How to start enhancing this project
 -----------------------------------
 
-Leveraging a Docker environment you can start developing in no time.
-
 Just install [Docker Desktop](https://www.docker.com/products/docker-desktop), open your preferred terminal on the root of the project, and follow the next few simple steps.
+
 
 1. **Open a Shell on the Docker environment:**
 ```console
@@ -36,7 +35,7 @@ CTRL+C
 npm run build:github
 ```
 
-### Close the Docker environment shell:
+5. **Close the Docker environment shell:**
 ```
 exit
 ```
@@ -44,19 +43,10 @@ exit
 Third-party
 -----------
 
-To help implement the interfaces the following software/libraries were used:
-
-+ [Hugo](https://github.com/gohugoio/hugo)
-+ [Boostrap](https://github.com/twbs/bootstrap)
-+ [Sass-Rem](https://github.com/pierreburel/sass-rem)
-
-For the development environment:
-
-+ [Docker Desktop](https://www.docker.com/products/docker-desktop)
-+ [Node.js & NPM](https://nodejs.org)
-
-Read more about the Docker and Node setup on this files:
-
-+ docker-compose.yml
-+ Dockerfile
-+ package.json
++ [Hugo](https://github.com/gohugoio/hugo) to create the static build;
++ [Boostrap](https://github.com/twbs/bootstrap) to accelerate the CSS development;
++ [Sass-Rem](https://github.com/pierreburel/sass-rem) to convert pixel to rem units;
++ [Leaflet](https://github.com/Leaflet/Leaflet) to render the Map;
++ [AR.js](https://github.com/AR-js-org/AR.js) to help with the AR feature.
++ [Docker Desktop](https://www.docker.com/products/docker-desktop) to launch and manage the environment dependencies;
++ [Node.js & NPM](https://nodejs.org) to help Hugo process the assets and define project-wide commands.
