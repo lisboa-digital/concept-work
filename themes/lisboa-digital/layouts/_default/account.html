@@ -4,6 +4,43 @@
 
 {{ define "body-content" }}
 <main>
-    {{ partial "page-header" (dict "page_header" (dict "title" .Page.Title "description" .Page.Description) "ctx" .) }}
+    {{- $cta_content := printf "%s%s%s%s%s%s%s%s%s" `
+    <form action="` (relref . "new-workspace") `">
+        <select id="submittype" class="custom-select" aria-label="` (T "account_submit_today") `">
+            <option selected>` (T "account_workspace") `</option>
+            <option>...</option>
+        </select>
+        <button class="call-to-action__button" type="submit">` (T "form_submit") `<span class="btn__icon"></span></button>
+    </form>
+    ` }}
+    {{- $cta := dict "description" (T "account_submit_today") "content" $cta_content -}}
+    {{- partial "page-header" (dict "page_header" (dict "title" .Page.Title "description" .Page.Description "call_to_action" $cta) "ctx" .) -}}
+    <div class="page-body">
+        <div class="account">
+            <h2 class="account__heading">{{ .Params.heading }}</h2>
+            {{ range $section := .Params.sections -}}
+            <div class="account__section">
+                <h3 class="account__section-title">{{ $section.title }}</h3>
+                {{ range $item := $section.items -}}
+                <div class="account__item">
+                    {{ $image := $.Page.Resources.GetMatch $item.image.src -}}
+                    {{- $image_default := $image.Resize "208x" -}}
+                    {{- $image_retina := $image.Resize "416x" -}}
+                    <img class="account__item-image" src="{{ $image_default.RelPermalink }}" srcset="{{ $image_default.RelPermalink }} 1x, {{ $image_retina.RelPermalink }} 1.5x" alt="{{ $item.image.alt }}">
+                    <a class="account__item-title" href="#">{{ $item.title }}</a>
+                    <div class="account__item-actions">
+                        <a class="account__action" href="#">{{ T "btn_edit" }}</a>
+                        <a class="account__action account__action--delete" href="#">{{ T "btn_delete" }}<span class="btn__icon"></span></a>
+                    </div>
+                </div>
+                {{- end }}
+            </div>
+            {{- end }}
+            <div class="account__profile-highlight">
+                <p class="account__highlight-description">{{ .Params.profile_highlight.description }}</p>
+                <a class="account__highlight-btn" href="{{ relref . .Params.profile_highlight.button.link }}">{{ .Params.profile_highlight.button.name }}<span class="btn__icon"></span></a>
+            </div>
+        </div>
+    </div>
 </main>
 {{- end }}

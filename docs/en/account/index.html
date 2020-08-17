@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;700&display=swap" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet">
     <link href="/concept-work/styles/main.fd8c9bd8dd04f91ba35131c5c90b378895fa90eb29dcc23e5236ec4c0fb506a1.css" rel="stylesheet">
-    <link href="/concept-work/styles/account.1544b1b6f2c16c4c7d953f76a92236d9f9a19f98522c9e97cbf6a60cc1a27027.css" rel="stylesheet">
+    <link href="/concept-work/styles/account.f2b1c368c0bdbd2a1284f6a07e18e222cc5fa8649bf2dde544cbd55f78c94307.css" rel="stylesheet">
 </head>
 <body>
     <header class="site-header">
@@ -29,7 +29,7 @@
                 </nav>
                 <nav class="site-header__btns" aria-label="quick actions">
                     <a class="site-header__account-btn" href="/concept-work/en/login/">Account<span class="btn__icon"></span></a>                    
-                    <a class="site-header__submit-content-btn" href="/concept-work/en/login/">Submit Content<span class="btn__icon"></span></a>
+                    <a class="site-header__submit-content-btn" href="/concept-work/en/account/">Submit Content<span class="btn__icon"></span></a>
                     <a class="site-header__contact-btn" href="/concept-work/en/contact/">Contact<span class="btn__icon"></span></a>
                 </nav>
             </div>
@@ -46,7 +46,7 @@
                     <li class="site-header__nav-item"><a class="site-header__nav-link " href="/concept-work/en/resources/">Resources</a></li>
                     <li class="site-header__nav-item"><a class="site-header__nav-link " href="/concept-work/en/investment/">Investment</a></li>
                     <li class="site-header__nav-item"><a class="site-header__nav-link " href="/concept-work/en/workspaces/">Workspaces</a></li>
-                    <li class="site-header__nav-item"><a class="site-header__submit-content-btn" href="/concept-work/en/login/">Submit Content<span class="btn__icon"></span></a></li>
+                    <li class="site-header__nav-item"><a class="site-header__submit-content-btn" href="/concept-work/en/account/">Submit Content<span class="btn__icon"></span></a></li>
                     <li class="site-header__nav-item"><a class="site-header__contact-btn" href="/concept-work/en/contact/">Contact<span class="btn__icon"></span></a></li>
                 </ul>
                 <button class="site-header__toggle-nav-btn" data-more="More" data-close="Close" >More<span class="btn__icon"></span></button>
@@ -54,8 +54,7 @@
         </div>
     </div>
 </header>
-<main>
-    <div class="page-header">
+<main><div class="page-header">
     <div class="page-header__side">&nbsp;</div>
     <div class="page-header__main">
         <div class="page-header__section">
@@ -64,13 +63,60 @@
         </div>
         <div class="page-header__section">
             <div class="page-header__pattern">&nbsp;</div>
-            
+            <div class="call-to-action">
+    <p class="call-to-action__description">What would you like to submit today?</p>
+    
+    <form action="/concept-work/en/new-workspace/">
+        <select id="submittype" class="custom-select" aria-label="What would you like to submit today?">
+            <option selected>Workspace</option>
+            <option>...</option>
+        </select>
+        <button class="call-to-action__button" type="submit">Submit<span class="btn__icon"></span></button>
+    </form>
+    
+</div>
         </div>
     </div>
     <div class="page-header__side">
         <div class="page-header__pattern">&nbsp;</div>
     </div>
-</div>
+</div><div class="page-body">
+        <div class="account">
+            <h2 class="account__heading">Your content</h2>
+            <div class="account__section">
+                <h3 class="account__section-title">Education Institutions</h3>
+                <div class="account__item">
+                    <img class="account__item-image" src="/concept-work/en/account/example_hu2c9ba0fca422a21fc83354107af05c64_70579_208x0_resize_q75_box.jpg" srcset="/concept-work/en/account/example_hu2c9ba0fca422a21fc83354107af05c64_70579_208x0_resize_q75_box.jpg 1x, /concept-work/en/account/example_hu2c9ba0fca422a21fc83354107af05c64_70579_416x0_resize_q75_box.jpg 1.5x" alt="example logo">
+                    <a class="account__item-title" href="#">Faculty of Sciences of the University of Lisbon</a>
+                    <div class="account__item-actions">
+                        <a class="account__action" href="#">Edit</a>
+                        <a class="account__action account__action--delete" href="#">Delete<span class="btn__icon"></span></a>
+                    </div>
+                </div>
+            </div><div class="account__section">
+                <h3 class="account__section-title">Education Courses</h3>
+                <div class="account__item">
+                    <img class="account__item-image" src="/concept-work/en/account/example_hu2c9ba0fca422a21fc83354107af05c64_70579_208x0_resize_q75_box.jpg" srcset="/concept-work/en/account/example_hu2c9ba0fca422a21fc83354107af05c64_70579_208x0_resize_q75_box.jpg 1x, /concept-work/en/account/example_hu2c9ba0fca422a21fc83354107af05c64_70579_416x0_resize_q75_box.jpg 1.5x" alt="example logo">
+                    <a class="account__item-title" href="#">Data Science</a>
+                    <div class="account__item-actions">
+                        <a class="account__action" href="#">Edit</a>
+                        <a class="account__action account__action--delete" href="#">Delete<span class="btn__icon"></span></a>
+                    </div>
+                </div><div class="account__item">
+                    <img class="account__item-image" src="/concept-work/en/account/example_hu2c9ba0fca422a21fc83354107af05c64_70579_208x0_resize_q75_box.jpg" srcset="/concept-work/en/account/example_hu2c9ba0fca422a21fc83354107af05c64_70579_208x0_resize_q75_box.jpg 1x, /concept-work/en/account/example_hu2c9ba0fca422a21fc83354107af05c64_70579_416x0_resize_q75_box.jpg 1.5x" alt="example logo">
+                    <a class="account__item-title" href="#">Information Technology</a>
+                    <div class="account__item-actions">
+                        <a class="account__action" href="#">Edit</a>
+                        <a class="account__action account__action--delete" href="#">Delete<span class="btn__icon"></span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="account__profile-highlight">
+                <p class="account__highlight-description">Do you need to manage your profile or change your password instead?</p>
+                <a class="account__highlight-btn" href="/concept-work/en/profile/">Go to your Profile<span class="btn__icon"></span></a>
+            </div>
+        </div>
+    </div>
 </main>
     <footer class="site-footer">
     <div class="site-footer__row">
@@ -85,7 +131,7 @@
         </div>
         <nav class="site-footer__actions" aria-label="quick actions (2)">
             <a class="site-footer__account-btn" href="/concept-work/en/login/">Account<span class="btn__icon"></span></a>
-            <a class="site-footer__submit-content-btn" href="/concept-work/en/login/">Submit Content<span class="btn__icon"></span></a>
+            <a class="site-footer__submit-content-btn" href="/concept-work/en/account/">Submit Content<span class="btn__icon"></span></a>
             <a class="site-footer__contact-btn" href="/concept-work/en/contact/">Contact<span class="btn__icon"></span></a>
         </nav>
     </div>

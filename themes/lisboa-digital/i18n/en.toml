@@ -185,6 +185,12 @@ other = "Close"
 [btn_community_chat]
 other = "Community Chat"
 
+[btn_edit]
+other = "Edit"
+
+[btn_delete]
+other = "Delete"
+
 ######################################### 
 #   ARIA
 #########################################
@@ -356,6 +362,9 @@ other = "Change Account Password"
 
 [account_submit_today]
 other = "What would you like to submit today?"
+
+[account_workspace]
+other = "Workspace"
 
 ######################################### 
 #   OTHER
