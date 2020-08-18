@@ -15,7 +15,7 @@ How to start enhancing this project
 Just install [Docker Desktop](https://www.docker.com/products/docker-desktop), open your preferred terminal on the root of the project, and follow the next few simple steps.
 
 
-1. **Open a Shell on the Docker environment:**
+1. **Open a Shell on the Docker *workspace* service:**
 ```console
 docker-compose run --service-ports --rm workspace bash
 ```
@@ -25,20 +25,48 @@ docker-compose run --service-ports --rm workspace bash
 npm run dev
 ```
 
-3. **Just stop it when you want to:**
+3. **Open your Browser on:**
+```
+http://localhost:1313
+```
+
+4. **Stop everything when you want to:**
 ```
 CTRL+C
 ```
 
-4. **Use NPM to make a build compatible with Github:**
+5. **Use NPM to make a build compatible with Github:**
 ```console
 npm run build:github
 ```
 
-5. **Close the Docker environment shell:**
+6. **Close the Docker *workspace* service shell:**
 ```
 exit
 ```
+
+If you need to improve the AR feature, you'll need a https URL, so...
+----------------------------------------------------------------------
+
+1. **Replace "your-host.local" for your own local host on the Caddyfile**
+
+2. **Launch the Docker Compose environment:**
+```console
+docker-compose up
+```
+
+3. **Open your Browser on your local host:**
+```
+http://<your-local-host>
+```
+
+4. **Stop everything when you want to:**
+```
+CTRL+C
+```
+
+5. **If you need to Build for Github just follow the other steps above**
+
 
 Third-party
 -----------

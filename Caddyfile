@@ -1,0 +1,16 @@
+{
+	admin off
+}
+
+your-host.local {
+	tls internal {
+		on_demand
+	}
+	header X-Robots-Tag "noindex, nofollow, nosnippet, noarchive"
+	route * {
+		reverse_proxy workspace:1313
+	}
+}
+
+
+
