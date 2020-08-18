@@ -42,5 +42,6 @@
     }
     &__ar-btn {
         @include btn--icon($baseURL + "images/icon-camera--primary.svg");
+        @include media-breakpoint-up(lg) { display: none; }
     }
 }

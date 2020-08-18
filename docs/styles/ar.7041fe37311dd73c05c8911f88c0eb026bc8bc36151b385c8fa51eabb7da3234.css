@@ -263,6 +263,12 @@
   background-image: url("/concept-work/images/icon-camera--primary.svg");
 }
 
+@media (min-width: 992px) {
+  .locations-header__ar-btn {
+    display: none;
+  }
+}
+
 body {
   margin: 0;
   overflow: hidden;
