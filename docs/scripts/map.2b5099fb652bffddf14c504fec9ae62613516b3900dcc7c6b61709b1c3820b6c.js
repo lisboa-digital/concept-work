@@ -9891,7 +9891,16 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
 
       window.L = exports2;
     });
-  }); // map.js
+  }); // themes/lisboa-digital/assets/scripts/foreach_polyfill.js
+
+
+  if (window.NodeList && !NodeList.prototype.forEach) {
+    NodeList.prototype.forEach = Array.prototype.forEach;
+  }
+
+  if (window.HTMLCollection && !HTMLCollection.prototype.forEach) {
+    HTMLCollection.prototype.forEach = Array.prototype.forEach;
+  } // map.js
 
 
   var leaflet = __toModule(require_leaflet_src());

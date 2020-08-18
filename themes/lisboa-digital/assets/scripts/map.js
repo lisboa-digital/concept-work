@@ -1,3 +1,4 @@
+import "./foreach_polyfill";
 import "leaflet";
 
 // Leaflet Configurations
