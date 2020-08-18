@@ -1,14 +1,52 @@
 {{ define "head-end" }}
     {{ partial "style" (dict "src" "ar" "asTmpl" .) }}
+    <script src="{{"/scripts/aframe.min.js" | relURL}}"></script>
+    <script src="{{"/scripts/aframe-look-at-component.min.js" | relURL}}"></script>
+    <script src="{{"/scripts/aframe-ar.js" | relURL}}"></script>
+    {{ partial "script" "ar" }}
 {{- end }}
 
 {{ define "body-content" }}
 {{ partial "locations-header" (dict "ar" true "ctx" . ) }}
 <main>
-
+    <a-scene 
+        cursor='rayOrigin: mouse; fuse: true; fuseTimeout: 0;'
+        raycaster="objects: [location-item]; far: 100000"
+        vr-mode-ui="enabled: false"
+        renderer="antialias: true; alpha:true"
+        arjs='videoTexture: true; debugUIEnabled: false;'
+    >
+        <a-image location-item look-at="[gps-camera]" src="{{ "/images/location-pin-outlined.png" | relURL}}" width="256" height="274"
+            title="Beta-i"
+            address="Av. Duque de Loulé 12 6º e 7º andar,<br>1050-090 Lisboa"
+            latitude="38.7290741"
+            longitude="-9.1442332"
+            gps-entity-place="latitude: 38.7290741; longitude: -9.1442332;"
+        ></a-image>
+        <a-image location-item look-at="[gps-camera]" src="{{ "/images/location-pin-outlined.png" | relURL}}" width="256" height="274"
+            title="Bright Pixel"
+            address="Rua da Emenda 19,<br>1200-169 Lisboa"
+            latitude="38.7089658"
+            longitude="-9.1445495"
+            gps-entity-place="latitude: 38.7089658; longitude: -9.1445495;"
+        ></a-image>
+        <a-image location-item look-at="[gps-camera]" src="{{ "/images/location-pin-outlined.png" | relURL}}" width="256" height="274"
+            title="Startup Lisboa"
+            address="Rua da Prata 80,<br>1100-415 Lisboa"
+            latitude="38.7100308"
+            longitude="-9.1364514"
+            gps-entity-place="latitude: 38.7100308; longitude: -9.1364514;"
+        ></a-image>
+        <a-camera gps-camera="simulateLatitude: 38.722024; simulateLongitude: -9.1392447;" near="0.1" far="50000" rotation-reader></a-camera>
+    </a-scene>
 </main>
+<div class="location-popup" style="display:none;">
+    <div class="location-popup__wrapper">
+        <div class="location-popup__content">
+            <p class="location-popup__title"></p>
+            <p class="location-popup__address"></p>
+            <a class="location-popup__link" href="https://www.google.com/maps?q=38.7290741,-9.1442332" target="_blank" rel="noopener noreferrer">{{ T "view_on_google_maps" }}</a>
+        </div>
+    </div>
+</div>
 {{- end}}
-
-{{ define "body-end" }}
-    {{ partial "script" "ar" }}
-{{- end }}

@@ -1,6 +1,7 @@
 @import "logo";
 
 .locations-header {
+    z-index: 999;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -37,9 +38,9 @@
         @include media-breakpoint-up(md) { margin-left: rem($gutter); }
     }
     &__map-btn {
-        @include btn--icon($baseURL + "images/icon-camera--primary.svg");
+        @include btn--icon($baseURL + "images/icon-location--primary.svg");
     }
     &__ar-btn {
-        @include btn--icon($baseURL + "images/icon-location--primary.svg");
+        @include btn--icon($baseURL + "images/icon-camera--primary.svg");
     }
 }

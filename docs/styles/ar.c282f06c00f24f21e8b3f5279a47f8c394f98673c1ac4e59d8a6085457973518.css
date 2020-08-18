@@ -134,6 +134,7 @@
 }
 
 .locations-header {
+  z-index: 999;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -255,9 +256,105 @@
 }
 
 .locations-header__map-btn > .btn__icon {
-  background-image: url("/concept-work/images/icon-camera--primary.svg");
+  background-image: url("/concept-work/images/icon-location--primary.svg");
 }
 
 .locations-header__ar-btn > .btn__icon {
-  background-image: url("/concept-work/images/icon-location--primary.svg");
+  background-image: url("/concept-work/images/icon-camera--primary.svg");
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+.locations-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+}
+
+.location-popup {
+  z-index: 9999;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.location-popup__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.location-popup__content {
+  max-width: 220px;
+  padding: 0.9375rem;
+  border-radius: 0.5rem;
+  background-color: #10428E;
+}
+
+.location-popup__title, .location-popup__address {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+  line-height: 150%;
+  font-size: 0.875rem;
+  color: #EBF3FF;
+}
+
+@media (min-width: 768px) {
+  .location-popup__title, .location-popup__address {
+    font-size: 0.9375rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .location-popup__title, .location-popup__address {
+    font-size: 1rem;
+  }
+}
+
+.location-popup__title {
+  font-weight: 700;
+}
+
+.location-popup__link {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 700;
+  text-decoration: underline;
+  letter-spacing: 0.04em;
+  font-size: 0.875rem;
+  color: #FFE270;
+}
+
+@media (min-width: 768px) {
+  .location-popup__link {
+    font-size: 0.9375rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .location-popup__link {
+    font-size: 1rem;
+  }
+}
+
+.location-popup__link--selected {
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.location-popup__link--selected:hover {
+  text-decoration: none;
+  cursor: default;
+}
+
+.location-popup__link:hover, .location-popup__link:focus, .location-popup__link--selected {
+  color: #EBF3FF;
 }

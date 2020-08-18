@@ -9,7 +9,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;700&display=swap" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet">
     <link href="/concept-work/styles/main.4ac378ec5a83e277b037ad8e7675c172f6e77402ede4b14b84548b42f813c75e.css" rel="stylesheet">
-    <link href="/concept-work/styles/ar.7222fa06b954640f751a5f2138799b2bedf249025db0866b62b51fcd8967fbda.css" rel="stylesheet">
+    <link href="/concept-work/styles/ar.c282f06c00f24f21e8b3f5279a47f8c394f98673c1ac4e59d8a6085457973518.css" rel="stylesheet">
+    <script src="/concept-work/scripts/aframe.min.js"></script>
+    <script src="/concept-work/scripts/aframe-look-at-component.min.js"></script>
+    <script src="/concept-work/scripts/aframe-ar.js"></script>
+    <script src="/concept-work/scripts/ar.43ab9d9971ab8cccffe26ed018f98750aec17df01bea3dbddb2794d6e54f6be4.js" type="text/javascript"></script>
 </head>
 <body>
 <header class="locations-header">
@@ -29,8 +33,45 @@
     </nav>
 </header>
 <main>
-
+    <a-scene 
+        cursor='rayOrigin: mouse; fuse: true; fuseTimeout: 0;'
+        raycaster="objects: [location-item]; far: 100000"
+        vr-mode-ui="enabled: false"
+        renderer="antialias: true; alpha:true"
+        arjs='videoTexture: true; debugUIEnabled: false;'
+    >
+        <a-image location-item look-at="[gps-camera]" src="/concept-work/images/location-pin-outlined.png" width="256" height="274"
+            title="Beta-i"
+            address="Av. Duque de Loulé 12 6º e 7º andar,<br>1050-090 Lisboa"
+            latitude="38.7290741"
+            longitude="-9.1442332"
+            gps-entity-place="latitude: 38.7290741; longitude: -9.1442332;"
+        ></a-image>
+        <a-image location-item look-at="[gps-camera]" src="/concept-work/images/location-pin-outlined.png" width="256" height="274"
+            title="Bright Pixel"
+            address="Rua da Emenda 19,<br>1200-169 Lisboa"
+            latitude="38.7089658"
+            longitude="-9.1445495"
+            gps-entity-place="latitude: 38.7089658; longitude: -9.1445495;"
+        ></a-image>
+        <a-image location-item look-at="[gps-camera]" src="/concept-work/images/location-pin-outlined.png" width="256" height="274"
+            title="Startup Lisboa"
+            address="Rua da Prata 80,<br>1100-415 Lisboa"
+            latitude="38.7100308"
+            longitude="-9.1364514"
+            gps-entity-place="latitude: 38.7100308; longitude: -9.1364514;"
+        ></a-image>
+        <a-camera gps-camera="simulateLatitude: 38.722024; simulateLongitude: -9.1392447;" near="0.1" far="50000" rotation-reader></a-camera>
+    </a-scene>
 </main>
-    <script src="/concept-work/scripts/ar.92013a1915e4e4e2b660428fe8ead657b46028fc1f55c3369b6620b022a5d0e7.js" type="text/javascript" defer></script>
+<div class="location-popup" style="display:none;">
+    <div class="location-popup__wrapper">
+        <div class="location-popup__content">
+            <p class="location-popup__title"></p>
+            <p class="location-popup__address"></p>
+            <a class="location-popup__link" href="https://www.google.com/maps?q=38.7290741,-9.1442332" target="_blank" rel="noopener noreferrer">ver no Google Maps</a>
+        </div>
+    </div>
+</div>
 </body>
 </html>

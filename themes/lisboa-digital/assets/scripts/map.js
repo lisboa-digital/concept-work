@@ -17,7 +17,7 @@ var locationPin = L.icon({
 var map = L.map("map").setView(lisbonCoordinates, 13);
 
 // Set Leaflet Tile Layer
-L.tileLayer(wikimediaOSM, { attribution: attribution }).addTo(map);
+L.tileLayer(defaultOSM, { attribution: attribution }).addTo(map);
 
 // Get Locations from DOM
 var locations = document.querySelectorAll(".location");

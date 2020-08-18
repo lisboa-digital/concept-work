@@ -8,3 +8,50 @@ $baseURL: "{{ $url.Path }}";
 
 @import "partials/locations";
 @import "partials/locations-header"; 
+
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
+.locations-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+}
+
+.location-popup {
+    z-index: 9999;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    &__wrapper {
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+       height: 100%;
+       width: 100%;
+    }
+    &__content {
+        max-width: 220px;
+        padding: rem($gutter);
+        border-radius: rem(8px);
+        background-color: $color-primary;
+    }
+    &__title,
+    &__address {
+        @include text-body;
+        @include text-body--light;
+    }
+    &__title {
+        font-weight: 700;
+    }
+    &__link {
+        @include link;
+        @include link--secondary;
+    }
+}

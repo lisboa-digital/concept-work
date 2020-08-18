@@ -9896,7 +9896,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
 
   var leaflet = __toModule(require_leaflet_src());
 
-  var wikimediaOSM = "https://maps.wikimedia.org/osm-intl/{z}/{x}/{y}.png";
+  var defaultOSM = "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png";
   var attribution = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';
   var lisbonCoordinates = [38.744, -9.158];
   var locationPin = L.icon({
@@ -9906,7 +9906,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
     popupAnchor: [0, -48]
   });
   var map = L.map("map").setView(lisbonCoordinates, 13);
-  L.tileLayer(wikimediaOSM, {
+  L.tileLayer(defaultOSM, {
     attribution: attribution
   }).addTo(map);
   var locations = document.querySelectorAll(".location");
