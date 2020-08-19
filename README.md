@@ -30,7 +30,7 @@ npm run dev
 http://localhost:1313
 ```
 
-4. **Stop everything when you want to:**
+4. **To Stop everything justo do:**
 ```
 CTRL+C
 ```
@@ -48,7 +48,7 @@ exit
 If you need to improve the AR feature, you'll need a https URL, so...
 ----------------------------------------------------------------------
 
-1. **Replace "your-host.local" for your own local host on the Caddyfile**
+1. **Replace "your-host.local" with your own local host on the Caddyfile**
 
 2. **Launch the Docker Compose environment:**
 ```console
