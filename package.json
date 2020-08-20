@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "lisboa-digital",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Implemention stage of \"Lisboa Digital\" project",
   "scripts": {
     "dev": "hugo serve --bind 0.0.0.0 -p 1313 --noHTTPCache --forceSyncStatic --i18n-warnings --gc",
