@@ -6,4 +6,4 @@
 {{- $script = $script | js.Build $opts -}}
 {{- $script = $script | babel -}}
 {{- $script = $script | fingerprint -}}
-<script src="{{ $script.RelPermalink }}" type="text/javascript"></script>
+<script src="{{ $script.RelPermalink }}"></script>
