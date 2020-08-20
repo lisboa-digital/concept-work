@@ -7,7 +7,7 @@ description = "Obrigado a todos os nossos parceiros e a todos aqueles que contri
     description = "Dependemos bastante das contribuições da comunidade e agradecemos todo o apoio que nos puder dar."
     [[contribute.ways]]
         pos = "01"
-        description = "<strong>Partilhe</strong> este website através das suas redes sociais, usando a hashtag <strong#lisboadigital</strong> sempre que puder;"
+        description = "<strong>Partilhe</strong> este website através das suas redes sociais, usando a hashtag <strong>#lisboadigital</strong> sempre que puder;"
     [[contribute.ways]]
         pos = "02"
         description = "<strong>Submeta</strong> novos conteúdos e forneça atualizações sobre o mesmo;"
