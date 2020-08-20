@@ -15,7 +15,6 @@ description = "Estes são os seus colegas, as pessoas que fazem a digitalizaçã
         "UX / UI Designer",
         "Gestor de Recuros Humanos",
         "Engenheiro de Software",
-        "Gestor de Produto",
         "Gestor de Marketing",
         "Gestor de Produto"]
 [listing]
