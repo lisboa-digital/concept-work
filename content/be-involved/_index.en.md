@@ -9,7 +9,7 @@ description = "Thank you to our partners and to anyone who contributes"
         description = "<strong>Share</strong> the platform through your social media accounts, using the hashtag <strong>#lisboadigital</strong> whenever you can;"
     [[contribute.ways]]
         pos = "02"
-        description = "<strong>Submit</strong> new content and providing fresh updates on it;"
+        description = "<strong>Submit</strong> new content and provide fresh updates on it;"
     [[contribute.ways]]
         pos = "03"
         description = "<strong>Improve the Source Code</strong> of this platform on the following repository:"

@@ -1,7 +1,7 @@
 +++
 url = "recursos"
 title = "Recursos"
-description = "Artigos selecionados para estar melhor preparado"
+description = "Artigos selecionados para estar mais bem preparado"
 [filter]
     categories = [
         "Todos",
@@ -23,7 +23,7 @@ description = "Artigos selecionados para estar melhor preparado"
         default = "280x"
         retina = "560x"
     [[listing.item]]
-        title = "10 passos para avaliar e melhorar sua carreira"
+        title = "10 passos para avaliar e melhorar a sua carreira"
         url = "#"
         in = "Landing Jobs"
         [listing.item.image]

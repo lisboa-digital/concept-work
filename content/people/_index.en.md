@@ -14,7 +14,6 @@ description = "Your peers, the people who make the digitization happening, the w
         "UX / UI Designer",
         "HR Manager",
         "Software Engineer",
-        "Product Manager",
         "Marketing Manager",
         "Project Manager"]
 [listing]

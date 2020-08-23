@@ -23,7 +23,7 @@ description = "Opções para ajudá-lo a iniciar, desenvolver ou expandir as sua
         retina = "416x"
     [[listing.item]]
         title = "Beta-i"
-        description = "Beta-i é uma organização criada para impulsionar o empreendedorismo, e sua missão é fomentar uma verdadeira cultura de inovação. Ajudamos empresas novas e estabelecidas a crescer, oferecendo serviços de inovação 360º com 6 áreas principais: Aceleração, Eventos, Corporativo (Inovação e Inovação Aberta), Educação, Investimento e Hub."
+        description = "Beta-i é uma organização criada para impulsionar o empreendedorismo, e a sua missão é fomentar uma verdadeira cultura de inovação. Ajudamos empresas novas e estabelecidas a crescer, oferecendo serviços de inovação 360º com 6 áreas principais: Aceleração, Eventos, Corporativo (Inovação e Inovação Aberta), Educação, Investimento e Hub."
         url = "http://beta-i.com"
         show_url = true
         categories = ["Aceleradora"]

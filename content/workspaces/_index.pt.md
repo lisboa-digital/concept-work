@@ -14,7 +14,7 @@ description = "Há um lugar para todos, seja um escritório completo para uma em
         retina = "560x"
     [[listing.item]]
         title = "Avila Spaces"
-        description = "Aqui encontra não só espaços de coworking, escritórios de aluguer, salas de reuniões e formação, mas também uma equipa inovadora, empenhada em lhe prestar um serviço chave na mão de qualidade e à medida."
+        description = "Aqui encontra não só espaços de coworking, escritórios, salas de reuniões e formação, mas também uma equipa inovadora, empenhada em lhe prestar um serviço chave na mão de qualidade e à medida."
         url = "https://avilaspaces.com"
         show_url = true
         categories = ["Escritório", "Cowork"]

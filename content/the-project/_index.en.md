@@ -13,7 +13,7 @@ intro = "This project aims to be an example of the frontend of a web application
     ref = "https://github.com/lisboa-digital/concept-work"
 [authorship]
     title = "Authorship"
-    description = "This project was developed by Pedro Pereira to fulfill the requirements necessary to obtain a Master's degree in New Media and Web Practices from NOVA Faculty of Social and Human Sciences, in Lisbon, Portugal."
+    description = "This project was developed by Pedro Pereira to fulfill the necessary requirements to obtain a Master's degree in New Media and Web Practices from NOVA Faculty of Social and Human Sciences, in Lisbon, Portugal."
     [authorship.image]
         alt = "author's portrait photography"
         src = "author.jpg"

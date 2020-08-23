@@ -47,7 +47,7 @@ description = "Portugal"
     [[numbers.items]]
         number = "7.1"
         unit = "MM"
-        description = "Touristas"
+        description = "Turistas"
 [[numbers]]
     title = "Um cenário empreendedor crescente"
     [numbers.source]
